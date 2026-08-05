@@ -3,6 +3,7 @@
 
 # Progress data (user-specific, not for sharing)
 progress.json
+test_bank.json
 
 # Python
 __pycache__/

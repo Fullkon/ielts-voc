@@ -14,8 +14,6 @@ import random
 import re
 from collections import defaultdict
 from typing import List, Dict, Optional, Tuple
-import hashlib
-import copy
 
 
 # =============================================================================
@@ -23,7 +21,7 @@ import copy
 # =============================================================================
 
 st.set_page_config(
-    page_title="IELTS Vocabulary Trainer",
+    page_title="IELTS Vocabulary Trainer for Victor",
     page_icon="📚",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -31,6 +29,7 @@ st.set_page_config(
 
 TOTAL_DAYS = 28
 DATA_FILE = Path(__file__).parent / 'progress.json'
+TEST_BANK_FILE = Path(__file__).parent / 'test_bank.json'
 XLSX_FILE = Path(__file__).parent / '雅思英文词汇表（完整版）.xlsx'
 
 
@@ -118,13 +117,6 @@ def apply_custom_css():
         display: inline-block;
     }
     
-    .progress-bar-bg {
-        width: 100%; height: 8px; background: #eee; border-radius: 4px; overflow: hidden;
-    }
-    .progress-bar-fg {
-        height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 4px;
-    }
-    
     .review-item {
         background: #fff3e0;
         border-left: 4px solid #ff9800;
@@ -133,15 +125,11 @@ def apply_custom_css():
         margin: 0.4rem 0;
     }
     
-    /* sidebar */
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg, #f8f9ff 0%, #f0f0ff 100%);
     }
     
-    /* tabs */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-    }
+    .stTabs [data-baseweb="tab-list"] { gap: 8px; }
     .stTabs [data-baseweb="tab"] {
         border-radius: 8px 8px 0 0;
         padding: 10px 20px;
@@ -157,12 +145,9 @@ def apply_custom_css():
 
 @st.cache_data
 def load_vocabulary() -> pd.DataFrame:
-    """Load the Excel vocabulary file and return a clean DataFrame."""
     df = pd.read_excel(XLSX_FILE)
-    # Rename columns to English for easier processing
     df.columns = ['index_no', 'word', 'english_def', 'chinese_def',
                    'collocations', 'sentence', 'root_words', 'related_words', 'notes']
-    # Clean data
     df = df.dropna(subset=['word', 'chinese_def'])
     df['word'] = df['word'].astype(str).str.strip()
     df['chinese_def'] = df['chinese_def'].astype(str).str.strip()
@@ -172,27 +157,23 @@ def load_vocabulary() -> pd.DataFrame:
     df['root_words'] = df['root_words'].fillna('').astype(str)
     df['related_words'] = df['related_words'].fillna('').astype(str)
     df['notes'] = df['notes'].fillna('').astype(str)
-    # Reset index
     df = df.reset_index(drop=True)
     df['id'] = df.index
     return df
 
 def parse_collocations(colloc_str: str) -> List[str]:
-    """Parse collocation string like 'crucial magma | use magma | magma of' into list."""
     if not colloc_str or colloc_str == 'None':
         return []
     parts = re.split(r'[|,，;；]', colloc_str)
     return [p.strip() for p in parts if p.strip()]
 
 def parse_related_words(related_str: str) -> List[str]:
-    """Parse related words string into list."""
     if not related_str or related_str == 'None':
         return []
     parts = re.split(r'[|,，;；]', related_str)
     return [p.strip() for p in parts if p.strip()]
 
 def parse_root_words(root_str: str) -> List[str]:
-    """Parse root words string into list."""
     if not root_str or root_str == 'None':
         return []
     parts = re.split(r'[|,，;；]', root_str)
@@ -204,10 +185,9 @@ def parse_root_words(root_str: str) -> List[str]:
 # =============================================================================
 
 def generate_learning_plan(total_words: int) -> Dict[int, List[int]]:
-    """Generate 28-day learning plan. Returns {day: [word_indices]}."""
     plan = {}
     indices = list(range(total_words))
-    np.random.seed(42)  # Fixed seed for reproducibility
+    np.random.seed(42)
     np.random.shuffle(indices)
     
     base_per_day = total_words // TOTAL_DAYS
@@ -223,12 +203,59 @@ def generate_learning_plan(total_words: int) -> Dict[int, List[int]]:
 
 
 # =============================================================================
+# TEST BANK MANAGER - Pre-generate & persist test questions
+# =============================================================================
+
+class TestBankManager:
+    """Manages pre-generated test questions, persisted to disk."""
+    
+    def __init__(self, plan: Dict[int, List[int]]):
+        self.plan = plan
+        self.data = self._load()
+    
+    def _load(self) -> dict:
+        if TEST_BANK_FILE.exists():
+            try:
+                with open(TEST_BANK_FILE, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except:
+                pass
+        return {}
+    
+    def save(self):
+        with open(TEST_BANK_FILE, 'w', encoding='utf-8') as f:
+            json.dump(self.data, f, ensure_ascii=False, indent=2)
+    
+    def ensure_day_bank(self, day: int):
+        """Ensure test bank exists for the given day, generate if not."""
+        day_key = str(day)
+        if day_key not in self.data:
+            day_words = self.plan.get(day, [])
+            self.data[day_key] = {}
+            for test_type in ['translation', 'collocation', 'sentence', 'related']:
+                shuffled = list(day_words)
+                random.shuffle(shuffled)
+                self.data[day_key][test_type] = shuffled
+            self.save()
+    
+    def get_test_batch(self, day: int, test_type: str, size: int = None) -> List[int]:
+        """Get pre-generated word IDs for the specified day and test type."""
+        self.ensure_day_bank(day)
+        day_key = str(day)
+        word_ids = self.data[day_key].get(test_type, self.plan.get(day, []))
+        if size and size < len(word_ids):
+            return word_ids[:size]
+        return word_ids
+    
+    def ensure_exists_for_day(self, day: int) -> bool:
+        return str(day) in self.data
+
+
+# =============================================================================
 # PROGRESS MANAGER
 # =============================================================================
 
 class ProgressManager:
-    """Manages learning progress with JSON persistence."""
-    
     def __init__(self):
         self.data = self._load()
     
@@ -241,10 +268,10 @@ class ProgressManager:
                 pass
         return {
             'start_date': None,
-            'daily_progress': {},       # day -> {completed, score, time_spent}
-            'word_records': {},         # word_id -> {attempts, correct, test_scores, mastery, last_tested}
-            'test_history': [],         # [{date, day, type, score, total}]
-            'review_queue': [],         # [word_id, ...]
+            'daily_progress': {},
+            'word_records': {},
+            'test_history': [],
+            'review_queue': [],
         }
     
     def save(self):
@@ -272,12 +299,13 @@ class ProgressManager:
         })
     
     def update_day_progress(self, day: int, score: float, total_tested: int, correct: int):
+        prev = self.get_day_progress(day)
         self.data['daily_progress'][str(day)] = {
-            'completed': True,
+            'completed': prev.get('completed', False) or (total_tested > 0),
             'score': round(score, 1),
             'total_tested': total_tested,
             'correct': correct,
-            'time_spent': self.get_day_progress(day).get('time_spent', 0),
+            'time_spent': prev.get('time_spent', 0),
             'last_updated': datetime.now().isoformat()
         }
         self.save()
@@ -299,11 +327,7 @@ class ProgressManager:
         rec['attempts'] += 1
         if correct:
             rec['correct'] += 1
-        # Update test-specific score (binary for now)
-        current = rec['test_scores'].get(test_type, 0)
-        # Running average
         n = rec['attempts']
-        old_acc = rec['correct'] / max(n-1, 1) if n > 1 else 0
         new_acc = rec['correct'] / n
         rec['test_scores'][test_type] = round(new_acc * 100)
         rec['mastery'] = round(new_acc, 2)
@@ -313,7 +337,6 @@ class ProgressManager:
         
         self.data['word_records'][key] = rec
         
-        # Add to review queue if mastery < 0.6
         if rec['mastery'] < 0.6 and word_id not in self.data['review_queue']:
             self.data['review_queue'].append(word_id)
         elif rec['mastery'] >= 0.9 and word_id in self.data['review_queue']:
@@ -342,7 +365,6 @@ class ProgressManager:
         mastered = sum(1 for r in recs.values() if r['mastery'] >= 0.9)
         need_review = sum(1 for r in recs.values() if 0.3 <= r['mastery'] < 0.6)
         weak = sum(1 for r in recs.values() if r['mastery'] < 0.3 and r['attempts'] > 0)
-        
         completed_days = sum(1 for d in self.data['daily_progress'].values() if d.get('completed', False))
         
         return {
@@ -357,80 +379,125 @@ class ProgressManager:
         }
     
     def get_weak_words(self, limit: int = 50) -> List[int]:
-        """Get IDs of weakest words for targeted practice."""
         recs = self.data['word_records']
         tested = [(int(k), v['mastery'], v['attempts']) for k, v in recs.items() if v['attempts'] > 0]
-        tested.sort(key=lambda x: (x[1], -x[2]))  # Sort by mastery ascending, attempts descending
+        tested.sort(key=lambda x: (x[1], -x[2]))
         return [t[0] for t in tested[:limit]]
 
 
 # =============================================================================
-# RICH COLLOCATION GENERATOR
+# RICH COLLOCATION GENERATOR (English only, multi-word)
 # =============================================================================
 
-COLLOCATION_TEMPLATES = {
-    'verb': ['use', 'apply', 'develop', 'achieve', 'create', 'involve', 'consider', 'affect', 
-             'improve', 'understand', 'provide', 'require', 'support', 'include', 'produce',
-             'establish', 'maintain', 'enhance', 'promote', 'identify'],
-    'adj': ['important', 'crucial', 'essential', 'relevant', 'significant', 'appropriate',
-            'effective', 'potential', 'major', 'fundamental', 'key', 'primary', 'critical',
-            'beneficial', 'comprehensive', 'efficient', 'valuable', 'necessary', 'common',
-            'particular'],
-    'prep': ['of', 'for', 'with', 'in', 'from', 'to', 'by', 'on', 'at', 'about', 'between', 'among'],
-}
+VERB_NOUN = [
+    'use', 'apply', 'develop', 'achieve', 'create', 'involve', 'consider', 'affect',
+    'improve', 'understand', 'provide', 'require', 'support', 'include', 'produce',
+    'establish', 'maintain', 'enhance', 'promote', 'identify', 'address', 'conduct',
+    'implement', 'generate', 'assess', 'evaluate', 'facilitate', 'contribute to',
+    'participate in', 'focus on', 'rely on', 'depend on', 'lead to', 'result in',
+    'deal with', 'cope with', 'take into account', 'pay attention to',
+    'make use of', 'have access to', 'play a role in', 'take part in',
+    'make a contribution to', 'have an impact on', 'give rise to',
+]
 
-def generate_rich_collocations(word: str, existing: List[str]) -> List[Dict[str, str]]:
-    """Generate rich collocations with Chinese translations."""
-    rich = []
+ADJ_NOUN = [
+    'important', 'crucial', 'essential', 'relevant', 'significant', 'appropriate',
+    'effective', 'potential', 'major', 'fundamental', 'key', 'primary', 'critical',
+    'beneficial', 'comprehensive', 'efficient', 'valuable', 'necessary', 'common',
+    'particular', 'sufficient', 'adequate', 'considerable', 'substantial',
+    'widespread', 'prominent', 'remarkable', 'inevitable', 'inextricably linked',
+]
+
+NOUN_PREP = ['of', 'for', 'with', 'in', 'from', 'to', 'by', 'on', 'at', 'about', 'between', 'among']
+
+MULTI_WORD_PATTERNS = [
+    "the {adj} {noun}",
+    "a {adj} {noun}",
+    "{verb} the {noun}",
+    "{noun} and {noun}",
+    "in terms of {noun}",
+    "in the context of {noun}",
+    "a wide range of {noun}",
+    "the impact of {noun} on",
+    "as a result of {noun}",
+    "with respect to {noun}",
+    "in relation to {noun}",
+    "a great deal of {noun}",
+    "the vast majority of {noun}",
+    "at the expense of {noun}",
+    "take advantage of {noun}",
+    "have a significant impact on {noun}",
+    "play a crucial role in {noun}",
+    "in the field of {noun}",
+    "in the process of {noun}",
+]
+
+
+def generate_rich_collocations(word: str, existing: List[str]) -> dict:
+    """Generate collocations grouped into 'existing' and 'extra', English only."""
     existing_word = word.lower()
+    seen = set()
     
-    # 1. Include existing collocations with translations
+    existing_colls = []
     for coll in existing:
-        if coll:
-            coll_clean = coll.strip()
-            rich.append({
-                'collocation': coll_clean,
-                'type': 'origin',
-                'cn': f"(原有搭配)"
-            })
+        if coll and coll.strip() and coll.strip() not in seen:
+            existing_colls.append(coll.strip())
+            seen.add(coll.strip())
     
-    # 2. Verb + Noun pattern
-    verb_count = min(5, max(2, len(existing) // 2))
-    selected_verbs = random.sample(COLLOCATION_TEMPLATES['verb'], verb_count)
+    extra_colls = []
+    
+    # 1. Simple verb + noun
+    verb_count = min(5, max(2, 8 - len(existing)))
+    selected_verbs = random.sample(VERB_NOUN[:30], min(verb_count, 30))
     for verb in selected_verbs:
         coll = f"{verb} {existing_word}"
-        if coll not in [r['collocation'] for r in rich]:
-            rich.append({
-                'collocation': coll,
-                'type': 'verb_noun',
-                'cn': f"动词+名词"
-            })
+        if coll not in seen:
+            extra_colls.append(coll)
+            seen.add(coll)
     
-    # 3. Adjective + Noun pattern
-    adj_count = min(4, max(2, len(existing) // 3))
-    selected_adj = random.sample(COLLOCATION_TEMPLATES['adj'], adj_count)
+    # 2. Adjective + noun
+    adj_count = min(4, max(2, 6 - len(existing)))
+    selected_adj = random.sample(ADJ_NOUN[:25], min(adj_count, 25))
     for adj in selected_adj:
         coll = f"{adj} {existing_word}"
-        if coll not in [r['collocation'] for r in rich]:
-            rich.append({
-                'collocation': coll,
-                'type': 'adj_noun',
-                'cn': f"形容词+名词"
-            })
+        if coll not in seen:
+            extra_colls.append(coll)
+            seen.add(coll)
     
-    # 4. Noun + Preposition pattern
-    prep_count = min(3, max(1, len(existing) // 4))
-    selected_prep = random.sample(COLLOCATION_TEMPLATES['prep'], prep_count)
+    # 3. Noun + preposition
+    prep_count = min(3, max(1, 4 - len(existing)))
+    selected_prep = random.sample(NOUN_PREP, min(prep_count, len(NOUN_PREP)))
     for prep in selected_prep:
         coll = f"{existing_word} {prep}"
-        if coll not in [r['collocation'] for r in rich]:
-            rich.append({
-                'collocation': coll,
-                'type': 'noun_prep',
-                'cn': f"名词+介词"
-            })
+        if coll not in seen:
+            extra_colls.append(coll)
+            seen.add(coll)
     
-    return rich
+    # 4. Multi-word patterns
+    pattern_count = min(4, max(2, 6 - len(extra_colls)))
+    selected_patterns = random.sample(MULTI_WORD_PATTERNS, min(pattern_count, len(MULTI_WORD_PATTERNS)))
+    adj_pool = ADJ_NOUN[:15]
+    for pat in selected_patterns:
+        adj = random.choice(adj_pool)
+        noun = existing_word
+        if "{adj}" in pat and "{noun}" in pat:
+            coll = pat.replace("{adj}", adj).replace("{noun}", noun)
+        elif "{adj}" in pat:
+            coll = pat.replace("{adj}", adj)
+        elif "{noun}" in pat:
+            coll = pat.replace("{noun}", noun)
+        elif "{verb}" in pat:
+            coll = pat.replace("{verb}", random.choice(VERB_NOUN[:10]))
+        else:
+            continue
+        if coll not in seen and coll != existing_word:
+            extra_colls.append(coll)
+            seen.add(coll)
+    
+    return {
+        'existing': existing_colls,
+        'extra': extra_colls[:16]
+    }
 
 
 # =============================================================================
@@ -438,147 +505,110 @@ def generate_rich_collocations(word: str, existing: List[str]) -> List[Dict[str,
 # =============================================================================
 
 class TestEngine:
-    """Generates and evaluates various test types."""
     
     @staticmethod
-    def generate_translation_test(word_row: pd.Series) -> dict:
-        """Chinese → English translation test."""
-        return {
-            'type': 'translation',
-            'label': '汉译英',
-            'question': str(word_row['chinese_def']),
-            'answer': str(word_row['word']).strip().lower(),
-            'hint': f"首字母: {word_row['word'][0].upper()}..." if len(str(word_row['word'])) > 3 else f"长度: {len(str(word_row['word']))} 个字母",
-            'word_row': word_row
-        }
-    
-    @staticmethod
-    def generate_collocation_test(word_row: pd.Series) -> dict:
-        """Collocation fill-in-blank test."""
-        coll_str = str(word_row['collocations'])
-        colls = parse_collocations(coll_str)
-        word = str(word_row['word']).strip()
+    def generate_question(word_id: int, word_row: pd.Series, test_type: str, seed_offset: int = 0) -> dict:
+        """Generate a deterministic question for the given word and test type."""
+        rng = random.Random(word_id * 100 + seed_offset + {'translation':0,'collocation':1000,'sentence':2000,'related':3000}[test_type])
         
-        if not colls:
-            # Fallback: create a simple collocation fill
-            question = f"_____ {word}" if random.random() > 0.5 else f"{word} _____"
+        word = str(word_row['word']).strip()
+        word_lower = word.lower()
+        
+        if test_type == 'translation':
+            hint = f"首字母: {word[0].upper()}..." if len(word) > 3 else f"长度: {len(word)} 个字母"
+            return {
+                'type': 'translation',
+                'label': '汉译英',
+                'question': str(word_row['chinese_def']),
+                'answer': word_lower,
+                'hint': hint,
+                'word_id': int(word_id),
+            }
+        
+        elif test_type == 'collocation':
+            colls = parse_collocations(str(word_row['collocations']))
+            if colls:
+                coll = rng.choice(colls).lower()
+                if word_lower in coll:
+                    question = coll.replace(word_lower, '_____', 1)
+                else:
+                    question = f"_____ {coll}"
+            else:
+                if rng.random() > 0.5:
+                    question = f"_____ {word_lower}"
+                    hint = '输入搭配词'
+                else:
+                    question = f"{word_lower} _____"
+                    hint = '输入搭配词'
             return {
                 'type': 'collocation',
                 'label': '搭配测试',
                 'question': question,
-                'answer': '',
-                'hint': '输入与目标词搭配的词',
-                'word_row': word_row,
-                'target_word': word,
-                'show_word': True,
-                'acceptable': []
+                'answer': word_lower,
+                'hint': f'目标词释义请自行回忆',
+                'word_id': int(word_id),
             }
         
-        # Pick a random collocation and hide the target word
-        coll = random.choice(colls)
-        coll_lower = coll.lower()
-        word_lower = word.lower()
-        
-        if word_lower in coll_lower:
-            blank_coll = coll_lower.replace(word_lower, '_____', 1)
-        else:
-            blank_coll = f"_____ {coll_lower}"
-        
-        return {
-            'type': 'collocation',
-            'label': '搭配测试',
-            'question': blank_coll,
-            'answer': word_lower,
-            'hint': f'目标词汉语: {word_row["chinese_def"]}',
-            'word_row': word_row,
-            'target_word': word_lower,
-            'show_word': False,
-            'acceptable': []
-        }
-    
-    @staticmethod
-    def generate_sentence_test(word_row: pd.Series) -> dict:
-        """Sentence fill-in-blank test."""
-        sentence = str(word_row['sentence'])
-        word = str(word_row['word']).strip()
-        
-        if not sentence or sentence == 'None':
+        elif test_type == 'sentence':
+            sentence = str(word_row['sentence'])
+            if sentence and sentence != 'None':
+                pattern = re.compile(re.escape(word), re.IGNORECASE)
+                question = pattern.sub('_____', sentence, count=1)
+            else:
+                question = f'翻译: {word_row["chinese_def"]}'
             return {
                 'type': 'sentence',
-                'label': '句子测试',
-                'question': f'翻译此句: {word_row["chinese_def"]}',
-                'answer': word.lower(),
-                'hint': f'目标词: {word}',
-                'word_row': word_row,
-                'target_word': word.lower()
+                'label': '句子填空',
+                'question': question,
+                'answer': word_lower,
+                'hint': f'长度: {len(word)} 个字母',
+                'word_id': int(word_id),
             }
         
-        # Create blank by replacing the word
-        import re as re_mod
-        pattern = re_mod.compile(re_mod.escape(word), re_mod.IGNORECASE)
-        blank_sentence = pattern.sub('_____', sentence, count=1)
+        elif test_type == 'related':
+            related = parse_related_words(str(word_row['related_words']))
+            root = parse_root_words(str(word_row['root_words']))
+            clues = []
+            if related:
+                clues.append(f"同类词: {', '.join(rng.sample(related, min(4, len(related))))}")
+            if root:
+                clues.append(f"同根词: {', '.join(rng.sample(root, min(4, len(root))))}")
+            if not clues:
+                clues.append(f"释义: {str(word_row['chinese_def'])}")
+            return {
+                'type': 'related',
+                'label': '相关词联想',
+                'question': ' | '.join(clues),
+                'answer': word_lower,
+                'hint': '根据相关词/同根词回忆目标单词',
+                'word_id': int(word_id),
+            }
         
+        # fallback
         return {
-            'type': 'sentence',
-            'label': '句子测试',
-            'question': blank_sentence,
-            'answer': word.lower(),
-            'hint': f'汉语: {word_row["chinese_def"]} | 长度: {len(word)} 个字母',
-            'word_row': word_row,
-            'target_word': word.lower()
-        }
-    
-    @staticmethod
-    def generate_related_test(word_row: pd.Series) -> dict:
-        """Related word recall test."""
-        related = parse_related_words(str(word_row['related_words']))
-        root = parse_root_words(str(word_row['root_words']))
-        word = str(word_row['word']).strip()
-        
-        clues = []
-        if related:
-            clues.append(f"同类词: {', '.join(related[:4])}")
-        if root:
-            clues.append(f"同根词: {', '.join(root[:4])}")
-        
-        if not clues:
-            clues.append(f"释义: {str(word_row['chinese_def'])}")
-        
-        return {
-            'type': 'related',
-            'label': '相关词测试',
-            'question': ' | '.join(clues),
-            'answer': word.lower(),
-            'hint': f'根据相关词/同根词联想目标单词',
-            'word_row': word_row,
-            'target_word': word.lower(),
-            'related_words': related,
-            'root_words': root
+            'type': 'translation',
+            'label': '汉译英',
+            'question': str(word_row['chinese_def']),
+            'answer': word_lower,
+            'hint': '',
+            'word_id': int(word_id),
         }
     
     @staticmethod
     def evaluate(user_answer: str, correct_answer: str) -> Tuple[bool, int]:
-        """
-        Evaluate user's answer against correct answer.
-        Returns (is_correct, similarity_score 0-100).
-        """
         user = user_answer.strip().lower()
         correct = correct_answer.strip().lower()
         
         if user == correct:
             return True, 100
         
-        # Fuzzy matching for typos
         if len(user) > 2 and len(correct) > 2:
-            # Levenshtein distance check
             if abs(len(user) - len(correct)) <= 2:
                 distance = TestEngine._levenshtein(user, correct)
                 max_len = max(len(user), len(correct))
                 similarity = (1 - distance / max_len) * 100
                 if similarity >= 85:
                     return True, int(similarity)
-            
-            # Partial match: correct word contains user's answer or vice versa
             if correct in user or user in correct:
                 return True, 70
         
@@ -617,8 +647,9 @@ def main():
         st.session_state.progress = ProgressManager()
         st.session_state.progress.init_start_date()
     
-    if 'current_test' not in st.session_state:
-        st.session_state.current_test = None
+    if 'test_bank' not in st.session_state:
+        st.session_state.test_bank = TestBankManager(plan)
+    
     if 'test_batch' not in st.session_state:
         st.session_state.test_batch = []
     if 'test_index' not in st.session_state:
@@ -639,8 +670,14 @@ def main():
         st.session_state.learning_day = 1
     if 'learning_page' not in st.session_state:
         st.session_state.learning_page = 0
+    if 'test_batch_size' not in st.session_state:
+        st.session_state.test_batch_size = 20
     
     pm = st.session_state.progress
+    tbm = st.session_state.test_bank
+    
+    # Ensure test bank exists for current day
+    tbm.ensure_day_bank(st.session_state.learning_day)
     
     # =========================================================================
     # SIDEBAR
@@ -649,10 +686,9 @@ def main():
         st.markdown("## 📚 IELTS词汇训练")
         st.markdown("---")
         
-        # Day selector
         st.markdown("### 📅 选择学习日")
         selected_day = st.selectbox(
-            "学习日 (1-28)", 
+            "学习日 (1-28)",
             options=list(range(1, TOTAL_DAYS + 1)),
             index=st.session_state.learning_day - 1,
             key="day_selector"
@@ -662,9 +698,10 @@ def main():
             st.session_state.learning_page = 0
             st.session_state.test_batch = []
             st.session_state.test_index = 0
+            # Ensure bank for the new day
+            tbm.ensure_day_bank(selected_day)
             st.rerun()
         
-        # Day info
         day_words = plan[selected_day]
         day_progress = pm.get_day_progress(selected_day)
         
@@ -676,7 +713,6 @@ def main():
         
         st.markdown("---")
         
-        # Overall stats
         st.markdown("### 📊 整体进度")
         stats = pm.get_overall_stats()
         
@@ -688,13 +724,10 @@ def main():
             st.metric("总体正确率", f"{stats['accuracy']}%")
             st.metric("已掌握", f"{stats['mastered']} 词")
         
-        # Progress bar
         progress_pct = stats['completed_days'] / TOTAL_DAYS
         st.progress(progress_pct, text=f"学习进度: {progress_pct*100:.0f}%")
         
         st.markdown("---")
-        
-        # Stats breakdown
         st.markdown("### 🎯 词汇状态")
         st.markdown(f"- ⭐ 已掌握: **{stats['mastered']}** 词")
         st.markdown(f"- 🔄 需复习: **{stats['need_review']}** 词")
@@ -713,6 +746,9 @@ def main():
                     'review_queue': []
                 }
                 pm.save()
+                # Also reset test bank
+                tbm.data = {}
+                tbm.save()
                 st.session_state.clear()
                 st.rerun()
             else:
@@ -723,7 +759,6 @@ def main():
     # MAIN CONTENT
     # =========================================================================
     
-    # Header
     st.markdown("""
     <div class="main-header">
         <h1>📖 IELTS 词汇训练营</h1>
@@ -731,10 +766,9 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
-    # Tabs
     tab1, tab2, tab3, tab4 = st.tabs([
         "📚 今日学习",
-        "✍️ 开始测试", 
+        "✍️ 开始测试",
         "📊 学习报告",
         "🎯 复习强化"
     ])
@@ -771,73 +805,75 @@ def main():
             word_rec = pm.get_word_record(word_idx)
             
             with st.container():
+                # Word card header: English word + English definition visible
+                eng_def_preview = str(row['english_def'])[:250]
+                eng_def_preview += '...' if len(str(row['english_def'])) > 250 else ''
+                
+                mastery_html = ""
+                if word_rec['attempts'] > 0:
+                    mastery_color = '#4caf50' if word_rec['mastery'] >= 0.8 else '#ff9800' if word_rec['mastery'] >= 0.5 else '#f44336'
+                    mastery_html = (
+                        f"<div style='margin-top:8px;'>"
+                        f"<span style='color:{mastery_color};font-size:0.85rem;'>"
+                        f"掌握度: {word_rec['mastery']*100:.0f}% | 测试: {word_rec['attempts']}次</span>"
+                        f"</div>"
+                    )
+                
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
                         <span class="word-en">🔤 {row['word']}</span>
-                        <span class="word-cn">{row['chinese_def']}</span>
                     </div>
                     <div class="content">
-                        <p><span class="label-badge">释义</span> {str(row['english_def'])[:200]}{'...' if len(str(row['english_def'])) > 200 else ''}</p>
+                        <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
+                    </div>
+                    {mastery_html}
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # Collocations section with rich content
-                existing_colls = parse_collocations(str(row['collocations']))
-                rich_colls = generate_rich_collocations(row['word'], existing_colls)
-                
-                # Display existing collocations first
-                origin_colls = [c for c in rich_colls if c['type'] == 'origin']
-                extra_colls = [c for c in rich_colls if c['type'] != 'origin']
-                
-                if origin_colls:
-                    st.markdown("**📎 常见搭配**:")
-                    cols = st.columns(min(4, len(origin_colls)))
-                    for j, coll in enumerate(origin_colls):
-                        with cols[j % len(cols)]:
-                            st.markdown(f"`{coll['collocation']}` {coll['cn']}")
-                
-                # Rich / extra collocations (expandable)
-                if extra_colls:
-                    with st.expander(f"✨ 更多搭配 ({len(extra_colls)} 个) - 点击展开"):
-                        for coll in extra_colls:
-                            st.markdown(f"- `{coll['collocation']}` *({coll['cn']})*")
-                
-                # Sentence
-                if str(row['sentence']) and str(row['sentence']) != 'None':
-                    st.markdown(f"**📝 例句**: *{row['sentence']}*")
-                
-                # Related & root words
-                related = parse_related_words(str(row['related_words']))
-                root = parse_root_words(str(row['root_words']))
-                if related or root:
-                    rel_root_text = ""
+                # Chinese definition + collocations + sentence + related/root words: ALL in expander
+                with st.expander(f"💡 点击查看: {row['word']} 的汉语释义 & 搭配 & 例句", expanded=False):
+                    st.markdown(f"**🇨🇳 汉语释义**: **{row['chinese_def']}**")
+                    
+                    # Existing collocations (English only)
+                    existing_colls = parse_collocations(str(row['collocations']))
+                    all_colls = generate_rich_collocations(row['word'], existing_colls)
+                    
+                    if all_colls['existing']:
+                        st.markdown("**📎 常见搭配**:")
+                        cols_disp = st.columns(min(4, len(all_colls['existing'])))
+                        for j, coll in enumerate(all_colls['existing']):
+                            with cols_disp[j % len(cols_disp)]:
+                                st.markdown(f"`{coll}`")
+                    
+                    if all_colls['extra']:
+                        st.markdown("**✨ 更多搭配**:")
+                        for coll in all_colls['extra']:
+                            st.markdown(f"- `{coll}`")
+                    
+                    # Sentence
+                    if str(row['sentence']) and str(row['sentence']) != 'None':
+                        st.markdown(f"**📝 例句**: *{row['sentence']}*")
+                    
+                    # Related & root words
+                    related = parse_related_words(str(row['related_words']))
+                    root = parse_root_words(str(row['root_words']))
                     if related:
-                        rel_root_text += f"**🔗 同类词**: {', '.join(related[:5])}  "
+                        st.markdown(f"**🔗 同类词**: {', '.join(related[:8])}")
                     if root:
-                        rel_root_text += f"**🌱 同根词**: {', '.join(root[:5])}"
-                    st.markdown(rel_root_text)
+                        st.markdown(f"**🌱 同根词**: {', '.join(root[:8])}")
                 
-                # Mastery indicator
-                if word_rec['attempts'] > 0:
-                    mastery_color = '#4caf50' if word_rec['mastery'] >= 0.8 else '#ff9800' if word_rec['mastery'] >= 0.5 else '#f44336'
-                    st.markdown(
-                        f"<div style='margin-top:8px;'><span style='color:{mastery_color};font-size:0.85rem;'>"
-                        f"掌握度: {word_rec['mastery']*100:.0f}% | 测试: {word_rec['attempts']}次</span></div>",
-                        unsafe_allow_html=True
-                    )
-                
-                st.markdown("</div>", unsafe_allow_html=True)
                 st.markdown("---")
         
-        # Start test section
+        # Direct test entry - no generation step, bank already exists
         st.markdown("---")
-        st.markdown("### ✍️ 开始测试")
+        st.markdown("### ✍️ 直接进入测试")
+        st.caption("测试题已在后台预生成并持久化，每次调用同一批题目，确保学习一致性。")
         
         col_t1, col_t2 = st.columns(2)
         with col_t1:
-            test_type_select = st.selectbox(
-                "测试题型",
+            test_type_go = st.selectbox(
+                "选择测试题型",
                 options=['translation', 'collocation', 'sentence', 'related'],
                 format_func=lambda x: {
                     'translation': '🈂️ 汉译英',
@@ -845,29 +881,30 @@ def main():
                     'sentence': '📝 句子填空',
                     'related': '🔍 相关词测试'
                 }[x],
-                key='test_type_pre_select'
+                key='test_type_go_selector'
             )
         with col_t2:
-            test_size = st.selectbox("测试数量", options=[10, 20, 30, 50, "全部(约125题)"], index=0, key='test_size_select')
+            test_size_go = st.selectbox(
+                "测试数量",
+                options=[10, 20, 30, 50, "全部(约125题)"],
+                index=1,  # default 20
+                key='test_size_go_selector'
+            )
         
-        col_btn_a, col_btn_b = st.columns(2)
-        with col_btn_a:
-            if st.button(f"🚀 生成测试并开始", type="primary", use_container_width=True):
-                size = len(day_words) if "全部" in str(test_size) else min(int(test_size), len(day_words))
-                test_word_indices = random.sample(day_words, size)
-                st.session_state.test_batch = test_word_indices
-                st.session_state.test_index = 0
-                st.session_state.test_score = 0
-                st.session_state.test_total = 0
-                st.session_state.test_results = []
-                st.session_state.test_type = test_type_select
-                st.session_state.show_answer = False
-                st.session_state.last_user_answer = ''
-                st.success(f"已生成 {size} 道测试题，请切换到「✍️ 开始测试」标签页进行测试")
-        with col_btn_b:
-            if st.button(f"📝 先学习全部词汇再测试", use_container_width=True):
-                st.session_state.learning_page = 0
-                st.info("已跳转到第1页，请浏览所有词汇后回来测试")
+        if st.button("🚀 进入测试", type="primary", use_container_width=True):
+            # Load from persistent test bank
+            size = len(day_words) if "全部" in str(test_size_go) else min(int(test_size_go), len(day_words))
+            batch = tbm.get_test_batch(selected_day, test_type_go, size)
+            st.session_state.test_batch = batch
+            st.session_state.test_index = 0
+            st.session_state.test_score = 0
+            st.session_state.test_total = 0
+            st.session_state.test_results = []
+            st.session_state.test_type = test_type_go
+            st.session_state.show_answer = False
+            st.session_state.last_user_answer = ''
+            st.session_state.test_batch_size = size
+            st.success(f"已加载 {len(batch)} 道测试题，请切换到「✍️ 开始测试」标签页")
     
     # =========================================================================
     # TAB 2: TEST
@@ -875,24 +912,10 @@ def main():
     with tab2:
         st.markdown("## ✍️ 词汇测试")
         
-        # Test type selector
         if not st.session_state.test_batch:
-            test_type = st.selectbox(
-                "选择测试类型",
-                options=['translation', 'collocation', 'sentence', 'related'],
-                format_func=lambda x: {
-                    'translation': '🈂️ 汉译英',
-                    'collocation': '🔗 搭配测试',
-                    'sentence': '📝 句子填空',
-                    'related': '🔍 相关词测试'
-                }[x],
-                key="test_type_selector_empty"
-            )
-            st.session_state.test_type = test_type
+            # Test bank auto-load display
+            st.info("👈 请先在「📚 今日学习」页面选择题型并点击「进入测试」，或使用下方快速测试")
             
-            st.info("👈 请先在「📚 今日学习」页面生成测试题，或选择下方的复习模式")
-            
-            # Quick test - allow testing any day's words without going through learning
             st.markdown("---")
             st.markdown("### ⚡ 快速测试")
             quick_day = st.selectbox("选择天", list(range(1, TOTAL_DAYS+1)), key='quick_day')
@@ -910,7 +933,9 @@ def main():
             if st.button("⚡ 快速开始", type="primary", use_container_width=True):
                 qday_words = plan[quick_day]
                 actual_size = min(quick_size, len(qday_words))
-                st.session_state.test_batch = random.sample(qday_words, actual_size)
+                tbm.ensure_day_bank(quick_day)
+                batch = tbm.get_test_batch(quick_day, quick_type, actual_size)
+                st.session_state.test_batch = batch
                 st.session_state.test_index = 0
                 st.session_state.test_score = 0
                 st.session_state.test_total = 0
@@ -920,7 +945,6 @@ def main():
                 st.rerun()
         
         else:
-            # Active test
             if st.session_state.test_index >= len(st.session_state.test_batch):
                 # Test complete
                 final_score = (st.session_state.test_score / st.session_state.test_total * 100) if st.session_state.test_total > 0 else 0
@@ -933,14 +957,12 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # Save progress
                 pm.update_day_progress(selected_day, final_score, st.session_state.test_total, st.session_state.test_score)
                 pm.add_test_history(selected_day, st.session_state.test_type, final_score, st.session_state.test_total)
                 
-                # Test results detail
                 if st.session_state.test_results:
                     st.markdown("### 📋 详细结果")
-                    for res in st.session_state.test_results[-20:]:  # Show last 20
+                    for res in st.session_state.test_results[-20:]:
                         badge = '<span class="correct-badge">✓</span>' if res['correct'] else '<span class="wrong-badge">✗</span>'
                         st.markdown(
                             f"{badge} **{res['word']}** ({res['chinese_def']}) - 你的答案: `{res['user_answer']}`",
@@ -954,28 +976,19 @@ def main():
                     st.rerun()
             
             else:
-                # Current test question
                 current_word_idx = st.session_state.test_batch[st.session_state.test_index]
                 word_row = df.iloc[current_word_idx]
                 test_type = st.session_state.test_type
                 
-                # Generate question
-                if test_type == 'translation':
-                    question = TestEngine.generate_translation_test(word_row)
-                elif test_type == 'collocation':
-                    question = TestEngine.generate_collocation_test(word_row)
-                elif test_type == 'sentence':
-                    question = TestEngine.generate_sentence_test(word_row)
-                elif test_type == 'related':
-                    question = TestEngine.generate_related_test(word_row)
-                else:
-                    question = TestEngine.generate_translation_test(word_row)
+                # Generate question deterministically from test bank position
+                question = TestEngine.generate_question(
+                    current_word_idx, word_row, test_type,
+                    seed_offset=st.session_state.test_index
+                )
                 
-                # Progress indicator
                 progress_pct = st.session_state.test_index / len(st.session_state.test_batch)
                 st.progress(progress_pct, text=f"进度: {st.session_state.test_index+1}/{len(st.session_state.test_batch)}")
                 
-                # Score display
                 col_sc1, col_sc2 = st.columns(2)
                 with col_sc1:
                     st.metric("正确", st.session_state.test_score)
@@ -983,7 +996,6 @@ def main():
                     current_acc = (st.session_state.test_score / st.session_state.test_total * 100) if st.session_state.test_total > 0 else 0
                     st.metric("正确率", f"{current_acc:.0f}%")
                 
-                # Question card
                 type_labels = {
                     'translation': '🈂️ 汉译英',
                     'collocation': '🔗 搭配测试',
@@ -999,7 +1011,6 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # Answer input
                 user_answer = st.text_input(
                     "请输入你的答案:",
                     key=f"answer_input_{st.session_state.test_index}",
@@ -1056,7 +1067,6 @@ def main():
                         st.session_state.last_user_answer = ''
                         st.rerun()
                 
-                # Show answer result
                 if st.session_state.show_answer:
                     st.markdown("---")
                     correct_answer = question['answer']
@@ -1072,12 +1082,10 @@ def main():
                         st.markdown(f"你的答案: `{user_ans}`")
                         st.markdown(f"正确答案: **`{correct_answer}`**")
                     
-                    # Show word details
                     st.markdown("---")
                     st.markdown(f"**📖 {word_row['word']}** — *{word_row['chinese_def']}*")
                     st.caption(str(word_row['english_def'])[:300])
                     
-                    # Show collocations
                     colls = parse_collocations(str(word_row['collocations']))
                     if colls:
                         st.markdown("**搭配**: " + " | ".join(f"`{c}`" for c in colls[:5]))
@@ -1092,7 +1100,6 @@ def main():
         
         stats = pm.get_overall_stats()
         
-        # Top stats row
         col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
             st.markdown(f"""
@@ -1131,8 +1138,6 @@ def main():
             """, unsafe_allow_html=True)
         
         st.markdown("---")
-        
-        # Daily progress chart
         st.markdown("### 📈 每日进度")
         days_data = []
         for d in range(1, TOTAL_DAYS + 1):
@@ -1147,13 +1152,10 @@ def main():
         
         df_progress = pd.DataFrame(days_data)
         
-        # Day-by-day progress visualization
         col_chart1, col_chart2 = st.columns(2)
         with col_chart1:
             st.bar_chart(df_progress.set_index('Day')[['正确率']], use_container_width=True)
         with col_chart2:
-            chart_data = df_progress.copy()
-            chart_data['已完成'] = chart_data['完成'].map({1: 1, 0: 0})
             st.markdown("#### 完成状态")
             completed_days_list = [d for d in range(1, TOTAL_DAYS+1) if pm.get_day_progress(d)['completed']]
             if completed_days_list:
@@ -1161,7 +1163,6 @@ def main():
                 if len(completed_days_list) > 14:
                     st.markdown(f"✅ 第 {', '.join(map(str, completed_days_list[14:28]))}天")
         
-        # Detailed day list
         st.markdown("### 📋 每日详情")
         for d in range(1, TOTAL_DAYS + 1):
             dp = pm.get_day_progress(d)
@@ -1175,17 +1176,13 @@ def main():
                     f"正确: {dp['correct']}/{dp['total_tested']}"
                 )
             else:
-                st.markdown(
-                    f"{status} 第{d}天 ({day_word_count}词) | 待学习",
-                    help=f"共{day_word_count}个单词待学习"
-                )
+                st.markdown(f"{status} 第{d}天 ({day_word_count}词) | 待学习")
         
-        # Test history
         st.markdown("---")
         st.markdown("### 📝 测试历史")
         test_hist = pm.data['test_history']
         if test_hist:
-            df_tests = pd.DataFrame(test_hist[-50:])  # Last 50 tests
+            df_tests = pd.DataFrame(test_hist[-50:])
             st.dataframe(df_tests, use_container_width=True, hide_index=True)
         else:
             st.info("暂无测试记录，快去测试吧!")
@@ -1196,7 +1193,6 @@ def main():
     with tab4:
         st.markdown("## 🎯 复习与强化训练")
         
-        # Review queue overview
         review_queue = pm.get_review_queue()
         weak_words = pm.get_weak_words(limit=100)
         
@@ -1208,16 +1204,9 @@ def main():
         
         st.markdown("---")
         
-        # Review mode selector
         review_mode = st.radio(
             "选择复习模式",
-            options=[
-                'smart_review',
-                'weak_focus',
-                'random_review',
-                'daily_review',
-                'mastery_check'
-            ],
+            options=['smart_review', 'weak_focus', 'random_review', 'daily_review', 'mastery_check'],
             format_func=lambda x: {
                 'smart_review': '🧠 智能复习 (根据遗忘曲线推荐)',
                 'weak_focus': '🎯 薄弱词强化',
@@ -1228,16 +1217,13 @@ def main():
             key='review_mode'
         )
         
-        # Determine review words
         review_words = []
         review_label = ""
         
         if review_mode == 'smart_review':
-            # Smart review: mix of review queue + spaced repetition
             today_idx = selected_day
             review_indices = set(review_queue)
-            # Add words from day (today-1), (today-3), (today-7), (today-14)
-            for offset, label in [(1, "昨天"), (3, "3天前"), (7, "1周前"), (14, "2周前")]:
+            for offset in [1, 3, 7, 14]:
                 if today_idx - offset >= 1:
                     review_indices.update(plan.get(today_idx - offset, []))
             review_words = list(review_indices)[:50]
@@ -1258,7 +1244,6 @@ def main():
             review_label = f"复习第{review_day}天词汇"
         
         elif review_mode == 'mastery_check':
-            # Words with mastery between 0.5 and 0.85
             recs = pm.data['word_records']
             mid_mastery = [int(k) for k, v in recs.items() if 0.3 <= v['mastery'] < 0.85 and v['attempts'] > 0]
             random.shuffle(mid_mastery)
@@ -1268,24 +1253,22 @@ def main():
         st.markdown(f"**{review_label}**: {len(review_words)} 个单词")
         
         if review_words:
-            # Display review words
             st.markdown("---")
             
-            # Batch display
             batch_size = st.slider("每页显示数量", 5, 30, 10, key='review_batch')
             page_r = st.session_state.get('review_page', 0)
             total_review_pages = max(1, (len(review_words) + batch_size - 1) // batch_size)
             
             col_rnav1, col_rnav2, col_rnav3 = st.columns([1, 2, 1])
             with col_rnav1:
-                if st.button("◀", key='review_prev', disabled=page_r==0):
+                if st.button("◀", key='review_prev', disabled=page_r == 0):
                     st.session_state.review_page = max(0, page_r - 1)
                     st.rerun()
             with col_rnav2:
                 st.markdown(f"<div style='text-align:center;'>{page_r+1}/{total_review_pages}</div>", unsafe_allow_html=True)
             with col_rnav3:
-                if st.button("▶", key='review_next', disabled=page_r>=total_review_pages-1):
-                    st.session_state.review_page = min(total_review_pages-1, page_r + 1)
+                if st.button("▶", key='review_next', disabled=page_r >= total_review_pages - 1):
+                    st.session_state.review_page = min(total_review_pages - 1, page_r + 1)
                     st.rerun()
             
             start_r = page_r * batch_size
@@ -1297,19 +1280,14 @@ def main():
                 wrec = pm.get_word_record(widx)
                 mastery = wrec['mastery']
                 
-                # Determine color based on mastery
                 if mastery >= 0.8:
-                    badge_color = '#4caf50'
-                    status = '🟢'
+                    badge_color, status = '#4caf50', '🟢'
                 elif mastery >= 0.5:
-                    badge_color = '#ff9800'
-                    status = '🟡'
+                    badge_color, status = '#ff9800', '🟡'
                 elif mastery > 0:
-                    badge_color = '#f44336'
-                    status = '🔴'
+                    badge_color, status = '#f44336', '🔴'
                 else:
-                    badge_color = '#999'
-                    status = '⚪'
+                    badge_color, status = '#999', '⚪'
                 
                 st.markdown(f"""
                 <div class="review-item">
@@ -1327,7 +1305,8 @@ def main():
                 """, unsafe_allow_html=True)
                 
                 with st.expander(f"查看详情: {row['word']}"):
-                    st.markdown(f"**释义**: {str(row['english_def'])[:300]}")
+                    st.markdown(f"**英文释义**: {str(row['english_def'])[:300]}")
+                    st.markdown(f"**汉语释义**: {row['chinese_def']}")
                     
                     colls = parse_collocations(str(row['collocations']))
                     if colls:
@@ -1340,7 +1319,6 @@ def main():
                     if root:
                         st.markdown(f"**同根词**: {', '.join(root[:6])}")
                     
-                    # Quick test button
                     if st.button(f"⚡ 快速测试此词", key=f"qt_{widx}"):
                         st.session_state.test_batch = [widx]
                         st.session_state.test_index = 0
@@ -1351,10 +1329,10 @@ def main():
                         st.session_state.test_type = 'translation'
                         st.info("请切换到「✍️ 开始测试」标签页")
             
-            # Start review test
             st.markdown("---")
-            if st.button(f"🚀 对这{len(review_words[:30])}个词进行测试", type="primary", use_container_width=True):
-                test_words = review_words[:30]
+            review_test_count = min(30, len(review_words))
+            if st.button(f"🚀 对这{review_test_count}个词进行测试", type="primary", use_container_width=True):
+                test_words = review_words[:review_test_count]
                 st.session_state.test_batch = test_words
                 st.session_state.test_index = 0
                 st.session_state.test_score = 0
@@ -1366,32 +1344,29 @@ def main():
         else:
             st.info("暂无需要复习的词汇。完成更多测试后，系统会自动识别薄弱词汇。")
         
-        # Learning suggestions
         st.markdown("---")
         st.markdown("### 💡 学习建议")
         
         if stats['completed_days'] == 0:
-            st.info("🔰 **开始建议**: 从第1天开始，先浏览词汇再进行测试，每天坚持学习约125个单词。")
+            st.info("🔰 **开始建议**: 从第1天开始，先浏览词汇（点击下拉框查看汉语释义），再进入测试，每天坚持学习约125个单词。")
         elif stats['accuracy'] < 50:
-            st.warning("⚠️ **准确率较低**: 建议多花时间在「今日学习」页面上浏览词汇，熟悉后再测试。可以降低每天学习的词汇量，重在理解而非速度。")
+            st.warning("⚠️ **准确率较低**: 建议多花时间浏览词汇的搭配和例句，不要急于看汉语释义，先尝试回忆再点击查看。")
         elif stats['accuracy'] < 70:
-            st.info("📈 **稳步提升中**: 正确率在提高，继续保持！建议增加搭配学习和句子理解，有助于提升词汇的实际运用能力。")
+            st.info("📈 **稳步提升中**: 正确率在提高，继续保持！多利用搭配和句子加深理解。")
         elif stats['accuracy'] >= 70:
-            st.success("🌟 **表现优秀**: 正确率很高！可以加快学习进度，尝试更多搭配测试和句子填空等高级测试模式。")
+            st.success("🌟 **表现优秀**: 正确率很高！可以尝试搭配测试和句子填空等高级测试模式。")
         
         if stats['need_review'] > 50:
             st.warning(f"📋 有 {stats['need_review']} 个词汇需要复习，建议优先在「复习强化」页面进行薄弱词专项训练。")
         
-        # Spaced repetition schedule reminder
         if stats['completed_days'] >= 3:
             st.markdown("### 🗓️ 间隔重复提醒 (基于艾宾浩斯遗忘曲线)")
-            # Days that should be reviewed
             for off in [1, 3, 7, 14]:
                 rev_day = selected_day - off
                 if rev_day >= 1:
                     day_prog = pm.get_day_progress(rev_day)
                     if day_prog['completed']:
-                        st.markdown(f"- **第{rev_day}天** ({off}天前): {'✅ 已复习' if False else '🔄 建议复习'} - 正确率 {day_prog['score']:.0f}%")
+                        st.markdown(f"- **第{rev_day}天** ({off}天前): 🔄 建议复习 - 正确率 {day_prog['score']:.0f}%")
 
 
 if __name__ == "__main__":
