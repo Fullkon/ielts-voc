@@ -528,7 +528,10 @@ class TestEngine:
         elif test_type == 'collocation':
             colls = parse_collocations(str(word_row['collocations']))
             if colls:
-                coll = rng.choice(colls).lower()
+                # Use only the first collocation
+                coll = colls[0].lower()
+                # Strip parenthetical content (Chinese translations etc.)
+                coll = re.sub(r'\s*[\(（][^)）]*[\)）]\s*', '', coll).strip()
                 if word_lower in coll:
                     question = coll.replace(word_lower, '_____', 1)
                 else:
@@ -536,10 +539,8 @@ class TestEngine:
             else:
                 if rng.random() > 0.5:
                     question = f"_____ {word_lower}"
-                    hint = '输入搭配词'
                 else:
                     question = f"{word_lower} _____"
-                    hint = '输入搭配词'
             return {
                 'type': 'collocation',
                 'label': '搭配测试',
@@ -761,7 +762,7 @@ def main():
     
     st.markdown("""
     <div class="main-header">
-        <h1>📖 IELTS 词汇训练营</h1>
+        <h1>📖 IELTS 词汇训练营--Victor特制</h1>
         <p>28天系统攻克 3,484 核心雅思词汇 | 多模式测试 | 智能复习</p>
     </div>
     """, unsafe_allow_html=True)
@@ -780,7 +781,7 @@ def main():
         st.markdown(f"## 📚 第 {selected_day} 天 - 词汇学习 ({len(day_words)} 词)")
         
         # Pagination
-        page_size = 10
+        page_size = 20
         total_pages = max(1, (len(day_words) + page_size - 1) // page_size)
         
         col_nav1, col_nav2, col_nav3 = st.columns([1, 2, 1])
@@ -805,9 +806,17 @@ def main():
             word_rec = pm.get_word_record(word_idx)
             
             with st.container():
-                # Word card header: English word + English definition visible
+                # Word card header: English word + pronunciation + English definition visible
                 eng_def_preview = str(row['english_def'])[:250]
                 eng_def_preview += '...' if len(str(row['english_def'])) > 250 else ''
+                
+                # Pronunciation from notes column (IPA)
+                notes_val = str(row['notes']).strip()
+                pron_html = ""
+                if notes_val and notes_val != 'None' and notes_val:
+                    # Clean up IPA text - it may contain escape chars
+                    pron_text = notes_val.replace('/', '').strip()
+                    pron_html = f'<span style="font-size:0.85rem;color:#888;margin-left:8px;">/{pron_text}/</span>'
                 
                 mastery_html = ""
                 if word_rec['attempts'] > 0:
@@ -822,7 +831,9 @@ def main():
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <span class="word-en">🔤 {row['word']}</span>
+                        <div>
+                            <span class="word-en">🔤 {row['word']}</span>{pron_html}
+                        </div>
                     </div>
                     <div class="content">
                         <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
