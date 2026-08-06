@@ -434,7 +434,8 @@ MULTI_WORD_PATTERNS = [
 
 
 def generate_rich_collocations(word: str, existing: List[str]) -> dict:
-    """Generate collocations grouped into 'existing' and 'extra', English only."""
+    """Generate collocations grouped into 'existing' and 'extra', English only.
+    Rules: max 1 preposition collocation, rest are content-word collocations, total extra ≤ 7."""
     existing_word = word.lower()
     seen = set()
     
@@ -446,57 +447,58 @@ def generate_rich_collocations(word: str, existing: List[str]) -> dict:
     
     extra_colls = []
     
-    # 1. Simple verb + noun
-    verb_count = min(5, max(2, 8 - len(existing)))
+    # 1. Verb + noun (content word)
+    verb_count = min(4, max(1, 6 - len(existing)))
     selected_verbs = random.sample(VERB_NOUN[:30], min(verb_count, 30))
     for verb in selected_verbs:
         coll = f"{verb} {existing_word}"
-        if coll not in seen:
+        if coll not in seen and len(extra_colls) < 7:
             extra_colls.append(coll)
             seen.add(coll)
     
-    # 2. Adjective + noun
-    adj_count = min(4, max(2, 6 - len(existing)))
+    # 2. Adjective + noun (content word)
+    adj_count = min(3, max(1, 5 - len(existing)))
     selected_adj = random.sample(ADJ_NOUN[:25], min(adj_count, 25))
     for adj in selected_adj:
         coll = f"{adj} {existing_word}"
-        if coll not in seen:
+        if coll not in seen and len(extra_colls) < 7:
             extra_colls.append(coll)
             seen.add(coll)
     
-    # 3. Noun + preposition
-    prep_count = min(3, max(1, 4 - len(existing)))
-    selected_prep = random.sample(NOUN_PREP, min(prep_count, len(NOUN_PREP)))
-    for prep in selected_prep:
+    # 3. Noun + preposition — at most 1
+    if len(extra_colls) < 7 and len(existing) < 4:
+        prep = random.choice(NOUN_PREP)
         coll = f"{existing_word} {prep}"
         if coll not in seen:
             extra_colls.append(coll)
             seen.add(coll)
     
-    # 4. Multi-word patterns
-    pattern_count = min(4, max(2, 6 - len(extra_colls)))
-    selected_patterns = random.sample(MULTI_WORD_PATTERNS, min(pattern_count, len(MULTI_WORD_PATTERNS)))
-    adj_pool = ADJ_NOUN[:15]
-    for pat in selected_patterns:
-        adj = random.choice(adj_pool)
-        noun = existing_word
-        if "{adj}" in pat and "{noun}" in pat:
-            coll = pat.replace("{adj}", adj).replace("{noun}", noun)
-        elif "{adj}" in pat:
-            coll = pat.replace("{adj}", adj)
-        elif "{noun}" in pat:
-            coll = pat.replace("{noun}", noun)
-        elif "{verb}" in pat:
-            coll = pat.replace("{verb}", random.choice(VERB_NOUN[:10]))
-        else:
-            continue
-        if coll not in seen and coll != existing_word:
-            extra_colls.append(coll)
-            seen.add(coll)
+    # 4. Multi-word patterns (content word) — fill remaining slots up to 7
+    if len(extra_colls) < 7:
+        patterns = random.sample(MULTI_WORD_PATTERNS, min(7 - len(extra_colls), len(MULTI_WORD_PATTERNS)))
+        adj_pool = ADJ_NOUN[:15]
+        for pat in patterns:
+            if len(extra_colls) >= 7:
+                break
+            adj = random.choice(adj_pool)
+            noun = existing_word
+            if "{adj}" in pat and "{noun}" in pat:
+                coll = pat.replace("{adj}", adj).replace("{noun}", noun)
+            elif "{adj}" in pat:
+                coll = pat.replace("{adj}", adj)
+            elif "{noun}" in pat:
+                coll = pat.replace("{noun}", noun)
+            elif "{verb}" in pat:
+                coll = pat.replace("{verb}", random.choice(VERB_NOUN[:10]))
+            else:
+                continue
+            if coll not in seen and coll != existing_word:
+                extra_colls.append(coll)
+                seen.add(coll)
     
     return {
         'existing': existing_colls,
-        'extra': extra_colls[:16]
+        'extra': extra_colls
     }
 
 
