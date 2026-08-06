@@ -185,10 +185,9 @@ def parse_root_words(root_str: str) -> List[str]:
 # =============================================================================
 
 def generate_learning_plan(total_words: int) -> Dict[int, List[int]]:
+    """Generate learning plan in original Excel order (no shuffle)."""
     plan = {}
     indices = list(range(total_words))
-    np.random.seed(42)
-    np.random.shuffle(indices)
     
     base_per_day = total_words // TOTAL_DAYS
     remainder = total_words % TOTAL_DAYS
@@ -383,123 +382,6 @@ class ProgressManager:
         tested = [(int(k), v['mastery'], v['attempts']) for k, v in recs.items() if v['attempts'] > 0]
         tested.sort(key=lambda x: (x[1], -x[2]))
         return [t[0] for t in tested[:limit]]
-
-
-# =============================================================================
-# RICH COLLOCATION GENERATOR (English only, multi-word)
-# =============================================================================
-
-VERB_NOUN = [
-    'use', 'apply', 'develop', 'achieve', 'create', 'involve', 'consider', 'affect',
-    'improve', 'understand', 'provide', 'require', 'support', 'include', 'produce',
-    'establish', 'maintain', 'enhance', 'promote', 'identify', 'address', 'conduct',
-    'implement', 'generate', 'assess', 'evaluate', 'facilitate', 'contribute to',
-    'participate in', 'focus on', 'rely on', 'depend on', 'lead to', 'result in',
-    'deal with', 'cope with', 'take into account', 'pay attention to',
-    'make use of', 'have access to', 'play a role in', 'take part in',
-    'make a contribution to', 'have an impact on', 'give rise to',
-]
-
-ADJ_NOUN = [
-    'important', 'crucial', 'essential', 'relevant', 'significant', 'appropriate',
-    'effective', 'potential', 'major', 'fundamental', 'key', 'primary', 'critical',
-    'beneficial', 'comprehensive', 'efficient', 'valuable', 'necessary', 'common',
-    'particular', 'sufficient', 'adequate', 'considerable', 'substantial',
-    'widespread', 'prominent', 'remarkable', 'inevitable', 'inextricably linked',
-]
-
-NOUN_PREP = ['of', 'for', 'with', 'in', 'from', 'to', 'by', 'on', 'at', 'about', 'between', 'among']
-
-MULTI_WORD_PATTERNS = [
-    "the {adj} {noun}",
-    "a {adj} {noun}",
-    "{verb} the {noun}",
-    "{noun} and {noun}",
-    "in terms of {noun}",
-    "in the context of {noun}",
-    "a wide range of {noun}",
-    "the impact of {noun} on",
-    "as a result of {noun}",
-    "with respect to {noun}",
-    "in relation to {noun}",
-    "a great deal of {noun}",
-    "the vast majority of {noun}",
-    "at the expense of {noun}",
-    "take advantage of {noun}",
-    "have a significant impact on {noun}",
-    "play a crucial role in {noun}",
-    "in the field of {noun}",
-    "in the process of {noun}",
-]
-
-
-def generate_rich_collocations(word: str, existing: List[str]) -> dict:
-    """Generate collocations grouped into 'existing' and 'extra', English only.
-    Rules: max 1 preposition collocation, rest are content-word collocations, total extra ≤ 7."""
-    existing_word = word.lower()
-    seen = set()
-    
-    existing_colls = []
-    for coll in existing:
-        if coll and coll.strip() and coll.strip() not in seen:
-            existing_colls.append(coll.strip())
-            seen.add(coll.strip())
-    
-    extra_colls = []
-    
-    # 1. Verb + noun (content word)
-    verb_count = min(4, max(1, 6 - len(existing)))
-    selected_verbs = random.sample(VERB_NOUN[:30], min(verb_count, 30))
-    for verb in selected_verbs:
-        coll = f"{verb} {existing_word}"
-        if coll not in seen and len(extra_colls) < 7:
-            extra_colls.append(coll)
-            seen.add(coll)
-    
-    # 2. Adjective + noun (content word)
-    adj_count = min(3, max(1, 5 - len(existing)))
-    selected_adj = random.sample(ADJ_NOUN[:25], min(adj_count, 25))
-    for adj in selected_adj:
-        coll = f"{adj} {existing_word}"
-        if coll not in seen and len(extra_colls) < 7:
-            extra_colls.append(coll)
-            seen.add(coll)
-    
-    # 3. Noun + preposition — at most 1
-    if len(extra_colls) < 7 and len(existing) < 4:
-        prep = random.choice(NOUN_PREP)
-        coll = f"{existing_word} {prep}"
-        if coll not in seen:
-            extra_colls.append(coll)
-            seen.add(coll)
-    
-    # 4. Multi-word patterns (content word) — fill remaining slots up to 7
-    if len(extra_colls) < 7:
-        patterns = random.sample(MULTI_WORD_PATTERNS, min(7 - len(extra_colls), len(MULTI_WORD_PATTERNS)))
-        adj_pool = ADJ_NOUN[:15]
-        for pat in patterns:
-            if len(extra_colls) >= 7:
-                break
-            adj = random.choice(adj_pool)
-            noun = existing_word
-            if "{adj}" in pat and "{noun}" in pat:
-                coll = pat.replace("{adj}", adj).replace("{noun}", noun)
-            elif "{adj}" in pat:
-                coll = pat.replace("{adj}", adj)
-            elif "{noun}" in pat:
-                coll = pat.replace("{noun}", noun)
-            elif "{verb}" in pat:
-                coll = pat.replace("{verb}", random.choice(VERB_NOUN[:10]))
-            else:
-                continue
-            if coll not in seen and coll != existing_word:
-                extra_colls.append(coll)
-                seen.add(coll)
-    
-    return {
-        'existing': existing_colls,
-        'extra': extra_colls
-    }
 
 
 # =============================================================================
@@ -848,21 +730,14 @@ def main():
                 with st.expander(f"💡 点击查看: {row['word']} 的汉语释义 & 搭配 & 例句", expanded=False):
                     st.markdown(f"**🇨🇳 汉语释义**: **{row['chinese_def']}**")
                     
-                    # Existing collocations (English only)
+                    # Collocations from the vocabulary list only
                     existing_colls = parse_collocations(str(row['collocations']))
-                    all_colls = generate_rich_collocations(row['word'], existing_colls)
-                    
-                    if all_colls['existing']:
+                    if existing_colls:
                         st.markdown("**📎 常见搭配**:")
-                        cols_disp = st.columns(min(4, len(all_colls['existing'])))
-                        for j, coll in enumerate(all_colls['existing']):
+                        cols_disp = st.columns(min(4, len(existing_colls)))
+                        for j, coll in enumerate(existing_colls):
                             with cols_disp[j % len(cols_disp)]:
                                 st.markdown(f"`{coll}`")
-                    
-                    if all_colls['extra']:
-                        st.markdown("**✨ 更多搭配**:")
-                        for coll in all_colls['extra']:
-                            st.markdown(f"- `{coll}`")
                     
                     # Sentence
                     if str(row['sentence']) and str(row['sentence']) != 'None':
