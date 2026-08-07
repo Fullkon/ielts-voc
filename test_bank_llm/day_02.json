@@ -1,0 +1,3014 @@
+{
+  "day": 2,
+  "word_count": 125,
+  "questions": {
+    "cn2en": [
+      {
+        "word_id": 125,
+        "question": "雨",
+        "answer": "rainfall",
+        "hint": "R..."
+      },
+      {
+        "word_id": 126,
+        "question": "撒",
+        "answer": "sprinkle",
+        "hint": "S..."
+      },
+      {
+        "word_id": 127,
+        "question": "contraction.我们已经（we have的缩写）",
+        "answer": "weve",
+        "hint": "W..."
+      },
+      {
+        "word_id": 128,
+        "question": "彩虹",
+        "answer": "rainbow",
+        "hint": "R..."
+      },
+      {
+        "word_id": 129,
+        "question": "nan",
+        "answer": "ridge",
+        "hint": "R..."
+      },
+      {
+        "word_id": 130,
+        "question": "天空",
+        "answer": "sky",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 131,
+        "question": "梯度",
+        "answer": "slope",
+        "hint": "S..."
+      },
+      {
+        "word_id": 132,
+        "question": "摄氏度",
+        "answer": "celsius",
+        "hint": "C..."
+      },
+      {
+        "word_id": 133,
+        "question": "最大",
+        "answer": "maximum",
+        "hint": "M..."
+      },
+      {
+        "word_id": 134,
+        "question": "温度",
+        "answer": "temperature",
+        "hint": "T..."
+      },
+      {
+        "word_id": 135,
+        "question": "预测",
+        "answer": "forecast",
+        "hint": "F..."
+      },
+      {
+        "word_id": 136,
+        "question": "最近",
+        "answer": "recent",
+        "hint": "R..."
+      },
+      {
+        "word_id": 137,
+        "question": "老",
+        "answer": "old",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 138,
+        "question": "东南",
+        "answer": "southeast",
+        "hint": "S..."
+      },
+      {
+        "word_id": 139,
+        "question": "n.奥地利",
+        "answer": "austria",
+        "hint": "A..."
+      },
+      {
+        "word_id": 140,
+        "question": "西南",
+        "answer": "southwest",
+        "hint": "S..."
+      },
+      {
+        "word_id": 141,
+        "question": "n.爱尔兰",
+        "answer": "ireland",
+        "hint": "I..."
+      },
+      {
+        "word_id": 142,
+        "question": "东北",
+        "answer": "northeast",
+        "hint": "N..."
+      },
+      {
+        "word_id": 143,
+        "question": "nan",
+        "answer": "snow",
+        "hint": "S..."
+      },
+      {
+        "word_id": 144,
+        "question": "西北",
+        "answer": "northwest",
+        "hint": "N..."
+      },
+      {
+        "word_id": 145,
+        "question": "大",
+        "answer": "large",
+        "hint": "L..."
+      },
+      {
+        "word_id": 146,
+        "question": "不定期",
+        "answer": "irregularly",
+        "hint": "I..."
+      },
+      {
+        "word_id": 147,
+        "question": "adj.不合理 ,不当",
+        "answer": "inappropriate",
+        "hint": "I..."
+      },
+      {
+        "word_id": 148,
+        "question": "变|态",
+        "answer": "abnormal",
+        "hint": "A..."
+      },
+      {
+        "word_id": 149,
+        "question": "东部",
+        "answer": "eastern",
+        "hint": "E..."
+      },
+      {
+        "word_id": 150,
+        "question": "adj.东方的",
+        "answer": "oriental",
+        "hint": "O..."
+      },
+      {
+        "word_id": 151,
+        "question": "adj.不可避免的",
+        "answer": "inevitable",
+        "hint": "I..."
+      },
+      {
+        "word_id": 152,
+        "question": "adj.不可逆的",
+        "answer": "irreversible",
+        "hint": "I..."
+      },
+      {
+        "word_id": 153,
+        "question": "n.沉积物",
+        "answer": "sediment",
+        "hint": "S..."
+      },
+      {
+        "word_id": 154,
+        "question": "n.淤泥v.淤塞",
+        "answer": "silt",
+        "hint": "S..."
+      },
+      {
+        "word_id": 155,
+        "question": "n.河流",
+        "answer": "river",
+        "hint": "R..."
+      },
+      {
+        "word_id": 156,
+        "question": "adj.泥泞的",
+        "answer": "muddy",
+        "hint": "M..."
+      },
+      {
+        "word_id": 157,
+        "question": "n.黏土",
+        "answer": "clay",
+        "hint": "C..."
+      },
+      {
+        "word_id": 158,
+        "question": "n.泥土，污垢",
+        "answer": "dirt",
+        "hint": "D..."
+      },
+      {
+        "word_id": 159,
+        "question": "n.边界v.接壤",
+        "answer": "border",
+        "hint": "B..."
+      },
+      {
+        "word_id": 160,
+        "question": "n.边缘，利润，余地",
+        "answer": "margin",
+        "hint": "M..."
+      },
+      {
+        "word_id": 161,
+        "question": "n.边缘，穗adj.边缘的",
+        "answer": "fringe",
+        "hint": "F..."
+      },
+      {
+        "word_id": 162,
+        "question": "v.感觉n.感受",
+        "answer": "feel",
+        "hint": "F..."
+      },
+      {
+        "word_id": 163,
+        "question": "n.盘子，板块",
+        "answer": "plate",
+        "hint": "P..."
+      },
+      {
+        "word_id": 164,
+        "question": "adj.搜索的，探究的",
+        "answer": "searching",
+        "hint": "S..."
+      },
+      {
+        "word_id": 165,
+        "question": "n.裂缝v.开裂",
+        "answer": "crack",
+        "hint": "C..."
+      },
+      {
+        "word_id": 166,
+        "question": "n.门",
+        "answer": "door",
+        "hint": "D..."
+      },
+      {
+        "word_id": 167,
+        "question": "n.荒野",
+        "answer": "wilderness",
+        "hint": "W..."
+      },
+      {
+        "word_id": 168,
+        "question": "adj.宽的，广泛的",
+        "answer": "wide",
+        "hint": "W..."
+      },
+      {
+        "word_id": 169,
+        "question": "n.森林砍伐",
+        "answer": "deforestation",
+        "hint": "D..."
+      },
+      {
+        "word_id": 170,
+        "question": "adj.贫瘠的，不育的",
+        "answer": "barren",
+        "hint": "B..."
+      },
+      {
+        "word_id": 171,
+        "question": "adj.肥沃的，有生育力的",
+        "answer": "fertile",
+        "hint": "F..."
+      },
+      {
+        "word_id": 172,
+        "question": "v.施肥，使受精",
+        "answer": "fertilise",
+        "hint": "F..."
+      },
+      {
+        "word_id": 173,
+        "question": "adj.太阳的，太阳能的",
+        "answer": "solar",
+        "hint": "S..."
+      },
+      {
+        "word_id": 174,
+        "question": "adj.月亮的，月球的",
+        "answer": "lunar",
+        "hint": "L..."
+      },
+      {
+        "word_id": 175,
+        "question": "n.日出，黎明",
+        "answer": "sunrise",
+        "hint": "S..."
+      },
+      {
+        "word_id": 176,
+        "question": "n.日落，黄昏",
+        "answer": "sunset",
+        "hint": "S..."
+      },
+      {
+        "word_id": 177,
+        "question": "n.日食/月食v.遮掩",
+        "answer": "eclipse",
+        "hint": "E..."
+      },
+      {
+        "word_id": 178,
+        "question": "n.黄昏，薄暮",
+        "answer": "dusk",
+        "hint": "D..."
+      },
+      {
+        "word_id": 179,
+        "question": "n.天堂，天空",
+        "answer": "heaven",
+        "hint": "H..."
+      },
+      {
+        "word_id": 180,
+        "question": "n.水库，蓄水池",
+        "answer": "reservoir",
+        "hint": "R..."
+      },
+      {
+        "word_id": 181,
+        "question": "n.瀑布",
+        "answer": "waterfall",
+        "hint": "W..."
+      },
+      {
+        "word_id": 182,
+        "question": "n.喷泉，源泉",
+        "answer": "fountain",
+        "hint": "F..."
+      },
+      {
+        "word_id": 183,
+        "question": "n.春天，泉水v.弹跳",
+        "answer": "spring",
+        "hint": "S..."
+      },
+      {
+        "word_id": 184,
+        "question": "n.露水",
+        "answer": "dew",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 185,
+        "question": "v.倾倒，倾泻",
+        "answer": "pour",
+        "hint": "P..."
+      },
+      {
+        "word_id": 186,
+        "question": "v.排水n.下水道",
+        "answer": "drain",
+        "hint": "D..."
+      },
+      {
+        "word_id": 187,
+        "question": "v.滴下n.水滴",
+        "answer": "drip",
+        "hint": "D..."
+      },
+      {
+        "word_id": 188,
+        "question": "v.淹死，淹没",
+        "answer": "drown",
+        "hint": "D..."
+      },
+      {
+        "word_id": 189,
+        "question": "v.吹，打击n.打击",
+        "answer": "blow",
+        "hint": "B..."
+      },
+      {
+        "word_id": 190,
+        "question": "n.皮特（人名）",
+        "answer": "pete",
+        "hint": "P..."
+      },
+      {
+        "word_id": 191,
+        "question": "v.喷n.一阵（烟/气）",
+        "answer": "puff",
+        "hint": "P..."
+      },
+      {
+        "word_id": 192,
+        "question": "contr.不要（do not）",
+        "answer": "dont",
+        "hint": "D..."
+      },
+      {
+        "word_id": 193,
+        "question": "v.涌出n.涌流",
+        "answer": "gush",
+        "hint": "G..."
+      },
+      {
+        "word_id": 194,
+        "question": "adj.密集的，浓密的",
+        "answer": "dense",
+        "hint": "D..."
+      },
+      {
+        "word_id": 195,
+        "question": "n.强度，烈度",
+        "answer": "intensity",
+        "hint": "I..."
+      },
+      {
+        "word_id": 196,
+        "question": "adj.密集的，强化的",
+        "answer": "intensive",
+        "hint": "I..."
+      },
+      {
+        "word_id": 197,
+        "question": "adv.强烈地，极度",
+        "answer": "intensely",
+        "hint": "I..."
+      },
+      {
+        "word_id": 198,
+        "question": "v.闪光n.闪光，瞬间",
+        "answer": "flash",
+        "hint": "F..."
+      },
+      {
+        "word_id": 199,
+        "question": "adj.好的，优良的",
+        "answer": "good",
+        "hint": "G..."
+      },
+      {
+        "word_id": 200,
+        "question": "v.漂浮；n.浮标",
+        "answer": "float",
+        "hint": "F..."
+      },
+      {
+        "word_id": 201,
+        "question": "n.环境",
+        "answer": "environment",
+        "hint": "E..."
+      },
+      {
+        "word_id": 202,
+        "question": "adj.周围的；n.环境",
+        "answer": "surrounding",
+        "hint": "S..."
+      },
+      {
+        "word_id": 203,
+        "question": "n.条件；状况",
+        "answer": "condition",
+        "hint": "C..."
+      },
+      {
+        "word_id": 204,
+        "question": "n.汽油",
+        "answer": "petrol",
+        "hint": "P..."
+      },
+      {
+        "word_id": 205,
+        "question": "n.气体；燃气；汽油",
+        "answer": "gas",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 206,
+        "question": "n.事实；真相",
+        "answer": "fact",
+        "hint": "F..."
+      },
+      {
+        "word_id": 207,
+        "question": "adj.自然的；天然的",
+        "answer": "natural",
+        "hint": "N..."
+      },
+      {
+        "word_id": 208,
+        "question": "adj.人造的；人工的",
+        "answer": "artificial",
+        "hint": "A..."
+      },
+      {
+        "word_id": 209,
+        "question": "adj.合成的；人造的",
+        "answer": "synthetic",
+        "hint": "S..."
+      },
+      {
+        "word_id": 210,
+        "question": "n.光合作用",
+        "answer": "photosynthesis",
+        "hint": "P..."
+      },
+      {
+        "word_id": 211,
+        "question": "v.呼吸",
+        "answer": "respire",
+        "hint": "R..."
+      },
+      {
+        "word_id": 212,
+        "question": "n.二氧化物",
+        "answer": "dioxide",
+        "hint": "D..."
+      },
+      {
+        "word_id": 213,
+        "question": "n.植被；植物",
+        "answer": "vegetation",
+        "hint": "V..."
+      },
+      {
+        "word_id": 214,
+        "question": "n.草本植物；药草",
+        "answer": "herb",
+        "hint": "H..."
+      },
+      {
+        "word_id": 215,
+        "question": "adj.多年生的；长久的",
+        "answer": "perennial",
+        "hint": "P..."
+      },
+      {
+        "word_id": 216,
+        "question": "n.多年生植物",
+        "answer": "perennials",
+        "hint": "P..."
+      },
+      {
+        "word_id": 217,
+        "question": "n.植物学",
+        "answer": "botany",
+        "hint": "B..."
+      },
+      {
+        "word_id": 218,
+        "question": "n.植物学家",
+        "answer": "botanist",
+        "hint": "B..."
+      },
+      {
+        "word_id": 219,
+        "question": "n.生态学",
+        "answer": "ecology",
+        "hint": "E..."
+      },
+      {
+        "word_id": 220,
+        "question": "n.生态学家",
+        "answer": "ecologist",
+        "hint": "E..."
+      },
+      {
+        "word_id": 221,
+        "question": "n.生态系统",
+        "answer": "ecosystem",
+        "hint": "E..."
+      },
+      {
+        "word_id": 222,
+        "question": "adj.环保的",
+        "answer": "eco-friendly",
+        "hint": "E..."
+      },
+      {
+        "word_id": 223,
+        "question": "n.园艺学",
+        "answer": "horticulture",
+        "hint": "H..."
+      },
+      {
+        "word_id": 224,
+        "question": "n.生物体；有机体",
+        "answer": "organism",
+        "hint": "O..."
+      },
+      {
+        "word_id": 225,
+        "question": "n.遗传学",
+        "answer": "genetics",
+        "hint": "G..."
+      },
+      {
+        "word_id": 226,
+        "question": "n.突变；变异",
+        "answer": "mutation",
+        "hint": "M..."
+      },
+      {
+        "word_id": 227,
+        "question": "n.变异；变化",
+        "answer": "variation",
+        "hint": "V..."
+      },
+      {
+        "word_id": 228,
+        "question": "n.多样性；多样化",
+        "answer": "diversity",
+        "hint": "D..."
+      },
+      {
+        "word_id": 229,
+        "question": "n.杂交；混合",
+        "answer": "hybridisation (=hybridization)",
+        "hint": "H..."
+      },
+      {
+        "word_id": 230,
+        "question": "v.分类；归类",
+        "answer": "classify",
+        "hint": "C..."
+      },
+      {
+        "word_id": 231,
+        "question": "v.繁殖；复制",
+        "answer": "reproduce",
+        "hint": "R..."
+      },
+      {
+        "word_id": 232,
+        "question": "v.进化；逐步发展",
+        "answer": "evolve",
+        "hint": "E..."
+      },
+      {
+        "word_id": 233,
+        "question": "v.波动；起伏",
+        "answer": "fluctuate",
+        "hint": "F..."
+      },
+      {
+        "word_id": 234,
+        "question": "v.开垦；回收",
+        "answer": "reclaim",
+        "hint": "R..."
+      },
+      {
+        "word_id": 235,
+        "question": "v.耕种；培育",
+        "answer": "cultivate",
+        "hint": "C..."
+      },
+      {
+        "word_id": 236,
+        "question": "v.播种；散布",
+        "answer": "sow",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 237,
+        "question": "n.铁锹；铲子",
+        "answer": "spade",
+        "hint": "S..."
+      },
+      {
+        "word_id": 238,
+        "question": "n.耙子；v.耙平",
+        "answer": "rake",
+        "hint": "R..."
+      },
+      {
+        "word_id": 239,
+        "question": "adj.古代的；古老的",
+        "answer": "ancient",
+        "hint": "A..."
+      },
+      {
+        "word_id": 240,
+        "question": "n.堆；v.堆叠",
+        "answer": "stack",
+        "hint": "S..."
+      },
+      {
+        "word_id": 241,
+        "question": "n.堆；v.堆积",
+        "answer": "heap",
+        "hint": "H..."
+      },
+      {
+        "word_id": 242,
+        "question": "v.采摘；拔",
+        "answer": "pluck",
+        "hint": "P..."
+      },
+      {
+        "word_id": 243,
+        "question": "v.采摘；挑选",
+        "answer": "pick",
+        "hint": "P..."
+      },
+      {
+        "word_id": 244,
+        "question": "n.产量；v.产出",
+        "answer": "yield",
+        "hint": "Y..."
+      },
+      {
+        "word_id": 245,
+        "question": "n.土地；陆地",
+        "answer": "land",
+        "hint": "L..."
+      },
+      {
+        "word_id": 246,
+        "question": "adj.坚硬的；不屈的",
+        "answer": "unyielding",
+        "hint": "U..."
+      },
+      {
+        "word_id": 247,
+        "question": "v.饲养；抚养",
+        "answer": "rear",
+        "hint": "R..."
+      },
+      {
+        "word_id": 248,
+        "question": "adj.可耕种的；n.耕地",
+        "answer": "arable",
+        "hint": "A..."
+      },
+      {
+        "word_id": 249,
+        "question": "n.犁；v.耕（地）",
+        "answer": "plough",
+        "hint": "P..."
+      }
+    ],
+    "en2cn": [
+      {
+        "word_id": 125,
+        "question": "rainfall",
+        "answer": "雨",
+        "hint": "(noun) The amount of rain that falls on a single occasion"
+      },
+      {
+        "word_id": 126,
+        "question": "sprinkle",
+        "answer": "撒",
+        "hint": "(noun) A light covering with a sprinkled substance."
+      },
+      {
+        "word_id": 127,
+        "question": "Weve",
+        "answer": "contraction.我们已经（we have的缩写）",
+        "hint": "Contraction of 'we have', used in informal spoken and written English"
+      },
+      {
+        "word_id": 128,
+        "question": "rainbow",
+        "answer": "彩虹",
+        "hint": "(noun) A multicoloured arch in the sky, produced by prismatic refraction of light within droplets of rain in the air."
+      },
+      {
+        "word_id": 129,
+        "question": "ridge",
+        "answer": "nan",
+        "hint": "(noun) The back of any animal; especially the upper or projecting part of the back of a quadruped."
+      },
+      {
+        "word_id": 130,
+        "question": "sky",
+        "answer": "天空",
+        "hint": "(noun) The atmosphere above a given point, especially as visible from the ground during the day."
+      },
+      {
+        "word_id": 131,
+        "question": "slope",
+        "answer": "梯度",
+        "hint": "(noun) An area of ground that tends evenly upward or downward."
+      },
+      {
+        "word_id": 132,
+        "question": "Celsius",
+        "answer": "摄氏度",
+        "hint": "(adjective) Related to a metric temperature scale, originally defined as having the freezing point of water as 0 degrees"
+      },
+      {
+        "word_id": 133,
+        "question": "maximum",
+        "answer": "最大",
+        "hint": "(noun) The highest limit"
+      },
+      {
+        "word_id": 134,
+        "question": "temperature",
+        "answer": "温度",
+        "hint": "(noun) A measure of cold or heat, often measurable with a thermometer."
+      },
+      {
+        "word_id": 135,
+        "question": "forecast",
+        "answer": "预测",
+        "hint": "(noun) An estimation of a future condition."
+      },
+      {
+        "word_id": 136,
+        "question": "recent",
+        "answer": "最近",
+        "hint": "(adjective) Having happened a short while ago."
+      },
+      {
+        "word_id": 137,
+        "question": "old",
+        "answer": "老",
+        "hint": "(noun) (with the, invariable plural only) People who are old; old beings; the older generation, taken as a group."
+      },
+      {
+        "word_id": 138,
+        "question": "southeast",
+        "answer": "东南",
+        "hint": "(noun) The direction of the cardinal compass point halfway between south and east, specifically 135°, abbreviated as SE."
+      },
+      {
+        "word_id": 139,
+        "question": "Austria",
+        "answer": "n.奥地利",
+        "hint": "A landlocked country in central Europe, known for its alpine terrain and cultural heritage"
+      },
+      {
+        "word_id": 140,
+        "question": "southwest",
+        "answer": "西南",
+        "hint": "(noun) The compass point halfway between south and west, specifically 225°, abbreviated as SW."
+      },
+      {
+        "word_id": 141,
+        "question": "Ireland",
+        "answer": "n.爱尔兰",
+        "hint": "An island nation in the North Atlantic, west of Great Britain, comprising the Republic of Ireland and Northern Ireland"
+      },
+      {
+        "word_id": 142,
+        "question": "northeast",
+        "answer": "东北",
+        "hint": "(noun) The compass point halfway between north and east, specifically 45°, abbreviated as NE."
+      },
+      {
+        "word_id": 143,
+        "question": "Snow",
+        "answer": "nan",
+        "hint": "(noun) The frozen, crystalline state of water that falls as precipitation."
+      },
+      {
+        "word_id": 144,
+        "question": "northwest",
+        "answer": "西北",
+        "hint": "(noun) The compass point halfway between north and west, bearing 315°, abbreviated as NW."
+      },
+      {
+        "word_id": 145,
+        "question": "large",
+        "answer": "大",
+        "hint": "(noun) An old musical note, equal to two longas, four breves, or eight semibreves."
+      },
+      {
+        "word_id": 146,
+        "question": "irregularly",
+        "answer": "不定期",
+        "hint": "(adverb) In an irregular manner; without rule, method, or order."
+      },
+      {
+        "word_id": 147,
+        "question": "inappropriate",
+        "answer": "adj.不合理 ,不当",
+        "hint": "(adjective) Not appropriate; not suitable for the situation, time, or place."
+      },
+      {
+        "word_id": 148,
+        "question": "abnormal",
+        "answer": "变|态",
+        "hint": "(noun) A person or object that is not normal."
+      },
+      {
+        "word_id": 149,
+        "question": "eastern",
+        "answer": "东部",
+        "hint": "(adjective) Of, facing, situated in, or related to the east."
+      },
+      {
+        "word_id": 150,
+        "question": "oriental",
+        "answer": "adj.东方的",
+        "hint": "Relating to the countries of East Asia, especially their culture or art."
+      },
+      {
+        "word_id": 151,
+        "question": "inevitable",
+        "answer": "adj.不可避免的",
+        "hint": "Certain to happen and impossible to avoid or prevent."
+      },
+      {
+        "word_id": 152,
+        "question": "irreversible",
+        "answer": "adj.不可逆的",
+        "hint": "Impossible to reverse, change back, or restore to a former state."
+      },
+      {
+        "word_id": 153,
+        "question": "sediment",
+        "answer": "n.沉积物",
+        "hint": "Solid matter that settles at the bottom of a liquid or water body."
+      },
+      {
+        "word_id": 154,
+        "question": "silt",
+        "answer": "n.淤泥v.淤塞",
+        "hint": "Fine sand, clay or soil carried by running water and deposited as sediment."
+      },
+      {
+        "word_id": 155,
+        "question": "River",
+        "answer": "n.河流",
+        "hint": "A large natural flowing watercourse that travels to a sea, lake or another river."
+      },
+      {
+        "word_id": 156,
+        "question": "muddy",
+        "answer": "adj.泥泞的",
+        "hint": "Covered in, full of, or resembling soft wet earth or mud."
+      },
+      {
+        "word_id": 157,
+        "question": "clay",
+        "answer": "n.黏土",
+        "hint": "A stiff, sticky fine-grained earth used to make bricks, pottery and ceramics."
+      },
+      {
+        "word_id": 158,
+        "question": "dirt",
+        "answer": "n.泥土，污垢",
+        "hint": "Loose, unclean earth or soil, or any substance that makes something dirty."
+      },
+      {
+        "word_id": 159,
+        "question": "border",
+        "answer": "n.边界v.接壤",
+        "hint": "The official line separating two countries, regions, or areas."
+      },
+      {
+        "word_id": 160,
+        "question": "margin",
+        "answer": "n.边缘，利润，余地",
+        "hint": "The edge or border of something, or an amount of extra space or allowance."
+      },
+      {
+        "word_id": 161,
+        "question": "fringe",
+        "answer": "n.边缘，穗adj.边缘的",
+        "hint": "The outer, less central or less mainstream part of an area or group."
+      },
+      {
+        "word_id": 162,
+        "question": "feel",
+        "answer": "v.感觉n.感受",
+        "hint": "To experience a physical sensation, emotion, or opinion through touch or thought."
+      },
+      {
+        "word_id": 163,
+        "question": "plate",
+        "answer": "n.盘子，板块",
+        "hint": "A flat dish for food, or a rigid section of the Earth's lithosphere."
+      },
+      {
+        "word_id": 164,
+        "question": "searching",
+        "answer": "adj.搜索的，探究的",
+        "hint": "Looking thoroughly for something or someone, often with great effort."
+      },
+      {
+        "word_id": 165,
+        "question": "crack",
+        "answer": "n.裂缝v.开裂",
+        "hint": "A narrow line or break on a hard surface, or to break without full separation."
+      },
+      {
+        "word_id": 166,
+        "question": "door",
+        "answer": "n.门",
+        "hint": "A movable barrier used to open or close the entrance to a room or building."
+      },
+      {
+        "word_id": 167,
+        "question": "wilderness",
+        "answer": "n.荒野",
+        "hint": "A wild, uncultivated, uninhabited region left in its natural state."
+      },
+      {
+        "word_id": 168,
+        "question": "wide",
+        "answer": "adj.宽的，广泛的",
+        "hint": "Of great or more than average horizontal extent; broad."
+      },
+      {
+        "word_id": 169,
+        "question": "deforestation",
+        "answer": "n.森林砍伐",
+        "hint": "The action of clearing large areas of trees and forest, usually for agriculture or development."
+      },
+      {
+        "word_id": 170,
+        "question": "barren",
+        "answer": "adj.贫瘠的，不育的",
+        "hint": "Too poor in nutrients to support much vegetation; unproductive or empty."
+      },
+      {
+        "word_id": 171,
+        "question": "fertile",
+        "answer": "adj.肥沃的，有生育力的",
+        "hint": "Able to produce abundant crops, vegetation, or new ideas; rich in nutrients."
+      },
+      {
+        "word_id": 172,
+        "question": "fertilise",
+        "answer": "v.施肥，使受精",
+        "hint": "To add nutrients to soil to help plants grow, or to make an egg able to develop."
+      },
+      {
+        "word_id": 173,
+        "question": "solar",
+        "answer": "adj.太阳的，太阳能的",
+        "hint": "Relating to, powered by, or coming from the sun."
+      },
+      {
+        "word_id": 174,
+        "question": "lunar",
+        "answer": "adj.月亮的，月球的",
+        "hint": "Relating to the moon, or its movements and appearance."
+      },
+      {
+        "word_id": 175,
+        "question": "sunrise",
+        "answer": "n.日出，黎明",
+        "hint": "The time in the morning when the sun first appears above the horizon."
+      },
+      {
+        "word_id": 176,
+        "question": "sunset",
+        "answer": "n.日落，黄昏",
+        "hint": "The time in the evening when the sun disappears below the horizon."
+      },
+      {
+        "word_id": 177,
+        "question": "eclipse",
+        "answer": "n.日食/月食v.遮掩",
+        "hint": "An astronomical event when one celestial body blocks light from another."
+      },
+      {
+        "word_id": 178,
+        "question": "dusk",
+        "answer": "n.黄昏，薄暮",
+        "hint": "The period of twilight just after sunset, when daylight begins to fade."
+      },
+      {
+        "word_id": 179,
+        "question": "heaven",
+        "answer": "n.天堂，天空",
+        "hint": "In many religions, the place where good people go after death, or the sky."
+      },
+      {
+        "word_id": 180,
+        "question": "reservoir",
+        "answer": "n.水库，蓄水池",
+        "hint": "A large artificial or natural lake used to store water for community use."
+      },
+      {
+        "word_id": 181,
+        "question": "waterfall",
+        "answer": "n.瀑布",
+        "hint": "A steep cascade of water flowing from a height over a rock ledge or cliff."
+      },
+      {
+        "word_id": 182,
+        "question": "fountain",
+        "answer": "n.喷泉，源泉",
+        "hint": "An ornamental structure that shoots jets of water into the air for decoration."
+      },
+      {
+        "word_id": 183,
+        "question": "spring",
+        "answer": "n.春天，泉水v.弹跳",
+        "hint": "A natural flow of groundwater coming to the surface, or the season after winter."
+      },
+      {
+        "word_id": 184,
+        "question": "dew",
+        "answer": "n.露水",
+        "hint": "Tiny drops of water that form on cool surfaces outdoors at night."
+      },
+      {
+        "word_id": 185,
+        "question": "pour",
+        "answer": "v.倾倒，倾泻",
+        "hint": "To flow or cause liquid to flow quickly and in large quantities from a container."
+      },
+      {
+        "word_id": 186,
+        "question": "drain",
+        "answer": "v.排水n.下水道",
+        "hint": "To remove liquid from something, or a pipe that carries waste water away."
+      },
+      {
+        "word_id": 187,
+        "question": "drip",
+        "answer": "v.滴下n.水滴",
+        "hint": "To fall in small individual drops, or a single small drop of liquid."
+      },
+      {
+        "word_id": 188,
+        "question": "drown",
+        "answer": "v.淹死，淹没",
+        "hint": "To die from submersion in and inhalation of water, or to cover completely with liquid."
+      },
+      {
+        "word_id": 189,
+        "question": "blow",
+        "answer": "v.吹，打击n.打击",
+        "hint": "To move or be moved by wind, or to strike with a hard hit from the hand or object."
+      },
+      {
+        "word_id": 190,
+        "question": "Pete",
+        "answer": "n.皮特（人名）",
+        "hint": "A common masculine English given name, short form of Peter."
+      },
+      {
+        "word_id": 191,
+        "question": "puff",
+        "answer": "v.喷n.一阵（烟/气）",
+        "hint": "A short, quick burst of air, smoke, or breath, or to blow in such bursts."
+      },
+      {
+        "word_id": 192,
+        "question": "Dont",
+        "answer": "contr.不要（do not）",
+        "hint": "Contraction of 'do not', used to express a prohibition or negative instruction."
+      },
+      {
+        "word_id": 193,
+        "question": "gush",
+        "answer": "v.涌出n.涌流",
+        "hint": "To flow out suddenly and in large quantities, often with great force."
+      },
+      {
+        "word_id": 194,
+        "question": "dense",
+        "answer": "adj.密集的，浓密的",
+        "hint": "Closely packed together, thick, or difficult to see through."
+      },
+      {
+        "word_id": 195,
+        "question": "intensity",
+        "answer": "n.强度，烈度",
+        "hint": "The quality of being very strong, forceful, or extreme in degree."
+      },
+      {
+        "word_id": 196,
+        "question": "intensive",
+        "answer": "adj.密集的，强化的",
+        "hint": "Concentrated on a single area, subject, or task, using a lot of effort or resources."
+      },
+      {
+        "word_id": 197,
+        "question": "intensely",
+        "answer": "adv.强烈地，极度",
+        "hint": "To a very great or extreme degree; with strong feeling or force."
+      },
+      {
+        "word_id": 198,
+        "question": "flash",
+        "answer": "v.闪光n.闪光，瞬间",
+        "hint": "A sudden brief burst of bright light, or to shine or move very quickly."
+      },
+      {
+        "word_id": 199,
+        "question": "good",
+        "answer": "adj.好的，优良的",
+        "hint": "Of high quality, satisfactory, or morally right; pleasant or desirable."
+      },
+      {
+        "word_id": 200,
+        "question": "float",
+        "answer": "v.漂浮；n.浮标",
+        "hint": "Rest or move on/within liquid/air without sinking"
+      },
+      {
+        "word_id": 201,
+        "question": "environment",
+        "answer": "n.环境",
+        "hint": "The natural world or conditions where people/animals/plants live"
+      },
+      {
+        "word_id": 202,
+        "question": "surrounding",
+        "answer": "adj.周围的；n.环境",
+        "hint": "Things/conditions around a particular place/person"
+      },
+      {
+        "word_id": 203,
+        "question": "condition",
+        "answer": "n.条件；状况",
+        "hint": "State of something; circumstances affecting function/occurrence"
+      },
+      {
+        "word_id": 204,
+        "question": "petrol",
+        "answer": "n.汽油",
+        "hint": "Refined petroleum used as fuel for internal combustion engines"
+      },
+      {
+        "word_id": 205,
+        "question": "gas",
+        "answer": "n.气体；燃气；汽油",
+        "hint": "Air-like substance; fuel for heating/cooking/vehicles"
+      },
+      {
+        "word_id": 206,
+        "question": "fact",
+        "answer": "n.事实；真相",
+        "hint": "Thing that is known to be true, proven by evidence"
+      },
+      {
+        "word_id": 207,
+        "question": "natural",
+        "answer": "adj.自然的；天然的",
+        "hint": "Existing in nature, not made/caused by humans"
+      },
+      {
+        "word_id": 208,
+        "question": "artificial",
+        "answer": "adj.人造的；人工的",
+        "hint": "Made by humans, not occurring naturally"
+      },
+      {
+        "word_id": 209,
+        "question": "synthetic",
+        "answer": "adj.合成的；人造的",
+        "hint": "Made by chemical synthesis, not natural origin"
+      },
+      {
+        "word_id": 210,
+        "question": "photosynthesis",
+        "answer": "n.光合作用",
+        "hint": "Process plants use to turn CO2/water into food using sunlight"
+      },
+      {
+        "word_id": 211,
+        "question": "respire",
+        "answer": "v.呼吸",
+        "hint": "Breathe; take in oxygen and release carbon dioxide"
+      },
+      {
+        "word_id": 212,
+        "question": "dioxide",
+        "answer": "n.二氧化物",
+        "hint": "Oxide containing two oxygen atoms per molecule"
+      },
+      {
+        "word_id": 213,
+        "question": "vegetation",
+        "answer": "n.植被；植物",
+        "hint": "Plants collectively, especially those in a particular area"
+      },
+      {
+        "word_id": 214,
+        "question": "herb",
+        "answer": "n.草本植物；药草",
+        "hint": "Plant with soft stem, used for food/medicine/perfume"
+      },
+      {
+        "word_id": 215,
+        "question": "perennial",
+        "answer": "adj.多年生的；长久的",
+        "hint": "Plant living for more than two years; lasting long"
+      },
+      {
+        "word_id": 216,
+        "question": "perennials",
+        "answer": "n.多年生植物",
+        "hint": "Plants that live and grow for more than two years"
+      },
+      {
+        "word_id": 217,
+        "question": "botany",
+        "answer": "n.植物学",
+        "hint": "Scientific study of plants, their structure and classification"
+      },
+      {
+        "word_id": 218,
+        "question": "botanist",
+        "answer": "n.植物学家",
+        "hint": "Scientist who specialises in the study of plants"
+      },
+      {
+        "word_id": 219,
+        "question": "ecology",
+        "answer": "n.生态学",
+        "hint": "Study of organisms and their interactions with environment"
+      },
+      {
+        "word_id": 220,
+        "question": "ecologist",
+        "answer": "n.生态学家",
+        "hint": "Scientist who studies organisms and their environments"
+      },
+      {
+        "word_id": 221,
+        "question": "ecosystem",
+        "answer": "n.生态系统",
+        "hint": "Community of organisms interacting with their physical environment"
+      },
+      {
+        "word_id": 222,
+        "question": "eco-friendly",
+        "answer": "adj.环保的",
+        "hint": "Not harmful to the natural environment"
+      },
+      {
+        "word_id": 223,
+        "question": "horticulture",
+        "answer": "n.园艺学",
+        "hint": "Art/science of growing garden plants, fruits and vegetables"
+      },
+      {
+        "word_id": 224,
+        "question": "organism",
+        "answer": "n.生物体；有机体",
+        "hint": "Individual living thing, such as plant/animal/bacterium"
+      },
+      {
+        "word_id": 225,
+        "question": "genetics",
+        "answer": "n.遗传学",
+        "hint": "Study of genes, heredity and variation in organisms"
+      },
+      {
+        "word_id": 226,
+        "question": "mutation",
+        "answer": "n.突变；变异",
+        "hint": "Permanent change in DNA sequence, causing new traits"
+      },
+      {
+        "word_id": 227,
+        "question": "variation",
+        "answer": "n.变异；变化",
+        "hint": "Difference between individuals of the same species/group"
+      },
+      {
+        "word_id": 228,
+        "question": "diversity",
+        "answer": "n.多样性；多样化",
+        "hint": "Range of different things/people/species in a group/area"
+      },
+      {
+        "word_id": 229,
+        "question": "hybridisation (=hybridization)",
+        "answer": "n.杂交；混合",
+        "hint": "The process of breeding or combining different species, varieties, or elements to produce a hybrid"
+      },
+      {
+        "word_id": 230,
+        "question": "classify",
+        "answer": "v.分类；归类",
+        "hint": "Arrange things into groups based on shared features"
+      },
+      {
+        "word_id": 231,
+        "question": "reproduce",
+        "answer": "v.繁殖；复制",
+        "hint": "Produce offspring; make a copy of something"
+      },
+      {
+        "word_id": 232,
+        "question": "evolve",
+        "answer": "v.进化；逐步发展",
+        "hint": "Develop gradually over generations via natural selection"
+      },
+      {
+        "word_id": 233,
+        "question": "fluctuate",
+        "answer": "v.波动；起伏",
+        "hint": "Rise and fall irregularly in number/amount/level"
+      },
+      {
+        "word_id": 234,
+        "question": "reclaim",
+        "answer": "v.开垦；回收",
+        "hint": "Bring damaged/used land back to usable condition"
+      },
+      {
+        "word_id": 235,
+        "question": "cultivate",
+        "answer": "v.耕种；培育",
+        "hint": "Prepare land to grow crops; develop plants/skills"
+      },
+      {
+        "word_id": 236,
+        "question": "sow",
+        "answer": "v.播种；散布",
+        "hint": "Plant seeds in soil for growth"
+      },
+      {
+        "word_id": 237,
+        "question": "spade",
+        "answer": "n.铁锹；铲子",
+        "hint": "Tool with flat blade and long handle for digging soil"
+      },
+      {
+        "word_id": 238,
+        "question": "rake",
+        "answer": "n.耙子；v.耙平",
+        "hint": "Tool with toothed bar for gathering leaves/levelling soil"
+      },
+      {
+        "word_id": 239,
+        "question": "ancient",
+        "answer": "adj.古代的；古老的",
+        "hint": "Belonging to the very distant past, very old"
+      },
+      {
+        "word_id": 240,
+        "question": "stack",
+        "answer": "n.堆；v.堆叠",
+        "hint": "Neat pile of things arranged one on top of another"
+      },
+      {
+        "word_id": 241,
+        "question": "heap",
+        "answer": "n.堆；v.堆积",
+        "hint": "Untidy pile of things; pile things untidily"
+      },
+      {
+        "word_id": 242,
+        "question": "pluck",
+        "answer": "v.采摘；拔",
+        "hint": "Pull something quickly to pick/remove it"
+      },
+      {
+        "word_id": 243,
+        "question": "pick",
+        "answer": "v.采摘；挑选",
+        "hint": "Take flowers/fruit from plant; choose something"
+      },
+      {
+        "word_id": 244,
+        "question": "yield",
+        "answer": "n.产量；v.产出",
+        "hint": "Amount of crop produced; produce/ provide a result"
+      },
+      {
+        "word_id": 245,
+        "question": "land",
+        "answer": "n.土地；陆地",
+        "hint": "Solid part of earth surface not covered by water"
+      },
+      {
+        "word_id": 246,
+        "question": "unyielding",
+        "answer": "adj.坚硬的；不屈的",
+        "hint": "Not giving way to pressure; firm, not producing crops"
+      },
+      {
+        "word_id": 247,
+        "question": "rear",
+        "answer": "v.饲养；抚养",
+        "hint": "Bring up/breed animals/children; back part of something"
+      },
+      {
+        "word_id": 248,
+        "question": "arable",
+        "answer": "adj.可耕种的；n.耕地",
+        "hint": "Suitable for growing crops; relating to cultivated farmland"
+      },
+      {
+        "word_id": 249,
+        "question": "plough",
+        "answer": "n.犁；v.耕（地）",
+        "hint": "A farm tool used to turn over soil before sowing; the act of tilling land with such a tool"
+      }
+    ],
+    "collocation": [
+      {
+        "word_id": 125,
+        "question": "heavy _____ (强降雨)",
+        "answer": "rainfall",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 126,
+        "question": "_____ salt (撒盐)",
+        "answer": "sprinkle",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 127,
+        "question": "_____ light (我们有光)",
+        "answer": "weve",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 128,
+        "question": "_____ trout (虹鳟鱼)",
+        "answer": "rainbow",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 129,
+        "question": "mountain _____ (山脊)",
+        "answer": "ridge",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 130,
+        "question": "clear _____ (晴空)",
+        "answer": "sky",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 131,
+        "question": "steep _____ (陡坡)",
+        "answer": "slope",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 132,
+        "question": "degree _____ (摄氏度)",
+        "answer": "celsius",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 133,
+        "question": "_____ capacity (最大容量)",
+        "answer": "maximum",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 134,
+        "question": "air _____ (气温)",
+        "answer": "temperature",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 135,
+        "question": "weather _____ (天气预报)",
+        "answer": "forecast",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 136,
+        "question": "_____ study (近期研究)",
+        "answer": "recent",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 137,
+        "question": "_____ building (老建筑)",
+        "answer": "old",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 138,
+        "question": "_____ Asia (东南亚)",
+        "answer": "southeast",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 139,
+        "question": "_____ border (奥地利边境)",
+        "answer": "austria",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 140,
+        "question": "_____ monsoon (西南季风)",
+        "answer": "southwest",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 141,
+        "question": "_____ coast (爱尔兰海岸)",
+        "answer": "ireland",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 142,
+        "question": "_____ monsoon (东北季风)",
+        "answer": "northeast",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 143,
+        "question": "_____ cover (积雪)",
+        "answer": "snow",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 144,
+        "question": "_____ passage (西北航道)",
+        "answer": "northwest",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 145,
+        "question": "_____ number (大量)",
+        "answer": "large",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 146,
+        "question": "occur _____ (不定期发生)",
+        "answer": "irregularly",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 147,
+        "question": "_____ behavior (不当行为)",
+        "answer": "inappropriate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 148,
+        "question": "_____ weather (异常天气)",
+        "answer": "abnormal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 149,
+        "question": "_____ Europe (东欧)",
+        "answer": "eastern",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 150,
+        "question": "_____ culture (东方文化)",
+        "answer": "oriental",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 151,
+        "question": "_____ consequence (不可避免的后果)",
+        "answer": "inevitable",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 152,
+        "question": "_____ damage (不可逆损伤)",
+        "answer": "irreversible",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 153,
+        "question": "_____ transport (沉积物输运)",
+        "answer": "sediment",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 154,
+        "question": "_____ deposition (淤泥沉积)",
+        "answer": "silt",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 155,
+        "question": "_____ bank (河岸)",
+        "answer": "river",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 156,
+        "question": "_____ water (泥水)",
+        "answer": "muddy",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 157,
+        "question": "_____ mineral (黏土矿物)",
+        "answer": "clay",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 158,
+        "question": "_____ road (土路)",
+        "answer": "dirt",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 159,
+        "question": "_____ control (边境管制)",
+        "answer": "border",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 160,
+        "question": "profit _____ (利润率)",
+        "answer": "margin",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 161,
+        "question": "_____ benefit (附加福利)",
+        "answer": "fringe",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 162,
+        "question": "_____ pressure (感到压力)",
+        "answer": "feel",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 163,
+        "question": "tectonic _____ (构造板块)",
+        "answer": "plate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 164,
+        "question": "_____ question (探究性问题)",
+        "answer": "searching",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 165,
+        "question": "hairline _____ (细裂缝)",
+        "answer": "crack",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 166,
+        "question": "revolving _____ (旋转门)",
+        "answer": "door",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 167,
+        "question": "_____ area (荒野地区)",
+        "answer": "wilderness",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 168,
+        "question": "_____ range (广泛范围)",
+        "answer": "wide",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 169,
+        "question": "_____ rate (森林砍伐率)",
+        "answer": "deforestation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 170,
+        "question": "_____ land (贫瘠土地)",
+        "answer": "barren",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 171,
+        "question": "_____ soil (肥沃土壤)",
+        "answer": "fertile",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 172,
+        "question": "_____ crops (给作物施肥)",
+        "answer": "fertilise",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 173,
+        "question": "_____ power (太阳能)",
+        "answer": "solar",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 174,
+        "question": "_____ eclipse (月食)",
+        "answer": "lunar",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 175,
+        "question": "_____ time (日出时间)",
+        "answer": "sunrise",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 176,
+        "question": "_____ clause (日落条款)",
+        "answer": "sunset",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 177,
+        "question": "solar _____ (日食)",
+        "answer": "eclipse",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 178,
+        "question": "_____ chorus (黄昏鸟鸣)",
+        "answer": "dusk",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 179,
+        "question": "enter _____ (进入天堂)",
+        "answer": "heaven",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 180,
+        "question": "_____ capacity (水库容量)",
+        "answer": "reservoir",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 181,
+        "question": "_____ formation (瀑布形成)",
+        "answer": "waterfall",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 182,
+        "question": "drinking _____ (公共饮水台)",
+        "answer": "fountain",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 183,
+        "question": "hot _____ (温泉)",
+        "answer": "spring",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 184,
+        "question": "_____ point (露点)",
+        "answer": "dew",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 185,
+        "question": "_____ concrete (浇筑混凝土)",
+        "answer": "pour",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 186,
+        "question": "brain _____ (人才流失)",
+        "answer": "drain",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 187,
+        "question": "_____ irrigation (滴灌)",
+        "answer": "drip",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 188,
+        "question": "accidentally _____ (意外溺亡)",
+        "answer": "drown",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 189,
+        "question": "major _____ (重大打击)",
+        "answer": "blow",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 190,
+        "question": "_____'s bottle (皮特的瓶子)",
+        "answer": "pete",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 191,
+        "question": "volcanic _____ (火山喷烟)",
+        "answer": "puff",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 192,
+        "question": "_____ exceed (请勿超过)",
+        "answer": "dont",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 193,
+        "question": "_____ oil (喷出石油)",
+        "answer": "gush",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 194,
+        "question": "_____ forest (茂密的森林)",
+        "answer": "dense",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 195,
+        "question": "exercise _____ (运动强度)",
+        "answer": "intensity",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 196,
+        "question": "_____ care (重症监护)",
+        "answer": "intensive",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 197,
+        "question": "compete _____ (激烈竞争)",
+        "answer": "intensely",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 198,
+        "question": "_____ flood (山洪，暴洪)",
+        "answer": "flash",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 199,
+        "question": "_____ health (身体健康)",
+        "answer": "good",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 200,
+        "question": "_____ gently (轻轻漂浮)",
+        "answer": "float",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 201,
+        "question": "natural _____ (自然环境)",
+        "answer": "environment",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 202,
+        "question": "_____ vegetation (周围植被)",
+        "answer": "surrounding",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 203,
+        "question": "weather _____ (天气状况)",
+        "answer": "condition",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 204,
+        "question": "unleaded _____ (无铅汽油)",
+        "answer": "petrol",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 205,
+        "question": "natural _____ (天然气)",
+        "answer": "gas",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 206,
+        "question": "scientific _____ (科学事实)",
+        "answer": "fact",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 207,
+        "question": "_____ selection (自然选择)",
+        "answer": "natural",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 208,
+        "question": "_____ intelligence (人工智能)",
+        "answer": "artificial",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 209,
+        "question": "_____ fibre (合成纤维)",
+        "answer": "synthetic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 210,
+        "question": "_____ rate (光合作用速率)",
+        "answer": "photosynthesis",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 211,
+        "question": "_____ anaerobically (进行无氧呼吸)",
+        "answer": "respire",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 212,
+        "question": "carbon _____ (二氧化碳)",
+        "answer": "dioxide",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 213,
+        "question": "native _____ (原生植被)",
+        "answer": "vegetation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 214,
+        "question": "medicinal _____ (药草)",
+        "answer": "herb",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 215,
+        "question": "hardy _____ (耐寒多年生植物)",
+        "answer": "perennial",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 216,
+        "question": "flowering _____ (开花多年生植物)",
+        "answer": "perennials",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 217,
+        "question": "_____ department (植物学系)",
+        "answer": "botany",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 218,
+        "question": "field _____ (野外植物学家)",
+        "answer": "botanist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 219,
+        "question": "population _____ (种群生态学)",
+        "answer": "ecology",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 220,
+        "question": "forest _____ (森林生态学家)",
+        "answer": "ecologist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 221,
+        "question": "terrestrial _____ (陆地生态系统)",
+        "answer": "ecosystem",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 222,
+        "question": "_____ transport (环保交通)",
+        "answer": "eco-friendly",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 223,
+        "question": "ornamental _____ (观赏园艺)",
+        "answer": "horticulture",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 224,
+        "question": "aquatic _____ (水生生物)",
+        "answer": "organism",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 225,
+        "question": "molecular _____ (分子遗传学)",
+        "answer": "genetics",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 226,
+        "question": "_____ rate (突变率)",
+        "answer": "mutation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 227,
+        "question": "genetic _____ (遗传变异)",
+        "answer": "variation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 228,
+        "question": "biological _____ (生物多样性)",
+        "answer": "diversity",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 229,
+        "question": "_____ technique (杂交技术)",
+        "answer": "hybridisation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 230,
+        "question": "_____ species (将物种分类)",
+        "answer": "classify",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 231,
+        "question": "_____ offspring (繁殖后代)",
+        "answer": "reproduce",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 232,
+        "question": "_____ rapidly (快速进化)",
+        "answer": "evolve",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 233,
+        "question": "_____ wildly (剧烈波动)",
+        "answer": "fluctuate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 234,
+        "question": "_____ land (开垦土地)",
+        "answer": "reclaim",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 235,
+        "question": "_____ bacteria (培养细菌)",
+        "answer": "cultivate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 236,
+        "question": "_____ seed (播撒种子)",
+        "answer": "sow",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 237,
+        "question": "_____ handle (铁锹柄)",
+        "answer": "spade",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 238,
+        "question": "leaf _____ (落叶耙)",
+        "answer": "rake",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 239,
+        "question": "_____ civilization (古代文明)",
+        "answer": "ancient",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 240,
+        "question": "hay _____ (干草堆)",
+        "answer": "stack",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 241,
+        "question": "compost _____ (堆肥堆)",
+        "answer": "heap",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 242,
+        "question": "_____ weed (拔除杂草)",
+        "answer": "pluck",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 243,
+        "question": "_____ fruit (采摘水果)",
+        "answer": "pick",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 244,
+        "question": "crop _____ (作物产量)",
+        "answer": "yield",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 245,
+        "question": "_____ use (土地利用)",
+        "answer": "land",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 246,
+        "question": "_____ soil (坚硬土壤)",
+        "answer": "unyielding",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 247,
+        "question": "_____ livestock (饲养牲畜)",
+        "answer": "rear",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 248,
+        "question": "_____ soil (可耕土壤)",
+        "answer": "arable",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 249,
+        "question": "_____ deeply (深耕)",
+        "answer": "plough",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      }
+    ],
+    "sentence": [
+      {
+        "word_id": 125,
+        "question": "After three days of continuous _____, the river began to rise. (雨)",
+        "answer": "rainfall",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 126,
+        "question": "Please _____ some sugar on the strawberries before serving. (撒)",
+        "answer": "sprinkle",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 127,
+        "question": "_____ been waiting for you for over an hour. (contraction.我们已经（we have的缩写）)",
+        "answer": "weve",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 128,
+        "question": "A beautiful _____ appeared in the sky after the summer shower. (彩虹)",
+        "answer": "rainbow",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 129,
+        "question": "They climbed along the narrow _____ until they reached the summit. (山脊)",
+        "answer": "ridge",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 130,
+        "question": "Birds are flying high in the _____. (天空)",
+        "answer": "sky",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 131,
+        "question": "The _____ of the line on the graph indicates the rate of change. (梯度)",
+        "answer": "slope",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 132,
+        "question": "Water boils at 100 degrees _____. (摄氏度)",
+        "answer": "celsius",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 133,
+        "question": "The _____ speed limit on this highway is 120 kilometers per hour. (最大)",
+        "answer": "maximum",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 134,
+        "question": "The nurse took my _____ and said I had a slight fever. (温度)",
+        "answer": "temperature",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 135,
+        "question": "Experts _____ that the economy will grow by 3% next year. (预测)",
+        "answer": "forecast",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 136,
+        "question": "According to _____ data, the number of endangered species is increasing. (最近)",
+        "answer": "recent",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 137,
+        "question": "My grandmother is very _____ but she still goes for a walk every day. (老)",
+        "answer": "old",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 138,
+        "question": "The wind is blowing from the _____, bringing warm, moist air. (东南)",
+        "answer": "southeast",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 139,
+        "question": "Vienna is the capital city of _____. (n.奥地利)",
+        "answer": "austria",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 140,
+        "question": "Yunnan Province is located in the _____ of China. (西南)",
+        "answer": "southwest",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 141,
+        "question": "Dublin is the capital and largest city of _____. (n.爱尔兰)",
+        "answer": "ireland",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 142,
+        "question": "The city of Harbin is in the _____ of China, known for its ice sculptures. (东北)",
+        "answer": "northeast",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 143,
+        "question": "_____ covers the ground after a heavy winter storm. (雪)",
+        "answer": "snow",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 144,
+        "question": "The Gobi Desert lies in the _____ of China, covering parts of Xinjiang and Gansu. (西北)",
+        "answer": "northwest",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 145,
+        "question": "A _____ number of students attended the career fair last week. (大)",
+        "answer": "large",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 146,
+        "question": "These migrant birds appear _____ in the wetland, making it hard for researchers to track them. (不定期)",
+        "answer": "irregularly",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 147,
+        "question": "Making jokes during a formal meeting is highly _____. (adj.不合理 ,不当)",
+        "answer": "inappropriate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 148,
+        "question": "His _____ behavior at the party made everyone feel uncomfortable. (变|态)",
+        "answer": "abnormal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 149,
+        "question": "Shanghai is located in the _____ part of China, near the East China Sea. (东部)",
+        "answer": "eastern",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 150,
+        "question": "Many visitors are drawn to the region's unique _____ architecture, which blends ancient design principles with modern aesthetics. (东方的)",
+        "answer": "oriental",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 151,
+        "question": "As urban populations continue to grow, increased pressure on public transport systems is _____. (不可避免的)",
+        "answer": "inevitable",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 152,
+        "question": "If pollution levels continue to rise at the current rate, the harm to local aquatic ecosystems will be _____. (不可逆的)",
+        "answer": "irreversible",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 153,
+        "question": "Over thousands of years, layers of _____ accumulate at the bottom of lakes, preserving valuable clues about past environmental conditions. (沉积物)",
+        "answer": "sediment",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 154,
+        "question": "The floodwaters left a thick layer of rich _____ on the farm fields, improving soil fertility for the next planting season. (淤泥)",
+        "answer": "silt",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 155,
+        "question": "The _____ meanders gently through the valley, supporting a diverse range of plant and animal life along its banks. (河流)",
+        "answer": "river",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 156,
+        "question": "After three days of heavy rain, the hiking trail became so _____ that trekkers had to wear sturdy waterproof boots to avoid slipping. (泥泞的)",
+        "answer": "muddy",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 157,
+        "question": "Local artisans use the fine, smooth _____ from the riverbank to hand-make traditional pottery sold in markets across the region. (黏土)",
+        "answer": "clay",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 158,
+        "question": "When the children came inside after playing in the garden, their shoes were caked in _____ and left marks all over the kitchen floor. (泥土)",
+        "answer": "dirt",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 159,
+        "question": "Travellers crossing the national _____ are required to show a valid passport and declare any restricted goods. (边界)",
+        "answer": "border",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 160,
+        "question": "When writing a research paper, you should leave a wide _____ on both sides of the page to allow space for tutor comments. (边缘)",
+        "answer": "margin",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 161,
+        "question": "Many young artists and creative professionals choose to live on the urban _____ where rent is cheaper and communities are more tight-knit. (边缘)",
+        "answer": "fringe",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 162,
+        "question": "Many people _____ anxious about public speaking, but regular practice can help reduce this nervousness over time. (感觉)",
+        "answer": "feel",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 163,
+        "question": "After finishing dinner, she cleared the table and placed each dirty _____ in the dishwasher to be washed. (盘子)",
+        "answer": "plate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 164,
+        "question": "She gave him a _____ look, trying to tell if he was lying. (探究的)",
+        "answer": "searching",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 165,
+        "question": "If you pour boiling water into a cold glass, it may _____ due to the sudden change in temperature. (开裂)",
+        "answer": "crack",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 166,
+        "question": "She heard a soft knock on the front _____ and walked over to see who was outside. (门)",
+        "answer": "door",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 167,
+        "question": "The national park protects a vast stretch of unspoiled _____ where visitors can hike, camp, and observe wildlife in its natural habitat. (荒野)",
+        "answer": "wilderness",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 168,
+        "question": "The old stone bridge is _____ enough to allow two cars to pass each other safely at the same time. (宽的)",
+        "answer": "wide",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 169,
+        "question": "Intensive agriculture and illegal logging are the main causes of _____ in the Amazon basin, threatening thousands of unique species. (森林砍伐)",
+        "answer": "deforestation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 170,
+        "question": "After years of severe drought and overfarming, the once-fertile valley had become a _____ landscape where almost no plants could grow. (贫瘠的)",
+        "answer": "barren",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 171,
+        "question": "The female panda is only _____ for a few days each year, making successful breeding in captivity very challenging. (有生育力的)",
+        "answer": "fertile",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 172,
+        "question": "For many fish species, males release sperm into the water to _____ the eggs laid by females, which then develop into young fish. (使受精)",
+        "answer": "fertilise",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 173,
+        "question": "The _____ wind is a stream of charged particles released from the Sun's upper atmosphere, which can cause auroras when it reaches Earth. (太阳的)",
+        "answer": "solar",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 174,
+        "question": "The _____ surface is covered in fine dust and impact craters formed by billions of years of collisions with asteroids and comets. (月球的)",
+        "answer": "lunar",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 175,
+        "question": "We woke up early to watch the _____ paint the sky in shades of pink and gold. (日出，黎明)",
+        "answer": "sunrise",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 176,
+        "question": "The golden light of the _____ filtered through the trees as we walked home. (日落，黄昏)",
+        "answer": "sunset",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 177,
+        "question": "A total lunar _____ occurs when the Earth passes directly between the sun and the moon. (日食/月食)",
+        "answer": "eclipse",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 178,
+        "question": "As _____ fell, the fireflies began to blink in the grass along the path. (黄昏，薄暮)",
+        "answer": "dusk",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 179,
+        "question": "According to many religious traditions, people who live virtuous lives will go to _____ after death. (天堂，天空)",
+        "answer": "heaven",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 180,
+        "question": "The local government built a new _____ to supply drinking water to three nearby towns. (水库，蓄水池)",
+        "answer": "reservoir",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 181,
+        "question": "After hiking for two hours, we finally reached the stunning _____ that cascaded down the rocky cliff. (瀑布)",
+        "answer": "waterfall",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 182,
+        "question": "Children laughed and played in the cool water of the public _____ in the town square on the hot summer day. (喷泉，源泉)",
+        "answer": "fountain",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 183,
+        "question": "Wildflowers bloom across the hillsides as _____ arrives and the weather grows warmer. (春天，泉水)",
+        "answer": "spring",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 184,
+        "question": "The grass was glistening with _____ as we walked through the meadow early in the morning. (露水)",
+        "answer": "dew",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 185,
+        "question": "As soon as we left the house, it started to _____ heavily, soaking us through within minutes. (倾倒，倾泻)",
+        "answer": "pour",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 186,
+        "question": "We need to call a plumber to fix the kitchen sink, because the water won’t _____ properly. (排水，下水道)",
+        "answer": "drain",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 187,
+        "question": "The tap in the bathroom continued to _____ all night, keeping me awake with its constant sound. (滴下，水滴)",
+        "answer": "drip",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 188,
+        "question": "Lifeguards warn swimmers not to go too far from the shore, as strong currents can pull people under and _____ them. (淹死，淹没)",
+        "answer": "drown",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 189,
+        "question": "A strong gust of wind began to _____ the fallen leaves across the pavement as the storm approached. (吹，打击)",
+        "answer": "blow",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 190,
+        "question": "_____ has been collecting plastic bottles and old newspapers for the community recycling drive for over three years. (皮特)",
+        "answer": "pete",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 191,
+        "question": "The hiker stopped to catch his breath, a small _____ of steam coming from his mouth in the cold air. (一阵（烟/气），喷)",
+        "answer": "puff",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 192,
+        "question": "_____ forget to bring your umbrella today, as the weather forecast predicts heavy rain in the afternoon. (不要)",
+        "answer": "dont",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 193,
+        "question": "When the construction crew hit the underground water pipe, clear water began to _____ out onto the street. (涌出，涌流)",
+        "answer": "gush",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 194,
+        "question": "The path through the _____ forest was dark and cool, even in the middle of the day. (密集的，浓密的)",
+        "answer": "dense",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 195,
+        "question": "The coach adjusted the _____ of the training session to help the athletes prepare for the upcoming competition. (强度，烈度)",
+        "answer": "intensity",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 196,
+        "question": "After the serious car accident, the patient was moved to the _____ care unit for close monitoring by medical staff. (密集的，强化的)",
+        "answer": "intensive",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 197,
+        "question": "The two athletes will compete _____ for the gold medal in the final match of the tournament tomorrow. (强烈地，极度)",
+        "answer": "intensely",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 198,
+        "question": "The weather service issued a warning that a _____ flood could occur in the valley if the heavy rain continues. (闪光，瞬间)",
+        "answer": "flash",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 199,
+        "question": "Regular exercise, a balanced diet, and enough sleep are all essential for maintaining _____ health. (好的，优良的)",
+        "answer": "good",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 200,
+        "question": "Empty plastic bottles will _____ on the water if not secured with a weight. (v.漂浮；n.浮标)",
+        "answer": "float",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 201,
+        "question": "A safe and supportive learning _____ helps children develop healthy study habits. (n.环境)",
+        "answer": "environment",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 202,
+        "question": "The _____ villages were all affected by the heavy smoke from the wildfire. (adj.周围的；n.环境)",
+        "answer": "surrounding",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 203,
+        "question": "The patient’s _____ improved rapidly after receiving the targeted medical treatment. (n.条件；状况)",
+        "answer": "condition",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 204,
+        "question": "We stopped at the roadside service station to fill the car’s tank with _____. (n.汽油)",
+        "answer": "petrol",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 205,
+        "question": "Remember to turn off the _____ supply before leaving the house for a long holiday to avoid leakage risks. (n.气体；燃气；汽油)",
+        "answer": "gas",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 206,
+        "question": "It is a well-known _____ that regular physical exercise benefits both physical and mental health. (n.事实；真相)",
+        "answer": "fact",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 207,
+        "question": "The area is famous for its stunning _____ landscapes and diverse wildlife populations. (adj.自然的；天然的)",
+        "answer": "natural",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 208,
+        "question": "The greenhouse uses _____ heating systems to maintain a stable temperature for tropical plants during cold winters. (adj.人造的；人工的)",
+        "answer": "artificial",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 209,
+        "question": "Many outdoor jackets are made from _____ materials that are water-resistant and highly durable. (adj.合成的；人造的)",
+        "answer": "synthetic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 210,
+        "question": "Plants use sunlight, water and carbon dioxide to produce energy through _____. (n.光合作用)",
+        "answer": "photosynthesis",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 211,
+        "question": "All living cells need to _____ continuously to release the energy required for essential life processes. (v.呼吸)",
+        "answer": "respire",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 212,
+        "question": "Sulfur _____ is a major air pollutant released from burning coal in industrial power plants. (n.二氧化物)",
+        "answer": "dioxide",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 213,
+        "question": "The dense tropical _____ in the rainforest provides habitat for thousands of unique animal and insect species. (n.植被；植物)",
+        "answer": "vegetation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 214,
+        "question": "Basil, rosemary and thyme are common types of _____ that are often used to add flavor to cooked dishes. (n.草本植物；药草)",
+        "answer": "herb",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 215,
+        "question": "Traffic congestion is a _____ problem in many large cities around the world. (adj.多年生的；长久的)",
+        "answer": "perennial",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 216,
+        "question": "Unlike annual plants that die after one growing season, _____ return to bloom year after year. (n.多年生植物)",
+        "answer": "perennials",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 217,
+        "question": "She developed a strong interest in _____ during high school, which led her to pursue a degree in plant science. (n.植物学)",
+        "answer": "botany",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 218,
+        "question": "The _____ spent several months in the Amazon rainforest documenting new species of flowering plants. (n.植物学家)",
+        "answer": "botanist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 219,
+        "question": "The introductory university course covers basic concepts of _____ including food webs, nutrient cycles and population dynamics. (n.生态学)",
+        "answer": "ecology",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 220,
+        "question": "The _____ warned that widespread deforestation could lead to irreversible soil erosion and biodiversity loss. (n.生态学家)",
+        "answer": "ecologist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 221,
+        "question": "Coral reefs support an incredibly diverse marine _____ that is home to thousands of fish and invertebrate species. (n.生态系统)",
+        "answer": "ecosystem",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 222,
+        "question": "Many local governments are encouraging residents to adopt more _____ habits to reduce their personal carbon footprint. (adj.环保的)",
+        "answer": "eco-friendly",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 223,
+        "question": "My grandmother studied _____ in college and now grows a wide variety of flowers and vegetables in her backyard garden. (n.园艺学)",
+        "answer": "horticulture",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 224,
+        "question": "Every living _____ requires a steady supply of nutrients and energy to survive, grow and reproduce. (n.生物体；有机体)",
+        "answer": "organism",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 225,
+        "question": "Advances in _____ have allowed scientists to identify the specific genes responsible for many inherited diseases. (遗传学)",
+        "answer": "genetics",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 226,
+        "question": "Exposure to high levels of radiation can cause a harmful _____ in an organism's DNA. (突变；变异)",
+        "answer": "mutation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 227,
+        "question": "There is considerable _____ in the size and colour of leaves even on the same tree. (变异；变化)",
+        "answer": "variation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 228,
+        "question": "The national park was established to protect the wide _____ of plant and animal species living in the region. (多样性；多样化)",
+        "answer": "diversity",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 229,
+        "question": "Plant breeders often use _____ to create new crop varieties that are more resistant to drought and disease. (杂交；混合)",
+        "answer": "hybridisation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 230,
+        "question": "Scientists _____ newly discovered organisms into different groups based on their shared physical and genetic characteristics. (分类；归类)",
+        "answer": "classify",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 231,
+        "question": "Most fish _____ by laying large numbers of eggs in the water, which are then fertilised externally. (繁殖；复制)",
+        "answer": "reproduce",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 232,
+        "question": "Over millions of years, birds _____ from small, feathered dinosaurs that once lived on the ground. (进化；逐步发展)",
+        "answer": "evolve",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 233,
+        "question": "The number of tourists visiting the coastal town tends to _____ depending on the time of year and weather conditions. (波动；起伏)",
+        "answer": "fluctuate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 234,
+        "question": "The local government launched a project to _____ former industrial wasteland and turn it into public green space. (开垦；回收)",
+        "answer": "reclaim",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 235,
+        "question": "Local farmers _____ a variety of grain and vegetable crops on the fertile plains near the river. (耕种；培育)",
+        "answer": "cultivate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 236,
+        "question": "Farmers usually _____ winter wheat in late autumn, so the young plants can emerge early the following spring. (播种；散布)",
+        "answer": "sow",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 237,
+        "question": "We need a sturdy _____ to dig holes for the new fruit trees we plan to plant this weekend. (铁锹；铲子)",
+        "answer": "spade",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 238,
+        "question": "After mowing the lawn, I used a _____ to gather all the cut grass into a pile for the compost bin. (耙子；耙平)",
+        "answer": "rake",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 239,
+        "question": "The archaeologists uncovered a collection of well-preserved pottery shards from an _____ village that dates back over 5,000 years. (古代的；古老的)",
+        "answer": "ancient",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 240,
+        "question": "There was a tall _____ of old books and magazines in the corner of the attic, covered in a thick layer of dust. (堆；堆叠)",
+        "answer": "stack",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 241,
+        "question": "She tossed the fallen apple peels and coffee grounds onto the _____ of organic waste in the corner of the garden. (堆；堆积)",
+        "answer": "heap",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 242,
+        "question": "The farm workers helped to _____ ripe grapes from the vines during the annual autumn harvest. (采摘；拔)",
+        "answer": "pluck",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 243,
+        "question": "Before conducting the survey, researchers must _____ a representative sample of participants to ensure the results are reliable. (采摘；挑选)",
+        "answer": "pick",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 244,
+        "question": "Well-fertilised, healthy plants tend to _____ larger, more flavourful fruits and vegetables than plants grown in poor soil. (产量；产出)",
+        "answer": "yield",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 245,
+        "question": "The local government introduced strict new rules to prevent unnecessary development on agricultural _____. (土地；陆地)",
+        "answer": "land",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 246,
+        "question": "Despite facing repeated setbacks and criticism, she remained _____ in her commitment to protecting the local environment. (坚硬的；不屈的)",
+        "answer": "unyielding",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 247,
+        "question": "Many families in the rural village _____ chickens and goats to provide eggs, milk, and meat for their own use. (饲养；抚养)",
+        "answer": "rear",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 248,
+        "question": "The river valley contains some of the most fertile and _____ land in the entire region, ideal for growing wheat and corn. (可耕种的；耕地)",
+        "answer": "arable",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 249,
+        "question": "Farmers use a heavy iron _____ to turn over the soil before sowing seeds in early spring. (犁；耕（地）)",
+        "answer": "plough",
+        "hint": "请根据上下文和中文提示填空"
+      }
+    ]
+  }
+}
