@@ -131,11 +131,34 @@ def apply_custom_css():
         background: linear-gradient(180deg, #f8f9ff 0%, #f0f0ff 100%);
     }
     
-    .stTabs [data-baseweb="tab-list"] { gap: 8px; }
-    .stTabs [data-baseweb="tab"] {
-        border-radius: 8px 8px 0 0;
-        padding: 10px 20px;
-        font-weight: 600;
+    /* Main nav radio - pill-style tab navigation */
+    [data-testid="stHorizontalRadio"] > div:first-child {
+        display: flex;
+        gap: 4px;
+        background: #f0f0f5;
+        border-radius: 14px;
+        padding: 5px;
+        margin-bottom: 1rem;
+    }
+    [data-testid="stHorizontalRadio"] label {
+        flex: 1;
+        text-align: center;
+        border-radius: 10px !important;
+        padding: 10px 14px !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+        margin: 0 !important;
+        transition: all 0.2s;
+    }
+    [data-testid="stHorizontalRadio"] label:hover {
+        background: #e0e0ff;
+    }
+    [data-testid="stHorizontalRadio"] label:has(input:checked) {
+        background: #667eea !important;
+        box-shadow: 0 2px 8px rgba(102,126,234,0.3);
+    }
+    [data-testid="stHorizontalRadio"] label:has(input:checked) p {
+        color: #fff !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -519,6 +542,8 @@ def main():
         st.session_state.test_batch_size = 20
     if 'show_test_bottom_notice' not in st.session_state:
         st.session_state.show_test_bottom_notice = False
+    if 'active_nav' not in st.session_state:
+        st.session_state.active_nav = 0
     
     pm = st.session_state.progress
     tbm = st.session_state.test_bank
@@ -605,17 +630,22 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
-    tab1, tab2, tab3, tab4 = st.tabs([
-        "📚 今日学习",
-        "✍️ 开始测试",
-        "📊 学习报告",
-        "🎯 复习强化"
-    ])
+    # Navigation radio (controllable via session_state.active_nav)
+    TAB_LABELS = ["📚 今日学习", "✍️ 开始测试", "📊 学习报告", "🎯 复习强化"]
+    active_nav_label = st.radio(
+        "", TAB_LABELS,
+        index=st.session_state.active_nav,
+        horizontal=True,
+        key="main_nav_radio",
+        label_visibility="collapsed"
+    )
+    # Sync the radio selection back to session state
+    st.session_state.active_nav = TAB_LABELS.index(active_nav_label)
     
     # =========================================================================
-    # TAB 1: TODAY'S LEARNING
+    # SECTION 1: TODAY'S LEARNING
     # =========================================================================
-    with tab1:
+    if st.session_state.active_nav == 0:
         st.markdown(f"## 📚 第 {selected_day} 天 - 词汇学习 ({len(day_words)} 词)")
         
         # Pagination
@@ -667,25 +697,21 @@ def main():
                         f"</div>"
                     )
 
-                # Render word card + audio side by side using st.columns for reliable audio
-                card_col, audio_col = st.columns([0.88, 0.12])
-                with card_col:
-                    st.markdown(f"""
-                    <div class="word-card">
-                        <div style="display:flex;justify-content:space-between;align-items:center;">
-                            <div>
-                                <span class="word-en">{row['word']}</span>{pron_html}
-                            </div>
+                # Render word card with embedded audio
+                audio_btn = get_audio_html(word_idx)
+                st.markdown(f"""
+                <div class="word-card">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <div>
+                            <span class="word-en">{row['word']}</span>{pron_html}{audio_btn}
                         </div>
-                        <div class="content">
-                            <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
-                        </div>
-                        {mastery_html}
                     </div>
-                    """, unsafe_allow_html=True)
-                with audio_col:
-                    st.write("")  # vertical alignment spacer
-                    render_audio_player(word_idx)
+                    <div class="content">
+                        <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
+                    </div>
+                    {mastery_html}
+                </div>
+                """, unsafe_allow_html=True)
 
                 # Expander: Chinese def, collocations (large), sentence, root, related
                 with st.expander(f"点击查看: {row['word']} 的完整释义", expanded=False):
@@ -784,7 +810,7 @@ def main():
                 st.session_state.test_batch_size = size
                 st.session_state.show_answer = False
                 st.session_state.last_user_answer = ''
-                st.success(f"已加载 {len(batch)} 道测试题，请切换到「✍️ 开始测试」标签页")
+                st.success(f"已加载 {len(batch)} 道测试题！点击下方「🎯 开始测试」按钮即可开始")
         
         # Show "开始测试" button at bottom if test batch is loaded
         if st.session_state.test_batch and len(st.session_state.test_batch) > 0:
@@ -799,15 +825,13 @@ def main():
             col_g1, col_g2, col_g3 = st.columns([1, 2, 1])
             with col_g2:
                 if st.button("🎯 开始测试", key="bottom_start_test", type="primary", use_container_width=True):
-                    st.session_state.show_test_bottom_notice = True
+                    st.session_state.active_nav = 1
                     st.rerun()
-                if st.session_state.get('show_test_bottom_notice', False):
-                    st.info("请点击页面顶部的「✍️ 开始测试」标签页进入测试")
     
     # =========================================================================
-    # TAB 2: TEST
+    # SECTION 2: TEST
     # =========================================================================
-    with tab2:
+    if st.session_state.active_nav == 1:
         st.markdown("## ✍️ 词汇测试")
         
         if not st.session_state.test_batch:
@@ -998,9 +1022,9 @@ def main():
                         st.markdown(f"**例句**: {word_row['sentence']}")
     
     # =========================================================================
-    # TAB 3: LEARNING REPORT
+    # SECTION 3: LEARNING REPORT
     # =========================================================================
-    with tab3:
+    if st.session_state.active_nav == 2:
         st.markdown("## 📊 学习报告")
         
         stats = pm.get_overall_stats()
@@ -1093,9 +1117,9 @@ def main():
             st.info("暂无测试记录，快去测试吧!")
     
     # =========================================================================
-    # TAB 4: REVIEW & REINFORCEMENT
+    # SECTION 4: REVIEW & REINFORCEMENT
     # =========================================================================
-    with tab4:
+    if st.session_state.active_nav == 3:
         st.markdown("## 🎯 复习与强化训练")
         
         review_queue = pm.get_review_queue()
@@ -1250,7 +1274,8 @@ def main():
                         st.session_state.test_results = []
                         st.session_state.show_answer = False
                         st.session_state.test_type = 'cn2en'
-                        st.info("请切换到「✍️ 开始测试」标签页")
+                        st.session_state.active_nav = 1
+                        st.rerun()
             
             st.markdown("---")
             review_test_count = min(30, len(review_words))
@@ -1275,7 +1300,8 @@ def main():
                 st.session_state.test_results = []
                 st.session_state.show_answer = False
                 st.session_state.test_type = 'cn2en'
-                st.info("请切换到「✍️ 开始测试」标签页")
+                st.session_state.active_nav = 1
+                st.rerun()
         else:
             st.info("暂无需要复习的词汇。完成更多测试后，系统会自动识别薄弱词汇。")
         
