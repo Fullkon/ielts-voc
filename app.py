@@ -662,12 +662,66 @@ def main():
                         f"</div>"
                     )
 
-                # Render word card (no embedded audio -- use st.audio below)
+                # Pre-compute audio base64 for embedded HTML audio tag
+                audio_html = ""
+                audio_path = AUDIO_DIR / f'{word_idx}.mp3'
+                if audio_path.exists() and audio_path.stat().st_size > 0:
+                    try:
+                        import base64
+                        with open(audio_path, 'rb') as f:
+                            b64 = base64.b64encode(f.read()).decode()
+                        audio_html = (
+                            f'<audio controls preload="none" '
+                            f'style="height:20px;width:140px;display:inline-block;vertical-align:middle;margin-left:6px;" '
+                            f'title="Click play to listen">'
+                            f'<source src="data:audio/mp3;base64,{b64}" type="audio/mp3">'
+                            f'</audio>'
+                        )
+                    except Exception:
+                        pass
+
+                # Build collocations HTML
+                colls = parse_collocations(str(row['collocations']))
+                processed_colls = []
+                target_word = str(row['word']).strip().lower()
+                for coll in colls:
+                    cl = coll.strip()
+                    if not cl:
+                        continue
+                    cl_lower = cl.lower()
+                    if target_word in cl_lower:
+                        processed_colls.append(cl)
+                    elif ' ' not in cl and ',' not in cl and '|' not in cl:
+                        processed_colls.append(f"{target_word} {cl}")
+                    else:
+                        processed_colls.append(cl)
+
+                colloc_html = ""
+                if processed_colls:
+                    items = "".join(
+                        f'<span style="display:inline-block;background:#f0f0ff;color:#667eea;'
+                        f'padding:0.25rem 0.6rem;border-radius:6px;margin:2px 4px;'
+                        f'font-size:1.05rem;font-weight:500;">{c}</span>'
+                        for c in processed_colls[:8]
+                    )
+                    colloc_html = f"<p><strong>常见搭配:</strong> {items}</p>"
+
+                sentence_html = ""
+                sent = str(row['sentence'])
+                if sent and sent not in ('None', 'nan', ''):
+                    sentence_html = f"<p><strong>例句:</strong> <em>{sent}</em></p>"
+
+                root = parse_root_words(str(row['root_words']))
+                related = parse_related_words(str(row['related_words']))
+                root_html = f"<p><strong>同根词:</strong> {', '.join(root[:8])}</p>" if root else ""
+                related_html = f"<p><strong>相近词:</strong> {', '.join(related[:8])}</p>" if related else ""
+
+                # Single markdown call: card + audio + details — ZERO Streamlit widgets
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
                         <div>
-                            <span class="word-en">{row['word']}</span>{pron_html}
+                            <span class="word-en">{row['word']}</span>{pron_html}{audio_html}
                         </div>
                     </div>
                     <div class="content">
@@ -675,57 +729,18 @@ def main():
                     </div>
                     {mastery_html}
                 </div>
+                <details style="margin:8px 0;cursor:pointer;">
+                    <summary style="font-weight:600;color:#667eea;font-size:0.9rem;padding:6px 0;">
+                        点击查看: {row['word']} — {row['chinese_def']}
+                    </summary>
+                    <div style="padding:10px 0;line-height:1.8;color:#444;font-size:0.95rem;">
+                        {colloc_html}
+                        {sentence_html}
+                        {root_html}
+                        {related_html}
+                    </div>
+                </details>
                 """, unsafe_allow_html=True)
-
-                # Audio player -- placed right after each card for reliable 1:1 mapping
-                audio_path = AUDIO_DIR / f'{word_idx}.mp3'
-                if audio_path.exists() and audio_path.stat().st_size > 0:
-                    try:
-                        with open(audio_path, 'rb') as f:
-                            audio_bytes = f.read()
-                        st.audio(audio_bytes, format='audio/mp3')
-                    except Exception:
-                        pass
-
-                # Expander: Chinese def, collocations (large), sentence, root, related
-                with st.expander(f"点击查看: {row['word']} 的完整释义", expanded=False):
-                    st.markdown(f"#### {row['word']} — {row['chinese_def']}")
-
-                    colls = parse_collocations(str(row['collocations']))
-                    # Post-process: if a collocation is a single word (no space, or doesn't
-                    # contain the target word), treat it as an adjective/noun modifier and
-                    # prepend/append the target word to form a proper collocation phrase.
-                    processed_colls = []
-                    target_word = str(row['word']).strip().lower()
-                    for coll in colls:
-                        cl = coll.strip()
-                        if not cl:
-                            continue
-                        cl_lower = cl.lower()
-                        # Already has target word? Keep as-is.
-                        if target_word in cl_lower:
-                            processed_colls.append(cl)
-                        # Single word only — prepend target word to form a phrase
-                        elif ' ' not in cl and ',' not in cl and '|' not in cl:
-                            processed_colls.append(f"{target_word} {cl}")
-                        else:
-                            processed_colls.append(cl)
-                    if processed_colls:
-                        st.markdown("##### 常见搭配")
-                        cols_disp = st.columns(min(4, len(processed_colls)))
-                        for j, coll in enumerate(processed_colls):
-                            with cols_disp[j % len(cols_disp)]:
-                                st.markdown(f"<span style='font-size:1.05rem;font-weight:500;'>`{coll}`</span>", unsafe_allow_html=True)
-
-                    if str(row['sentence']) and str(row['sentence']) not in ('None', 'nan', ''):
-                        st.markdown(f"**例句**: *{row['sentence']}*")
-
-                    root = parse_root_words(str(row['root_words']))
-                    related = parse_related_words(str(row['related_words']))
-                    if root:
-                        st.markdown(f"**同根词**: {', '.join(root[:8])}")
-                    if related:
-                        st.markdown(f"**相近词**: {', '.join(related[:8])}")
                 
                 st.markdown("---")
         
@@ -1207,31 +1222,49 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                with st.expander(f"查看详情: {row['word']}"):
-                    st.markdown(f"**英文释义**: {str(row['english_def'])[:300]}")
-                    st.markdown(f"**汉语释义**: {row['chinese_def']}")
-                    
-                    # Audio for review word
-                    audio_path = AUDIO_DIR / f'{widx}.mp3'
-                    if audio_path.exists() and audio_path.stat().st_size > 0:
-                        try:
-                            with open(audio_path, 'rb') as f:
-                                st.audio(f.read(), format='audio/mp3')
-                        except Exception:
-                            pass
-                    
-                    colls = parse_collocations(str(row['collocations']))
-                    if colls:
-                        st.markdown("**搭配**: " + " | ".join(f"`{c}`" for c in colls[:6]))
-                    
-                    related = parse_related_words(str(row['related_words']))
-                    root = parse_root_words(str(row['root_words']))
-                    if related:
-                        st.markdown(f"**相近词**: {', '.join(related[:6])}")
-                    if root:
-                        st.markdown(f"**同根词**: {', '.join(root[:6])}")
-                    
-                    if st.button(f"⚡ 快速测试此词", key=f"qt_{widx}"):
+                # Build details HTML with embedded base64 audio
+                eng = str(row['english_def'])[:300]
+                cn = str(row['chinese_def'])
+                colls = parse_collocations(str(row['collocations']))
+                coll_html = " | ".join(f'<code>{c}</code>' for c in colls[:6]) if colls else ""
+                
+                related = parse_related_words(str(row['related_words']))
+                root = parse_root_words(str(row['root_words']))
+                rel_html = f"<p><strong>相近词:</strong> {', '.join(related[:6])}</p>" if related else ""
+                rtl_html = f"<p><strong>同根词:</strong> {', '.join(root[:6])}</p>" if root else ""
+                
+                # Base64 audio for review
+                import base64
+                aud_html = ""
+                aud_path = AUDIO_DIR / f'{widx}.mp3'
+                if aud_path.exists() and aud_path.stat().st_size > 0:
+                    try:
+                        with open(aud_path, 'rb') as af:
+                            b64 = base64.b64encode(af.read()).decode()
+                        aud_html = (
+                            f'<audio controls preload="none" style="height:22px;width:150px;margin:4px 0;">'
+                            f'<source src="data:audio/mp3;base64,{b64}" type="audio/mp3"></audio><br>'
+                        )
+                    except Exception:
+                        pass
+                
+                st.markdown(f"""
+                <details style="margin:4px 0;cursor:pointer;">
+                    <summary style="font-weight:600;color:#667eea;font-size:0.9rem;padding:4px 0;">
+                        查看详情: {row['word']}
+                    </summary>
+                    <div style="padding:8px 0;line-height:1.8;color:#444;font-size:0.9rem;">
+                        {aud_html}
+                        <p><strong>英文释义:</strong> {eng}</p>
+                        <p><strong>汉语释义:</strong> {cn}</p>
+                        {f'<p><strong>搭配:</strong> {coll_html}</p>' if coll_html else ''}
+                        {rel_html}
+                        {rtl_html}
+                    </div>
+                </details>
+                """, unsafe_allow_html=True)
+                
+                if st.button(f"⚡ 快速测试此词", key=f"qt_{widx}"):
                         row = df.iloc[widx]
                         word = str(row['word']).strip()
                         cn_def = str(row['chinese_def']).strip()
