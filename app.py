@@ -174,14 +174,13 @@ def load_vocabulary() -> pd.DataFrame:
     df = pd.read_excel(XLSX_FILE)
     df.columns = ['index_no', 'word', 'pronunciation', 'english_def',
                   'collocations', 'sentence', 'root_words', 'related_words', 'chinese_def']
-    df = df.dropna(subset=['word', 'chinese_def'])
-    df['word'] = df['word'].astype(str).str.strip()
-    df['chinese_def'] = df['chinese_def'].astype(str).str.strip()
-    df['english_def'] = df['english_def'].fillna('').astype(str)
+    df['word']         = df['word'].fillna('').astype(str).str.strip()
+    df['chinese_def']  = df['chinese_def'].fillna('').astype(str).str.strip()
+    df['english_def']  = df['english_def'].fillna('').astype(str)
     df['pronunciation'] = df['pronunciation'].fillna('').astype(str)
-    df['collocations'] = df['collocations'].fillna('').astype(str)
-    df['sentence'] = df['sentence'].fillna('').astype(str)
-    df['root_words'] = df['root_words'].fillna('').astype(str)
+    df['collocations']  = df['collocations'].fillna('').astype(str)
+    df['sentence']      = df['sentence'].fillna('').astype(str)
+    df['root_words']    = df['root_words'].fillna('').astype(str)
     df['related_words'] = df['related_words'].fillna('').astype(str)
     df = df.reset_index(drop=True)
     df['id'] = df.index
