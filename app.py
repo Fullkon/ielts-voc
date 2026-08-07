@@ -517,6 +517,8 @@ def main():
         st.session_state.learning_page = 0
     if 'test_batch_size' not in st.session_state:
         st.session_state.test_batch_size = 20
+    if 'show_test_bottom_notice' not in st.session_state:
+        st.session_state.show_test_bottom_notice = False
     
     pm = st.session_state.progress
     tbm = st.session_state.test_bank
@@ -642,7 +644,7 @@ def main():
             word_rec = pm.get_word_record(word_idx)
             
             with st.container():
-                # Word card header: word + pronunciation + audio + English definition (always visible)
+                # Word card header: word + pronunciation + audio (always visible)
                 eng_def_preview = str(row['english_def'])[:250]
                 eng_def_preview += '...' if len(str(row['english_def'])) > 250 else ''
 
@@ -665,31 +667,53 @@ def main():
                         f"</div>"
                     )
 
-                audio_btn = get_audio_html(word_idx)
-
-                st.markdown(f"""
-                <div class="word-card">
-                    <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <div>
-                            <span class="word-en">{row['word']}</span>{pron_html}{audio_btn}
+                # Render word card + audio side by side using st.columns for reliable audio
+                card_col, audio_col = st.columns([0.88, 0.12])
+                with card_col:
+                    st.markdown(f"""
+                    <div class="word-card">
+                        <div style="display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <span class="word-en">{row['word']}</span>{pron_html}
+                            </div>
                         </div>
+                        <div class="content">
+                            <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
+                        </div>
+                        {mastery_html}
                     </div>
-                    <div class="content">
-                        <p><span class="label-badge">英文释义</span> {eng_def_preview}</p>
-                    </div>
-                    {mastery_html}
-                </div>
-                """, unsafe_allow_html=True)
+                    """, unsafe_allow_html=True)
+                with audio_col:
+                    st.write("")  # vertical alignment spacer
+                    render_audio_player(word_idx)
 
                 # Expander: Chinese def, collocations (large), sentence, root, related
                 with st.expander(f"点击查看: {row['word']} 的完整释义", expanded=False):
                     st.markdown(f"#### {row['word']} — {row['chinese_def']}")
 
                     colls = parse_collocations(str(row['collocations']))
-                    if colls:
+                    # Post-process: if a collocation is a single word (no space, or doesn't
+                    # contain the target word), treat it as an adjective/noun modifier and
+                    # prepend/append the target word to form a proper collocation phrase.
+                    processed_colls = []
+                    target_word = str(row['word']).strip().lower()
+                    for coll in colls:
+                        cl = coll.strip()
+                        if not cl:
+                            continue
+                        cl_lower = cl.lower()
+                        # Already has target word? Keep as-is.
+                        if target_word in cl_lower:
+                            processed_colls.append(cl)
+                        # Single word only — prepend target word to form a phrase
+                        elif ' ' not in cl and ',' not in cl and '|' not in cl:
+                            processed_colls.append(f"{target_word} {cl}")
+                        else:
+                            processed_colls.append(cl)
+                    if processed_colls:
                         st.markdown("##### 常见搭配")
-                        cols_disp = st.columns(min(4, len(colls)))
-                        for j, coll in enumerate(colls):
+                        cols_disp = st.columns(min(4, len(processed_colls)))
+                        for j, coll in enumerate(processed_colls):
                             with cols_disp[j % len(cols_disp)]:
                                 st.markdown(f"<span style='font-size:1.05rem;font-weight:500;'>`{coll}`</span>", unsafe_allow_html=True)
 
@@ -705,7 +729,20 @@ def main():
                 
                 st.markdown("---")
         
-        # Direct test entry - no generation step, bank already exists
+        # Bottom pagination navigation
+        col_bnav1, col_bnav2, col_bnav3 = st.columns([1, 2, 1])
+        with col_bnav1:
+            if st.button("◀ 上一页", key='bottom_prev', disabled=st.session_state.learning_page == 0):
+                st.session_state.learning_page -= 1
+                st.rerun()
+        with col_bnav2:
+            st.markdown(f"<div style='text-align:center;padding-top:5px;'>第 {st.session_state.learning_page+1}/{total_pages} 页</div>", unsafe_allow_html=True)
+        with col_bnav3:
+            if st.button("下一页 ▶", key='bottom_next', disabled=st.session_state.learning_page >= total_pages - 1):
+                st.session_state.learning_page += 1
+                st.rerun()
+        
+        # Direct test entry
         st.markdown("---")
         st.markdown("### ✍️ 直接进入测试")
         st.caption("测试题已在后台预生成并持久化，每次调用同一批题目，确保学习一致性。")
@@ -744,10 +781,28 @@ def main():
                 st.session_state.test_total = 0
                 st.session_state.test_results = []
                 st.session_state.test_type = test_type_go
+                st.session_state.test_batch_size = size
                 st.session_state.show_answer = False
                 st.session_state.last_user_answer = ''
-                st.session_state.test_batch_size = size
                 st.success(f"已加载 {len(batch)} 道测试题，请切换到「✍️ 开始测试」标签页")
+        
+        # Show "开始测试" button at bottom if test batch is loaded
+        if st.session_state.test_batch and len(st.session_state.test_batch) > 0:
+            st.markdown("---")
+            st.markdown(f"""
+            <div style="background:#e8f0fe;border-left:4px solid #667eea;border-radius:8px;padding:1rem;text-align:center;margin-bottom:1rem;">
+                <p style="font-size:1.2rem;font-weight:700;color:#667eea;margin:0;">
+                    测试已就绪！共 {len(st.session_state.test_batch)} 题 — 题型: {st.session_state.test_type}
+                </p>
+            </div>
+            """, unsafe_allow_html=True)
+            col_g1, col_g2, col_g3 = st.columns([1, 2, 1])
+            with col_g2:
+                if st.button("🎯 开始测试", key="bottom_start_test", type="primary", use_container_width=True):
+                    st.session_state.show_test_bottom_notice = True
+                    st.rerun()
+                if st.session_state.get('show_test_bottom_notice', False):
+                    st.info("请点击页面顶部的「✍️ 开始测试」标签页进入测试")
     
     # =========================================================================
     # TAB 2: TEST
