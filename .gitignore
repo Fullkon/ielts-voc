@@ -35,6 +35,6 @@ build/
 # Jupyter
 .ipynb_checkpoints/
 
-# Environment
-.env
-.env.local
+# Collocation regeneration
+collocations_new.json
+collocations_checkpoint.json

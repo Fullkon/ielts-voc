@@ -31,6 +31,7 @@ TOTAL_DAYS = 28
 DATA_FILE = Path(__file__).parent / 'progress.json'
 TEST_BANK_FILE = Path(__file__).parent / 'test_bank.json'
 XLSX_FILE = Path(__file__).parent / '雅思英文词汇表（完整版）.xlsx'
+AUDIO_DIR = Path(__file__).parent / 'audio'
 
 
 # =============================================================================
@@ -162,22 +163,59 @@ def load_vocabulary() -> pd.DataFrame:
     return df
 
 def parse_collocations(colloc_str: str) -> List[str]:
-    if not colloc_str or colloc_str == 'None':
+    """Parse comma- or pipe-separated collocation PHRASES.
+    Each item is a full phrase like 'conduct research', NOT a single word.
+    """
+    if not colloc_str or colloc_str in ('None', 'nan', ''):
         return []
-    parts = re.split(r'[|,，;；]', colloc_str)
+    parts = re.split(r'[,|，]', colloc_str)
     return [p.strip() for p in parts if p.strip()]
 
 def parse_related_words(related_str: str) -> List[str]:
-    if not related_str or related_str == 'None':
+    if not related_str or related_str in ('None', 'nan', ''):
         return []
-    parts = re.split(r'[|,，;；]', related_str)
+    parts = re.split(r'[,|，]', related_str)
     return [p.strip() for p in parts if p.strip()]
 
 def parse_root_words(root_str: str) -> List[str]:
-    if not root_str or root_str == 'None':
+    if not root_str or root_str in ('None', 'nan', ''):
         return []
-    parts = re.split(r'[|,，;；]', root_str)
+    parts = re.split(r'[,|，]', root_str)
     return [p.strip() for p in parts if p.strip()]
+
+def get_audio_html(word_index: int) -> str:
+    """Return compact HTML audio element with controls.
+    Uses base64 data-URI so it works without separate file hosting.
+    Streamlit preserves <audio controls> tags (but strips onclick/js handlers).
+    """
+    import base64
+    audio_path = AUDIO_DIR / f'{word_index}.mp3'
+    if not audio_path.exists() or audio_path.stat().st_size == 0:
+        return ''
+    try:
+        with open(audio_path, 'rb') as f:
+            b64 = base64.b64encode(f.read()).decode()
+        return (
+            f'<audio controls preload="none" '
+            f'style="height:20px;width:140px;display:inline-block;vertical-align:middle;margin-left:6px;" '
+            f'title="Click play to listen">'
+            f'<source src="data:audio/mp3;base64,{b64}" type="audio/mp3">'
+            f'</audio>'
+        )
+    except Exception:
+        return ''
+
+
+def render_audio_player(word_index: int):
+    """Render an audio player for the word using st.audio."""
+    audio_path = AUDIO_DIR / f'{word_index}.mp3'
+    if audio_path.exists() and audio_path.stat().st_size > 0:
+        try:
+            with open(audio_path, 'rb') as f:
+                audio_bytes = f.read()
+            st.audio(audio_bytes, format='audio/mp3')
+        except Exception:
+            pass
 
 
 # =============================================================================
@@ -411,26 +449,24 @@ class TestEngine:
         
         elif test_type == 'collocation':
             colls = parse_collocations(str(word_row['collocations']))
-            if colls:
-                # Use only the first collocation
-                coll = colls[0].lower()
-                # Strip parenthetical content (Chinese translations etc.)
-                coll = re.sub(r'\s*[\(（][^)）]*[\)）]\s*', '', coll).strip()
-                if word_lower in coll:
-                    question = coll.replace(word_lower, '_____', 1)
+            if colls and len(colls) >= 1:
+                # Pick ONE random collocation phrase deterministically
+                picked = colls[rng.randint(0, len(colls) - 1)]
+                # Build question by blanking out the target word IN the phrase
+                pattern = re.compile(re.escape(word), re.IGNORECASE)
+                if pattern.search(picked):
+                    question = pattern.sub('_____', picked, count=1)
                 else:
-                    question = f"_____ {coll}"
+                    # Target word not literally in the phrase — prepend blank
+                    question = f"_____ {picked}"
             else:
-                if rng.random() > 0.5:
-                    question = f"_____ {word_lower}"
-                else:
-                    question = f"{word_lower} _____"
+                question = f"_____ {word_lower}"
             return {
                 'type': 'collocation',
                 'label': '搭配测试',
                 'question': question,
                 'answer': word_lower,
-                'hint': f'目标词释义请自行回忆',
+                'hint': '请填写该搭配短语中缺失的目标词',
                 'word_id': int(word_id),
             }
         
@@ -712,11 +748,14 @@ def main():
                         f"</div>"
                     )
                 
+                # Audio button HTML (inline base64)
+                audio_btn = get_audio_html(word_idx)
+
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
                         <div>
-                            <span class="word-en">🔤 {row['word']}</span>{pron_html}
+                            <span class="word-en">🔤 {row['word']}</span>{pron_html}{audio_btn}
                         </div>
                     </div>
                     <div class="content">
@@ -974,6 +1013,15 @@ def main():
                     st.markdown(f"**📖 {word_row['word']}** — *{word_row['chinese_def']}*")
                     st.caption(str(word_row['english_def'])[:300])
                     
+                    # Audio for the word in test answer
+                    audio_path = AUDIO_DIR / f'{current_word_idx}.mp3'
+                    if audio_path.exists() and audio_path.stat().st_size > 0:
+                        try:
+                            with open(audio_path, 'rb') as f:
+                                st.audio(f.read(), format='audio/mp3')
+                        except Exception:
+                            pass
+                    
                     colls = parse_collocations(str(word_row['collocations']))
                     if colls:
                         st.markdown("**搭配**: " + " | ".join(f"`{c}`" for c in colls[:5]))
@@ -1195,6 +1243,15 @@ def main():
                 with st.expander(f"查看详情: {row['word']}"):
                     st.markdown(f"**英文释义**: {str(row['english_def'])[:300]}")
                     st.markdown(f"**汉语释义**: {row['chinese_def']}")
+                    
+                    # Audio for review word
+                    audio_path = AUDIO_DIR / f'{widx}.mp3'
+                    if audio_path.exists() and audio_path.stat().st_size > 0:
+                        try:
+                            with open(audio_path, 'rb') as f:
+                                st.audio(f.read(), format='audio/mp3')
+                        except Exception:
+                            pass
                     
                     colls = parse_collocations(str(row['collocations']))
                     if colls:
