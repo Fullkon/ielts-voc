@@ -207,41 +207,6 @@ def parse_root_words(root_str: str) -> List[str]:
     parts = re.split(r'[,|，]', root_str)
     return [p.strip() for p in parts if p.strip()]
 
-def get_audio_html(word_index: int) -> str:
-    """Return compact HTML audio element with controls.
-    Uses base64 data-URI so it works without separate file hosting.
-    Streamlit preserves <audio controls> tags (but strips onclick/js handlers).
-    """
-    import base64
-    audio_path = AUDIO_DIR / f'{word_index}.mp3'
-    if not audio_path.exists() or audio_path.stat().st_size == 0:
-        return ''
-    try:
-        with open(audio_path, 'rb') as f:
-            b64 = base64.b64encode(f.read()).decode()
-        return (
-            f'<audio controls preload="none" '
-            f'style="height:20px;width:140px;display:inline-block;vertical-align:middle;margin-left:6px;" '
-            f'title="Click play to listen">'
-            f'<source src="data:audio/mp3;base64,{b64}" type="audio/mp3">'
-            f'</audio>'
-        )
-    except Exception:
-        return ''
-
-
-def render_audio_player(word_index: int):
-    """Render an audio player for the word using st.audio."""
-    audio_path = AUDIO_DIR / f'{word_index}.mp3'
-    if audio_path.exists() and audio_path.stat().st_size > 0:
-        try:
-            with open(audio_path, 'rb') as f:
-                audio_bytes = f.read()
-            st.audio(audio_bytes, format='audio/mp3')
-        except Exception:
-            pass
-
-
 # =============================================================================
 # LEARNING PLAN GENERATOR
 # =============================================================================
@@ -697,13 +662,12 @@ def main():
                         f"</div>"
                     )
 
-                # Render word card with embedded audio
-                audio_btn = get_audio_html(word_idx)
+                # Render word card (no embedded audio -- use st.audio below)
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
                         <div>
-                            <span class="word-en">{row['word']}</span>{pron_html}{audio_btn}
+                            <span class="word-en">{row['word']}</span>{pron_html}
                         </div>
                     </div>
                     <div class="content">
@@ -712,6 +676,16 @@ def main():
                     {mastery_html}
                 </div>
                 """, unsafe_allow_html=True)
+
+                # Audio player -- placed right after each card for reliable 1:1 mapping
+                audio_path = AUDIO_DIR / f'{word_idx}.mp3'
+                if audio_path.exists() and audio_path.stat().st_size > 0:
+                    try:
+                        with open(audio_path, 'rb') as f:
+                            audio_bytes = f.read()
+                        st.audio(audio_bytes, format='audio/mp3')
+                    except Exception:
+                        pass
 
                 # Expander: Chinese def, collocations (large), sentence, root, related
                 with st.expander(f"点击查看: {row['word']} 的完整释义", expanded=False):
