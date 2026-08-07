@@ -35,6 +35,16 @@ build/
 # Jupyter
 .ipynb_checkpoints/
 
+# Temp files (Word/Excel locker files)
+~$*
+
 # Collocation regeneration
 collocations_new.json
 collocations_checkpoint.json
+
+# API key config (contains secrets, never commit)
+config.py
+
+# Collocation output (regeneratable)
+collocations_phrases_checkpoint.json
+collocations_phrases.json

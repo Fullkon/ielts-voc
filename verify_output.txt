@@ -1,0 +1,13 @@
+﻿Words with collocations: 3471
+Mismatches (old vs new parsing): 3329
+
+python : Traceback (most recent call last):
+所在位置 C:\Users\xingf\AppData\Local\Temp\ps-script-b2b230dd-7941-4e15-9cf6-a345b2a9144e.ps1:84 字符: 35
++ ... CursorProj\IELTS\collapp"; python verify_collocations.py 2>&1 | Out-F ...
++                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\CursorProj\IELTS\collapp\verify_collocations.py", line 68, in <module>
+    print(f'[{r["idx"]}] {r["word"]}: old={r["old_count"]} items, new={r["new_count"]} items')
+UnicodeEncodeError: 'gbk' codec can't encode character '\xf1' in position 10: illegal multibyte sequence
