@@ -147,17 +147,17 @@ def apply_custom_css():
 @st.cache_data
 def load_vocabulary() -> pd.DataFrame:
     df = pd.read_excel(XLSX_FILE)
-    df.columns = ['index_no', 'word', 'english_def', 'chinese_def',
-                   'collocations', 'sentence', 'root_words', 'related_words', 'notes']
+    df.columns = ['index_no', 'word', 'pronunciation', 'english_def',
+                  'collocations', 'sentence', 'root_words', 'related_words', 'chinese_def']
     df = df.dropna(subset=['word', 'chinese_def'])
     df['word'] = df['word'].astype(str).str.strip()
     df['chinese_def'] = df['chinese_def'].astype(str).str.strip()
     df['english_def'] = df['english_def'].fillna('').astype(str)
+    df['pronunciation'] = df['pronunciation'].fillna('').astype(str)
     df['collocations'] = df['collocations'].fillna('').astype(str)
     df['sentence'] = df['sentence'].fillna('').astype(str)
     df['root_words'] = df['root_words'].fillna('').astype(str)
     df['related_words'] = df['related_words'].fillna('').astype(str)
-    df['notes'] = df['notes'].fillna('').astype(str)
     df = df.reset_index(drop=True)
     df['id'] = df.index
     return df
@@ -491,7 +491,7 @@ class TestEngine:
             root = parse_root_words(str(word_row['root_words']))
             clues = []
             if related:
-                clues.append(f"同类词: {', '.join(rng.sample(related, min(4, len(related))))}")
+                clues.append(f"相近词: {', '.join(rng.sample(related, min(4, len(related))))}")
             if root:
                 clues.append(f"同根词: {', '.join(rng.sample(root, min(4, len(root))))}")
             if not clues:
@@ -726,18 +726,19 @@ def main():
             word_rec = pm.get_word_record(word_idx)
             
             with st.container():
-                # Word card header: English word + pronunciation + English definition visible
+                # Word card header: word + pronunciation + audio + English definition (always visible)
                 eng_def_preview = str(row['english_def'])[:250]
                 eng_def_preview += '...' if len(str(row['english_def'])) > 250 else ''
-                
-                # Pronunciation from notes column (IPA)
-                notes_val = str(row['notes']).strip()
+
+                # Pronunciation from the dedicated column (IPA)
+                pron_raw = str(row['pronunciation']).strip()
                 pron_html = ""
-                if notes_val and notes_val != 'None' and notes_val:
-                    # Clean up IPA text - it may contain escape chars
-                    pron_text = notes_val.replace('/', '').strip()
-                    pron_html = f'<span style="font-size:0.85rem;color:#888;margin-left:8px;">/{pron_text}/</span>'
-                
+                if pron_raw and pron_raw not in ('None', 'nan', ''):
+                    pron_html = (
+                        f'<span style="font-size:0.9rem;color:#888;margin-left:8px;'
+                        f'font-style:italic;">{pron_raw}</span>'
+                    )
+
                 mastery_html = ""
                 if word_rec['attempts'] > 0:
                     mastery_color = '#4caf50' if word_rec['mastery'] >= 0.8 else '#ff9800' if word_rec['mastery'] >= 0.5 else '#f44336'
@@ -747,15 +748,14 @@ def main():
                         f"掌握度: {word_rec['mastery']*100:.0f}% | 测试: {word_rec['attempts']}次</span>"
                         f"</div>"
                     )
-                
-                # Audio button HTML (inline base64)
+
                 audio_btn = get_audio_html(word_idx)
 
                 st.markdown(f"""
                 <div class="word-card">
                     <div style="display:flex;justify-content:space-between;align-items:center;">
                         <div>
-                            <span class="word-en">🔤 {row['word']}</span>{pron_html}{audio_btn}
+                            <span class="word-en">{row['word']}</span>{pron_html}{audio_btn}
                         </div>
                     </div>
                     <div class="content">
@@ -764,31 +764,28 @@ def main():
                     {mastery_html}
                 </div>
                 """, unsafe_allow_html=True)
-                
-                # Chinese definition + collocations + sentence + related/root words: ALL in expander
-                with st.expander(f"💡 点击查看: {row['word']} 的汉语释义 & 搭配 & 例句", expanded=False):
-                    st.markdown(f"**🇨🇳 汉语释义**: **{row['chinese_def']}**")
-                    
-                    # Collocations from the vocabulary list only
-                    existing_colls = parse_collocations(str(row['collocations']))
-                    if existing_colls:
-                        st.markdown("**📎 常见搭配**:")
-                        cols_disp = st.columns(min(4, len(existing_colls)))
-                        for j, coll in enumerate(existing_colls):
+
+                # Expander: Chinese def, collocations (large), sentence, root, related
+                with st.expander(f"点击查看: {row['word']} 的完整释义", expanded=False):
+                    st.markdown(f"#### {row['word']} — {row['chinese_def']}")
+
+                    colls = parse_collocations(str(row['collocations']))
+                    if colls:
+                        st.markdown("##### 常见搭配")
+                        cols_disp = st.columns(min(4, len(colls)))
+                        for j, coll in enumerate(colls):
                             with cols_disp[j % len(cols_disp)]:
-                                st.markdown(f"`{coll}`")
-                    
-                    # Sentence
-                    if str(row['sentence']) and str(row['sentence']) != 'None':
-                        st.markdown(f"**📝 例句**: *{row['sentence']}*")
-                    
-                    # Related & root words
-                    related = parse_related_words(str(row['related_words']))
+                                st.markdown(f"<span style='font-size:1.05rem;font-weight:500;'>`{coll}`</span>", unsafe_allow_html=True)
+
+                    if str(row['sentence']) and str(row['sentence']) not in ('None', 'nan', ''):
+                        st.markdown(f"**例句**: *{row['sentence']}*")
+
                     root = parse_root_words(str(row['root_words']))
-                    if related:
-                        st.markdown(f"**🔗 同类词**: {', '.join(related[:8])}")
+                    related = parse_related_words(str(row['related_words']))
                     if root:
-                        st.markdown(f"**🌱 同根词**: {', '.join(root[:8])}")
+                        st.markdown(f"**同根词**: {', '.join(root[:8])}")
+                    if related:
+                        st.markdown(f"**相近词**: {', '.join(related[:8])}")
                 
                 st.markdown("---")
         
@@ -1260,7 +1257,7 @@ def main():
                     related = parse_related_words(str(row['related_words']))
                     root = parse_root_words(str(row['root_words']))
                     if related:
-                        st.markdown(f"**同类词**: {', '.join(related[:6])}")
+                        st.markdown(f"**相近词**: {', '.join(related[:6])}")
                     if root:
                         st.markdown(f"**同根词**: {', '.join(root[:6])}")
                     

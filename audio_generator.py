@@ -294,8 +294,8 @@ async def main():
         return
 
     df = pd.read_excel(xlsx)
-    df.columns = ['index_no', 'word', 'english_def', 'chinese_def',
-                   'collocations', 'sentence', 'root_words', 'related_words', 'notes']
+    df.columns = ['index_no', 'word', 'pronunciation', 'english_def',
+                   'collocations', 'sentence', 'root_words', 'related_words', 'chinese_def']
     df['word'] = df['word'].astype(str).str.strip()
 
     generator = AudioGenerator()

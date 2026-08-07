@@ -198,13 +198,13 @@ def _write_excel(progress: dict, df: pd.DataFrame, path: Path, total: int):
     out = pd.DataFrame({
         '序号':       df['index_no'],
         '英文单词':   df['word'],
+        '英文发音':   df['pronunciation'],
         '英文释义':   df['english_def'],
-        '汉语释义':   df['chinese_def'],
         '常见搭配':   df['collocations'],
         '例句':       df['sentence'],
         '同根词':     df['root_words'],
-        '相关同类词': df['related_words'],
-        '备注':       df['notes'],
+        '相近词':     df['related_words'],
+        '汉语释义':   df['chinese_def'],
     })
     out.to_excel(path, index=False)
     print(f"    [SAVE] Excel saved ({updated}/{total} words have collocations)",
@@ -241,8 +241,8 @@ def main():
         sys.exit(1)
 
     df = pd.read_excel(XLSX_FILE)
-    df.columns = ['index_no', 'word', 'english_def', 'chinese_def',
-                  'collocations', 'sentence', 'root_words', 'related_words', 'notes']
+    df.columns = ['index_no', 'word', 'pronunciation', 'english_def',
+                  'collocations', 'sentence', 'root_words', 'related_words', 'chinese_def']
     df['word'] = df['word'].astype(str).str.strip()
     df['collocations'] = df['collocations'].fillna('').astype(str)
     total = len(df)
