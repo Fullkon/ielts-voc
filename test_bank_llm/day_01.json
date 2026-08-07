@@ -1,0 +1,3002 @@
+{
+  "day": 1,
+  "word_count": 125,
+  "questions": {
+    "cn2en": [
+      {
+        "word_id": 0,
+        "question": "岩浆",
+        "answer": "magma",
+        "hint": "M..."
+      },
+      {
+        "word_id": 1,
+        "question": "喷薄迸",
+        "answer": "erupt",
+        "hint": "E..."
+      },
+      {
+        "word_id": 2,
+        "question": "火山",
+        "answer": "volcano",
+        "hint": "V..."
+      },
+      {
+        "word_id": 3,
+        "question": "地壳",
+        "answer": "crust",
+        "hint": "C..."
+      },
+      {
+        "word_id": 4,
+        "question": "核心",
+        "answer": "core",
+        "hint": "C..."
+      },
+      {
+        "word_id": 5,
+        "question": "氛围",
+        "answer": "atmosphere",
+        "hint": "A..."
+      },
+      {
+        "word_id": 6,
+        "question": "水圈",
+        "answer": "hydrosphere",
+        "hint": "H..."
+      },
+      {
+        "word_id": 7,
+        "question": "岩石圈",
+        "answer": "lithosphere",
+        "hint": "L..."
+      },
+      {
+        "word_id": 8,
+        "question": "氧气",
+        "answer": "oxygen",
+        "hint": "O..."
+      },
+      {
+        "word_id": 9,
+        "question": "氧化物",
+        "answer": "oxide",
+        "hint": "O..."
+      },
+      {
+        "word_id": 10,
+        "question": "二氧化碳",
+        "answer": "carbon dioxide",
+        "hint": "C..."
+      },
+      {
+        "word_id": 11,
+        "question": "氢",
+        "answer": "hydrogen",
+        "hint": "H..."
+      },
+      {
+        "word_id": 12,
+        "question": "地幔",
+        "answer": "mantle",
+        "hint": "M..."
+      },
+      {
+        "word_id": 13,
+        "question": "父母",
+        "answer": "parents",
+        "hint": "P..."
+      },
+      {
+        "word_id": 14,
+        "question": "经度",
+        "answer": "longitude",
+        "hint": "L..."
+      },
+      {
+        "word_id": 15,
+        "question": "纬度",
+        "answer": "latitude",
+        "hint": "L..."
+      },
+      {
+        "word_id": 16,
+        "question": "地平线",
+        "answer": "horizon",
+        "hint": "H..."
+      },
+      {
+        "word_id": 17,
+        "question": "海拔高度",
+        "answer": "altitude",
+        "hint": "A..."
+      },
+      {
+        "word_id": 18,
+        "question": "灾难\tzāinàn",
+        "answer": "disaster",
+        "hint": "D..."
+      },
+      {
+        "word_id": 19,
+        "question": "n.事故, 意外",
+        "answer": "mishap",
+        "hint": "M..."
+      },
+      {
+        "word_id": 20,
+        "question": "溫室",
+        "answer": "greenhouse",
+        "hint": "G..."
+      },
+      {
+        "word_id": 21,
+        "question": "灾难性的...",
+        "answer": "catastrophic",
+        "hint": "C..."
+      },
+      {
+        "word_id": 22,
+        "question": "n.不幸 ,灾 ,灾害",
+        "answer": "calamity",
+        "hint": "C..."
+      },
+      {
+        "word_id": 23,
+        "question": "使遭危险",
+        "answer": "endanger",
+        "hint": "E..."
+      },
+      {
+        "word_id": 24,
+        "question": "现象",
+        "answer": "phenomenon",
+        "hint": "P..."
+      },
+      {
+        "word_id": 25,
+        "question": "危害",
+        "answer": "jeopardise",
+        "hint": "J..."
+      },
+      {
+        "word_id": 26,
+        "question": "adj.破坏性",
+        "answer": "destructive",
+        "hint": "D..."
+      },
+      {
+        "word_id": 27,
+        "question": "鵝卵石",
+        "answer": "pebble",
+        "hint": "P..."
+      },
+      {
+        "word_id": 28,
+        "question": "磁铁",
+        "answer": "magnet",
+        "hint": "M..."
+      },
+      {
+        "word_id": 29,
+        "question": "n.厄尔尼诺现象",
+        "answer": "ei niño",
+        "hint": "E..."
+      },
+      {
+        "word_id": 30,
+        "question": "雨 季",
+        "answer": "monsoon",
+        "hint": "M..."
+      },
+      {
+        "word_id": 31,
+        "question": "n.定期交付的租金",
+        "answer": "gale",
+        "hint": "G..."
+      },
+      {
+        "word_id": 32,
+        "question": "山",
+        "answer": "mountain",
+        "hint": "M..."
+      },
+      {
+        "word_id": 33,
+        "question": "矿物",
+        "answer": "mineral",
+        "hint": "M..."
+      },
+      {
+        "word_id": 34,
+        "question": "大理石",
+        "answer": "marble",
+        "hint": "M..."
+      },
+      {
+        "word_id": 35,
+        "question": "石英",
+        "answer": "quartz",
+        "hint": "Q..."
+      },
+      {
+        "word_id": 36,
+        "question": "花岗岩",
+        "answer": "granite",
+        "hint": "G..."
+      },
+      {
+        "word_id": 37,
+        "question": "古斯特",
+        "answer": "gust",
+        "hint": "G..."
+      },
+      {
+        "word_id": 38,
+        "question": "小风",
+        "answer": "breeze",
+        "hint": "B..."
+      },
+      {
+        "word_id": 39,
+        "question": "飓风",
+        "answer": "hurricane",
+        "hint": "H..."
+      },
+      {
+        "word_id": 40,
+        "question": "龙卷风",
+        "answer": "tornado",
+        "hint": "T..."
+      },
+      {
+        "word_id": 41,
+        "question": "台风",
+        "answer": "typhoon",
+        "hint": "T..."
+      },
+      {
+        "word_id": 42,
+        "question": "adj.热力学的",
+        "answer": "thermodynamic",
+        "hint": "T..."
+      },
+      {
+        "word_id": 43,
+        "question": "海啸",
+        "answer": "tsunami",
+        "hint": "T..."
+      },
+      {
+        "word_id": 44,
+        "question": "干旱",
+        "answer": "drought",
+        "hint": "D..."
+      },
+      {
+        "word_id": 45,
+        "question": "雾霾",
+        "answer": "smog",
+        "hint": "S..."
+      },
+      {
+        "word_id": 46,
+        "question": "淹没",
+        "answer": "flooding",
+        "hint": "F..."
+      },
+      {
+        "word_id": 47,
+        "question": "洪流",
+        "answer": "torrent",
+        "hint": "T..."
+      },
+      {
+        "word_id": 48,
+        "question": "Fume",
+        "answer": "fume",
+        "hint": "F..."
+      },
+      {
+        "word_id": 49,
+        "question": "烟雾",
+        "answer": "mist",
+        "hint": "M..."
+      },
+      {
+        "word_id": 50,
+        "question": "地震",
+        "answer": "earthquake",
+        "hint": "E..."
+      },
+      {
+        "word_id": 51,
+        "question": "地震",
+        "answer": "seismic",
+        "hint": "S..."
+      },
+      {
+        "word_id": 52,
+        "question": "昨天",
+        "answer": "yesterdays",
+        "hint": "Y..."
+      },
+      {
+        "word_id": 53,
+        "question": "地形",
+        "answer": "terrain",
+        "hint": "T..."
+      },
+      {
+        "word_id": 54,
+        "question": "风景",
+        "answer": "landscape",
+        "hint": "L..."
+      },
+      {
+        "word_id": 55,
+        "question": "大陆",
+        "answer": "continent",
+        "hint": "C..."
+      },
+      {
+        "word_id": 56,
+        "question": "洞穴",
+        "answer": "cave",
+        "hint": "C..."
+      },
+      {
+        "word_id": 57,
+        "question": "悬崖",
+        "answer": "cliff",
+        "hint": "C..."
+      },
+      {
+        "word_id": 58,
+        "question": "冰川",
+        "answer": "glacier",
+        "hint": "G..."
+      },
+      {
+        "word_id": 59,
+        "question": "沼泽",
+        "answer": "swamp",
+        "hint": "S..."
+      },
+      {
+        "word_id": 60,
+        "question": "n.尼罗河",
+        "answer": "nile",
+        "hint": "N..."
+      },
+      {
+        "word_id": 61,
+        "question": "纯",
+        "answer": "plain",
+        "hint": "P..."
+      },
+      {
+        "word_id": 62,
+        "question": "忘记1次",
+        "answer": "once",
+        "hint": "O..."
+      },
+      {
+        "word_id": 63,
+        "question": "高原",
+        "answer": "plateau",
+        "hint": "P..."
+      },
+      {
+        "word_id": 64,
+        "question": "绿洲",
+        "answer": "oasis",
+        "hint": "O..."
+      },
+      {
+        "word_id": 65,
+        "question": "杆",
+        "answer": "pole",
+        "hint": "P..."
+      },
+      {
+        "word_id": 66,
+        "question": "极地数据集标签",
+        "answer": "polar",
+        "hint": "P..."
+      },
+      {
+        "word_id": 67,
+        "question": "3 轴",
+        "answer": "axis",
+        "hint": "A..."
+      },
+      {
+        "word_id": 68,
+        "question": "球",
+        "answer": "globe",
+        "hint": "G..."
+      },
+      {
+        "word_id": 69,
+        "question": "adj.北",
+        "answer": "northern",
+        "hint": "N..."
+      },
+      {
+        "word_id": 70,
+        "question": "赤道",
+        "answer": "equator",
+        "hint": "E..."
+      },
+      {
+        "word_id": 71,
+        "question": "北极",
+        "answer": "arctic",
+        "hint": "A..."
+      },
+      {
+        "word_id": 72,
+        "question": "南极",
+        "answer": "antarctic",
+        "hint": "A..."
+      },
+      {
+        "word_id": 73,
+        "question": "conj.因为",
+        "answer": "because",
+        "hint": "B..."
+      },
+      {
+        "word_id": 74,
+        "question": "升级",
+        "answer": "upgrade",
+        "hint": "U..."
+      },
+      {
+        "word_id": 75,
+        "question": "侵蚀",
+        "answer": "erode",
+        "hint": "E..."
+      },
+      {
+        "word_id": 76,
+        "question": "n./adj.大西洋（的）",
+        "answer": "atlantic",
+        "hint": "A..."
+      },
+      {
+        "word_id": 77,
+        "question": "adj.爱好和平 ,和平",
+        "answer": "pacific",
+        "hint": "P..."
+      },
+      {
+        "word_id": 78,
+        "question": "adj.亚太的",
+        "answer": "asian-pacific",
+        "hint": "A..."
+      },
+      {
+        "word_id": 79,
+        "question": "当前",
+        "answer": "current",
+        "hint": "C..."
+      },
+      {
+        "word_id": 80,
+        "question": "海洋",
+        "answer": "ocean",
+        "hint": "O..."
+      },
+      {
+        "word_id": 81,
+        "question": "海洋",
+        "answer": "marine",
+        "hint": "M..."
+      },
+      {
+        "word_id": 82,
+        "question": "正确",
+        "answer": "true",
+        "hint": "T..."
+      },
+      {
+        "word_id": 83,
+        "question": "nan",
+        "answer": "navigation",
+        "hint": "N..."
+      },
+      {
+        "word_id": 84,
+        "question": "海灣",
+        "answer": "gulf",
+        "hint": "G..."
+      },
+      {
+        "word_id": 85,
+        "question": "海滩",
+        "answer": "beach",
+        "hint": "B..."
+      },
+      {
+        "word_id": 86,
+        "question": "平行",
+        "answer": "parallel",
+        "hint": "P..."
+      },
+      {
+        "word_id": 87,
+        "question": "adj.表面",
+        "answer": "superficial",
+        "hint": "S..."
+      },
+      {
+        "word_id": 88,
+        "question": "平的",
+        "answer": "flat",
+        "hint": "F..."
+      },
+      {
+        "word_id": 89,
+        "question": "流畅",
+        "answer": "smooth",
+        "hint": "S..."
+      },
+      {
+        "word_id": 90,
+        "question": "尝试推杆保帕",
+        "answer": "rough",
+        "hint": "R..."
+      },
+      {
+        "word_id": 91,
+        "question": "半岛型",
+        "answer": "peninsula",
+        "hint": "P..."
+      },
+      {
+        "word_id": 92,
+        "question": "三哥",
+        "answer": "sandy",
+        "hint": "S..."
+      },
+      {
+        "word_id": 93,
+        "question": "气候；",
+        "answer": "climate",
+        "hint": "C..."
+      },
+      {
+        "word_id": 94,
+        "question": "石质",
+        "answer": "stony",
+        "hint": "S..."
+      },
+      {
+        "word_id": 95,
+        "question": "垂直",
+        "answer": "vertical",
+        "hint": "V..."
+      },
+      {
+        "word_id": 96,
+        "question": "nan",
+        "answer": "weather",
+        "hint": "W..."
+      },
+      {
+        "word_id": 97,
+        "question": "气象",
+        "answer": "meteorology",
+        "hint": "M..."
+      },
+      {
+        "word_id": 98,
+        "question": "轻度",
+        "answer": "mild",
+        "hint": "M..."
+      },
+      {
+        "word_id": 99,
+        "question": "加热",
+        "answer": "heating",
+        "hint": "H..."
+      },
+      {
+        "word_id": 100,
+        "question": "中等",
+        "answer": "moderate",
+        "hint": "M..."
+      },
+      {
+        "word_id": 101,
+        "question": "血液",
+        "answer": "blood",
+        "hint": "B..."
+      },
+      {
+        "word_id": 102,
+        "question": "热",
+        "answer": "thermal",
+        "hint": "T..."
+      },
+      {
+        "word_id": 103,
+        "question": "n.生命（复数）；v.居住/生活（第三人称单数）",
+        "answer": "lives",
+        "hint": "L..."
+      },
+      {
+        "word_id": 104,
+        "question": "干旱",
+        "answer": "arid",
+        "hint": "A..."
+      },
+      {
+        "word_id": 105,
+        "question": "潮湿",
+        "answer": "moist",
+        "hint": "M..."
+      },
+      {
+        "word_id": 106,
+        "question": "『潮』湿",
+        "answer": "damp",
+        "hint": "D..."
+      },
+      {
+        "word_id": 107,
+        "question": "奶",
+        "answer": "milk",
+        "hint": "M..."
+      },
+      {
+        "word_id": 108,
+        "question": "雪润的",
+        "answer": "snowy",
+        "hint": "S..."
+      },
+      {
+        "word_id": 109,
+        "question": "所有的抵抗力。",
+        "answer": "frost",
+        "hint": "F..."
+      },
+      {
+        "word_id": 110,
+        "question": "冰雹",
+        "answer": "hail",
+        "hint": "H..."
+      },
+      {
+        "word_id": 111,
+        "question": "周日",
+        "answer": "sun",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 112,
+        "question": "阴寒",
+        "answer": "chill",
+        "hint": "C..."
+      },
+      {
+        "word_id": 113,
+        "question": "坏",
+        "answer": "bad",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 114,
+        "question": "停止",
+        "answer": "freeze",
+        "hint": "F..."
+      },
+      {
+        "word_id": 115,
+        "question": "天气预报员",
+        "answer": "weatherman",
+        "hint": "W..."
+      },
+      {
+        "word_id": 116,
+        "question": "阴寒",
+        "answer": "frigid",
+        "hint": "F..."
+      },
+      {
+        "word_id": 117,
+        "question": "撼 撼 [han4]",
+        "answer": "tremble",
+        "hint": "T..."
+      },
+      {
+        "word_id": 118,
+        "question": "颤抖",
+        "answer": "shiver",
+        "hint": "S..."
+      },
+      {
+        "word_id": 119,
+        "question": "雷",
+        "answer": "thunder",
+        "hint": "T..."
+      },
+      {
+        "word_id": 120,
+        "question": "快递",
+        "answer": "express",
+        "hint": "E..."
+      },
+      {
+        "word_id": 121,
+        "question": "闪电",
+        "answer": "lightning",
+        "hint": "L..."
+      },
+      {
+        "word_id": 122,
+        "question": "n.风暴闪电（复数）",
+        "answer": "stormflashes",
+        "hint": "S..."
+      },
+      {
+        "word_id": 123,
+        "question": "暴风雨",
+        "answer": "stormy",
+        "hint": "S..."
+      },
+      {
+        "word_id": 124,
+        "question": "倾盆",
+        "answer": "downpour",
+        "hint": "D..."
+      }
+    ],
+    "en2cn": [
+      {
+        "word_id": 0,
+        "question": "magma",
+        "answer": "岩浆",
+        "hint": "(noun) The molten matter within the earth, the source of the material of lava flows, dikes of eruptive rocks, etc."
+      },
+      {
+        "word_id": 1,
+        "question": "erupt",
+        "answer": "喷薄迸",
+        "hint": "(verb) To eject something violently (such as lava or water, as from a volcano or geyser)."
+      },
+      {
+        "word_id": 2,
+        "question": "volcano",
+        "answer": "火山",
+        "hint": "(noun) A vent or fissure on the surface of a planet (usually in a mountainous form) with a magma chamber attached to the"
+      },
+      {
+        "word_id": 3,
+        "question": "crust",
+        "answer": "地壳",
+        "hint": "(noun) A more solid, dense or hard layer on a surface or boundary."
+      },
+      {
+        "word_id": 4,
+        "question": "core",
+        "answer": "核心",
+        "hint": "(noun) The central part of fruit, containing the kernels or seeds."
+      },
+      {
+        "word_id": 5,
+        "question": "atmosphere",
+        "answer": "氛围",
+        "hint": "(noun) The gases surrounding the Earth or any astronomical body."
+      },
+      {
+        "word_id": 6,
+        "question": "hydrosphere",
+        "answer": "水圈",
+        "hint": "(noun) All the waters of the Earth, as distinguished from the land and the gases of the atmosphere."
+      },
+      {
+        "word_id": 7,
+        "question": "lithosphere",
+        "answer": "岩石圈",
+        "hint": "(noun) The rigid, mechanically strong, outer layer of the Earth; divided into twelve major plates."
+      },
+      {
+        "word_id": 8,
+        "question": "oxygen",
+        "answer": "氧气",
+        "hint": "(noun) The chemical element (symbol O) with an atomic number of 8 and relative atomic mass of 15.9994. It is a colorless"
+      },
+      {
+        "word_id": 9,
+        "question": "oxide",
+        "answer": "氧化物",
+        "hint": "(noun) A binary chemical compound of oxygen with another chemical element."
+      },
+      {
+        "word_id": 10,
+        "question": "carbon dioxide",
+        "answer": "二氧化碳",
+        "hint": "(noun) The normal oxide of carbon, CO₂; a colorless, odorless gas formed during respiration and combustion and consumed "
+      },
+      {
+        "word_id": 11,
+        "question": "hydrogen",
+        "answer": "氢",
+        "hint": "(noun) The lightest chemical element (symbol H), with an atomic number of 1 and atomic weight of 1.00794."
+      },
+      {
+        "word_id": 12,
+        "question": "mantle",
+        "answer": "地幔",
+        "hint": "(noun) The shelf above a fireplace which may be also a structural support for the masonry of the chimney."
+      },
+      {
+        "word_id": 13,
+        "question": "Parents",
+        "answer": "父母",
+        "hint": "(noun) One of the two persons from whom one is immediately biologically descended; a mother or father."
+      },
+      {
+        "word_id": 14,
+        "question": "longitude",
+        "answer": "经度",
+        "hint": "(noun) Angular distance measured west or east of the prime meridian."
+      },
+      {
+        "word_id": 15,
+        "question": "latitude",
+        "answer": "纬度",
+        "hint": "(noun) The angular distance north or south from a planet's equator, measured along the meridian of that particular point"
+      },
+      {
+        "word_id": 16,
+        "question": "horizon",
+        "answer": "地平线",
+        "hint": "(noun) The visible horizontal line or point (in all directions) that appears to connect the Earth to the sky."
+      },
+      {
+        "word_id": 17,
+        "question": "altitude",
+        "answer": "海拔高度",
+        "hint": "(noun) The absolute height of a location, usually measured from sea level."
+      },
+      {
+        "word_id": 18,
+        "question": "disaster",
+        "answer": "灾难\tzāinàn",
+        "hint": "(noun) An unexpected natural or man-made catastrophe of substantial extent causing significant physical damage or destru"
+      },
+      {
+        "word_id": 19,
+        "question": "mishap",
+        "answer": "n.事故, 意外",
+        "hint": "(noun) An accident, mistake, or problem."
+      },
+      {
+        "word_id": 20,
+        "question": "greenhouse",
+        "answer": "溫室",
+        "hint": "(noun) A building used to grow plants, particularly one with large glass windows or plastic sheeting to trap heat from s"
+      },
+      {
+        "word_id": 21,
+        "question": "catastrophic",
+        "answer": "灾难性的...",
+        "hint": "(adjective) Of or pertaining to a catastrophe."
+      },
+      {
+        "word_id": 22,
+        "question": "calamity",
+        "answer": "n.不幸 ,灾 ,灾害",
+        "hint": "(noun) An event resulting in great loss."
+      },
+      {
+        "word_id": 23,
+        "question": "endanger",
+        "answer": "使遭危险",
+        "hint": "(verb) To put (someone or something) in danger; to risk causing harm to."
+      },
+      {
+        "word_id": 24,
+        "question": "phenomenon",
+        "answer": "现象",
+        "hint": "(noun) A thing or being, event or process, perceptible through senses; or a fact or occurrence thereof."
+      },
+      {
+        "word_id": 25,
+        "question": "jeopardise",
+        "answer": "危害",
+        "hint": "(verb) To put in jeopardy, to threaten."
+      },
+      {
+        "word_id": 26,
+        "question": "destructive",
+        "answer": "adj.破坏性",
+        "hint": "(adjective) Causing destruction; damaging."
+      },
+      {
+        "word_id": 27,
+        "question": "Pebble",
+        "answer": "鵝卵石",
+        "hint": "(noun) A small stone, especially one rounded by the action of water."
+      },
+      {
+        "word_id": 28,
+        "question": "magnet",
+        "answer": "磁铁",
+        "hint": "(noun) A piece of material that attracts some metals by magnetism."
+      },
+      {
+        "word_id": 29,
+        "question": "EI Niño",
+        "answer": "n.厄尔尼诺现象",
+        "hint": "A periodic climate pattern causing abnormal warming of eastern Pacific surface waters, disrupting global weather"
+      },
+      {
+        "word_id": 30,
+        "question": "monsoon",
+        "answer": "雨 季",
+        "hint": "(noun) Any of a number of winds associated with regions where most rain falls during a particular season."
+      },
+      {
+        "word_id": 31,
+        "question": "gale",
+        "answer": "n.定期交付的租金",
+        "hint": "(verb) To sing; charm; enchant."
+      },
+      {
+        "word_id": 32,
+        "question": "mountain",
+        "answer": "山",
+        "hint": "(noun) An elevation of land of considerable dimensions rising more or less abruptly, forming a conspicuous figure in the"
+      },
+      {
+        "word_id": 33,
+        "question": "mineral",
+        "answer": "矿物",
+        "hint": "(noun) Any naturally occurring inorganic material that has a (more or less) definite chemical composition and characteri"
+      },
+      {
+        "word_id": 34,
+        "question": "marble",
+        "answer": "大理石",
+        "hint": "(noun) A rock of crystalline limestone."
+      },
+      {
+        "word_id": 35,
+        "question": "quartz",
+        "answer": "石英",
+        "hint": "(noun) The most abundant mineral on the earth's surface, of chemical composition silicon dioxide, SiO2. It occurs in a v"
+      },
+      {
+        "word_id": 36,
+        "question": "granite",
+        "answer": "花岗岩",
+        "hint": "(noun) A group of igneous and plutonic rocks composed primarily of feldspar and quartz. Usually contains one or more dar"
+      },
+      {
+        "word_id": 37,
+        "question": "gust",
+        "answer": "古斯特",
+        "hint": "(noun) A strong, abrupt rush of wind."
+      },
+      {
+        "word_id": 38,
+        "question": "breeze",
+        "answer": "小风",
+        "hint": "(noun) A light, gentle wind."
+      },
+      {
+        "word_id": 39,
+        "question": "hurricane",
+        "answer": "飓风",
+        "hint": "(noun) A severe tropical cyclone in the North Atlantic Ocean, Caribbean Sea, Gulf of Mexico, or in the eastern North Pac"
+      },
+      {
+        "word_id": 40,
+        "question": "tornado",
+        "answer": "龙卷风",
+        "hint": "(noun) A violent windstorm characterized by a mobile, twisting, funnel-shaped cloud."
+      },
+      {
+        "word_id": 41,
+        "question": "typhoon",
+        "answer": "台风",
+        "hint": "(noun) A weather phenomenon in the northwestern Pacific that is precisely equivalent to a hurricane, which results in wi"
+      },
+      {
+        "word_id": 42,
+        "question": "thermodynamic",
+        "answer": "adj.热力学的",
+        "hint": "Relating to the relations between heat and other forms of energy"
+      },
+      {
+        "word_id": 43,
+        "question": "tsunami",
+        "answer": "海啸",
+        "hint": "(noun) A very large and destructive wave, generally caused by a tremendous disturbance in the ocean, such as an undersea"
+      },
+      {
+        "word_id": 44,
+        "question": "drought",
+        "answer": "干旱",
+        "hint": "(noun) A period of unusually low rainfall, longer and more severe than a dry spell."
+      },
+      {
+        "word_id": 45,
+        "question": "smog",
+        "answer": "雾霾",
+        "hint": "(noun) A noxious mixture of particulates and gases that is the result of urban air pollution."
+      },
+      {
+        "word_id": 46,
+        "question": "flooding",
+        "answer": "淹没",
+        "hint": "(verb) To overflow, as by water from excessive rainfall."
+      },
+      {
+        "word_id": 47,
+        "question": "torrent",
+        "answer": "洪流",
+        "hint": "(noun) A violent flow, as of water, lava, etc.; a stream suddenly raised and running rapidly, as down a precipice."
+      },
+      {
+        "word_id": 48,
+        "question": "fume",
+        "answer": "fume",
+        "hint": "(noun) A gas or vapour/vapor that is strong-smelling or dangerous to inhale."
+      },
+      {
+        "word_id": 49,
+        "question": "mist",
+        "answer": "烟雾",
+        "hint": "(noun) Water or other liquid finely suspended in air."
+      },
+      {
+        "word_id": 50,
+        "question": "earthquake",
+        "answer": "地震",
+        "hint": "(noun) A shaking of the ground, caused by volcanic activity or movement around geologic faults."
+      },
+      {
+        "word_id": 51,
+        "question": "seismic",
+        "answer": "地震",
+        "hint": "(adjective) Related to, or caused by an earthquake or other vibration of the Earth."
+      },
+      {
+        "word_id": 52,
+        "question": "Yesterdays",
+        "answer": "昨天",
+        "hint": "(noun) The day immediately before today; one day ago."
+      },
+      {
+        "word_id": 53,
+        "question": "terrain",
+        "answer": "地形",
+        "hint": "(noun) A single, distinctive rock formation; an area having a preponderance of a particular rock or group of rocks."
+      },
+      {
+        "word_id": 54,
+        "question": "landscape",
+        "answer": "风景",
+        "hint": "(noun) A portion of land or territory which the eye can comprehend in a single view, including all the objects it contai"
+      },
+      {
+        "word_id": 55,
+        "question": "continent",
+        "answer": "大陆",
+        "hint": "(noun) Each of the main continuous land-masses on the earth's surface, now generally regarded as seven in number, includ"
+      },
+      {
+        "word_id": 56,
+        "question": "cave",
+        "answer": "洞穴",
+        "hint": "(noun) A large, naturally-occurring cavity formed underground or in the face of a cliff or a hillside."
+      },
+      {
+        "word_id": 57,
+        "question": "cliff",
+        "answer": "悬崖",
+        "hint": "(noun) A vertical (or nearly vertical) rock face."
+      },
+      {
+        "word_id": 58,
+        "question": "glacier",
+        "answer": "冰川",
+        "hint": "(noun) A large body of ice which flows under its own mass, usually downhill."
+      },
+      {
+        "word_id": 59,
+        "question": "swamp",
+        "answer": "沼泽",
+        "hint": "(noun) A piece of wet, spongy land; low ground saturated with water; soft, wet ground which may have a growth of certain"
+      },
+      {
+        "word_id": 60,
+        "question": "Nile",
+        "answer": "n.尼罗河",
+        "hint": "The longest river in the world, flowing through northeastern Africa to the Mediterranean"
+      },
+      {
+        "word_id": 61,
+        "question": "plain",
+        "answer": "纯",
+        "hint": "(adjective) Flat, level."
+      },
+      {
+        "word_id": 62,
+        "question": "Once",
+        "answer": "忘记1次",
+        "hint": "(adverb) (frequency) One and only one time."
+      },
+      {
+        "word_id": 63,
+        "question": "plateau",
+        "answer": "高原",
+        "hint": "(noun) A largely level expanse of land at a high elevation; tableland."
+      },
+      {
+        "word_id": 64,
+        "question": "oasis",
+        "answer": "绿洲",
+        "hint": "(noun) A spring of fresh water, surrounded by a fertile region of vegetation, in a desert."
+      },
+      {
+        "word_id": 65,
+        "question": "pole",
+        "answer": "杆",
+        "hint": "(noun) Originally, a stick; now specifically, a long and slender piece of metal or (especially) wood, used for various c"
+      },
+      {
+        "word_id": 66,
+        "question": "polar",
+        "answer": "极地数据集标签",
+        "hint": "(noun) The line joining the points of contact of tangents drawn to meet a curve from a point called the pole of the line"
+      },
+      {
+        "word_id": 67,
+        "question": "axis",
+        "answer": "3 轴",
+        "hint": "(noun) An imaginary line around which an object spins (an axis of rotation) or is symmetrically arranged (an axis of sym"
+      },
+      {
+        "word_id": 68,
+        "question": "globe",
+        "answer": "球",
+        "hint": "(noun) Any spherical (or nearly spherical) object."
+      },
+      {
+        "word_id": 69,
+        "question": "northern",
+        "answer": "adj.北",
+        "hint": "(noun) An inhabitant of the northern regions."
+      },
+      {
+        "word_id": 70,
+        "question": "equator",
+        "answer": "赤道",
+        "hint": "(noun) (often “the Equator”) An imaginary great circle around the Earth, equidistant from the two poles, and dividing ea"
+      },
+      {
+        "word_id": 71,
+        "question": "arctic",
+        "answer": "北极",
+        "hint": "(noun) A warm waterproof overshoe."
+      },
+      {
+        "word_id": 72,
+        "question": "Antarctic",
+        "answer": "南极",
+        "hint": "(adjective) Of, from, or pertaining to Antarctica and the south polar regions."
+      },
+      {
+        "word_id": 73,
+        "question": "Because",
+        "answer": "conj.因为",
+        "hint": "A conjunction used to introduce the reason or cause of something"
+      },
+      {
+        "word_id": 74,
+        "question": "upgrade",
+        "answer": "升级",
+        "hint": "(noun) An upward grade or slope."
+      },
+      {
+        "word_id": 75,
+        "question": "erode",
+        "answer": "侵蚀",
+        "hint": "(verb) To wear away by abrasion, corrosion or chemical reaction."
+      },
+      {
+        "word_id": 76,
+        "question": "Atlantic",
+        "answer": "n./adj.大西洋（的）",
+        "hint": "The second-largest ocean on Earth, separating the Americas from Europe and Africa"
+      },
+      {
+        "word_id": 77,
+        "question": "pacific",
+        "answer": "adj.爱好和平 ,和平",
+        "hint": "(adjective) Calm, peaceful."
+      },
+      {
+        "word_id": 78,
+        "question": "Asian-Pacific",
+        "answer": "adj.亚太的",
+        "hint": "Relating to the region of Asia and the adjacent Pacific Ocean"
+      },
+      {
+        "word_id": 79,
+        "question": "current",
+        "answer": "当前",
+        "hint": "(noun) The generally unidirectional movement of a gas or fluid."
+      },
+      {
+        "word_id": 80,
+        "question": "ocean",
+        "answer": "海洋",
+        "hint": "(noun) One of the large bodies of water separating the continents."
+      },
+      {
+        "word_id": 81,
+        "question": "marine",
+        "answer": "海洋",
+        "hint": "(noun) A soldier, normally a member of a marine corps, trained to serve on board or from a ship"
+      },
+      {
+        "word_id": 82,
+        "question": "true",
+        "answer": "正确",
+        "hint": "(noun) The state of being in alignment."
+      },
+      {
+        "word_id": 83,
+        "question": "navigation",
+        "answer": "nan",
+        "hint": "(noun) The theory, practice and technology of charting a course for a ship, aircraft or spaceship or (colloquially) road"
+      },
+      {
+        "word_id": 84,
+        "question": "Gulf",
+        "answer": "海灣",
+        "hint": "(noun) A hollow place in the earth; an abyss; a deep chasm or basin."
+      },
+      {
+        "word_id": 85,
+        "question": "beach",
+        "answer": "海滩",
+        "hint": "(noun) The shore of a body of water, especially when sandy or pebbly."
+      },
+      {
+        "word_id": 86,
+        "question": "parallel",
+        "answer": "平行",
+        "hint": "(noun) One of a set of parallel lines."
+      },
+      {
+        "word_id": 87,
+        "question": "superficial",
+        "answer": "adj.表面",
+        "hint": "(noun) (chiefly in plural) A surface detail."
+      },
+      {
+        "word_id": 88,
+        "question": "flat",
+        "answer": "平的",
+        "hint": "(noun) An area of level ground."
+      },
+      {
+        "word_id": 89,
+        "question": "smooth",
+        "answer": "流畅",
+        "hint": "(noun) Something that is smooth, or that goes smoothly and easily."
+      },
+      {
+        "word_id": 90,
+        "question": "rough",
+        "answer": "尝试推杆保帕",
+        "hint": "(noun) The unmowed part of a golf course."
+      },
+      {
+        "word_id": 91,
+        "question": "peninsula",
+        "answer": "半岛型",
+        "hint": "(noun) A piece of land projecting into water from a larger land mass."
+      },
+      {
+        "word_id": 92,
+        "question": "sandy",
+        "answer": "三哥",
+        "hint": "(adjective) Covered with sand."
+      },
+      {
+        "word_id": 93,
+        "question": "climate",
+        "answer": "气候；",
+        "hint": "(noun) An area of the earth's surface between two parallels of latitude."
+      },
+      {
+        "word_id": 94,
+        "question": "stony",
+        "answer": "石质",
+        "hint": "(adjective) As hard as stone."
+      },
+      {
+        "word_id": 95,
+        "question": "vertical",
+        "answer": "垂直",
+        "hint": "(noun) A vertex or zenith."
+      },
+      {
+        "word_id": 96,
+        "question": "weather",
+        "answer": "nan",
+        "hint": "(noun) The short term state of the atmosphere at a specific time and place, including the temperature, relative humidity"
+      },
+      {
+        "word_id": 97,
+        "question": "meteorology",
+        "answer": "气象",
+        "hint": "(noun) The science that deals with the study of the atmosphere and its phenomena, especially with weather and weather fo"
+      },
+      {
+        "word_id": 98,
+        "question": "mild",
+        "answer": "轻度",
+        "hint": "(noun) A relatively low-gravity beer, often with a dark colour; mild ale"
+      },
+      {
+        "word_id": 99,
+        "question": "heating",
+        "answer": "加热",
+        "hint": "(verb) To cause an increase in temperature of (an object or space); to cause to become hot (often with \"up\")."
+      },
+      {
+        "word_id": 100,
+        "question": "moderate",
+        "answer": "中等",
+        "hint": "(noun) One who holds an intermediate position between extremes, as in politics."
+      },
+      {
+        "word_id": 101,
+        "question": "blood",
+        "answer": "血液",
+        "hint": "(noun) A member of the Los Angeles gang The Bloods."
+      },
+      {
+        "word_id": 102,
+        "question": "thermal",
+        "answer": "热",
+        "hint": "(noun) A column of rising air in the lower atmosphere created by uneven heating of Earth's surface."
+      },
+      {
+        "word_id": 103,
+        "question": "lives",
+        "answer": "n.生命（复数）；v.居住/生活（第三人称单数）",
+        "hint": "Plural of life; the state of being alive, or individual human/animal existences; also third-person singular of live"
+      },
+      {
+        "word_id": 104,
+        "question": "arid",
+        "answer": "干旱",
+        "hint": "(adjective) Very dry."
+      },
+      {
+        "word_id": 105,
+        "question": "moist",
+        "answer": "潮湿",
+        "hint": "(verb) To moisten."
+      },
+      {
+        "word_id": 106,
+        "question": "damp",
+        "answer": "『潮』湿",
+        "hint": "(noun) Moisture; humidity; dampness."
+      },
+      {
+        "word_id": 107,
+        "question": "milk",
+        "answer": "奶",
+        "hint": "(noun) A white liquid produced by the mammary glands of female mammals to nourish their young. From certain animals, esp"
+      },
+      {
+        "word_id": 108,
+        "question": "snowy",
+        "answer": "雪润的",
+        "hint": "(adjective) Marked by snow, characterized by snow."
+      },
+      {
+        "word_id": 109,
+        "question": "frost",
+        "answer": "所有的抵抗力。",
+        "hint": "(noun) A cover of minute ice crystals on objects that are exposed to the air. Frost is formed by the same process as dew"
+      },
+      {
+        "word_id": 110,
+        "question": "hail",
+        "answer": "冰雹",
+        "hint": "(noun) Balls or pieces of ice falling as precipitation, often in connection with a thunderstorm."
+      },
+      {
+        "word_id": 111,
+        "question": "sun",
+        "answer": "周日",
+        "hint": "(noun) A star, especially when seen as the centre of any single solar system."
+      },
+      {
+        "word_id": 112,
+        "question": "chill",
+        "answer": "阴寒",
+        "hint": "(noun) A moderate, but uncomfortable and penetrating coldness."
+      },
+      {
+        "word_id": 113,
+        "question": "bad",
+        "answer": "坏",
+        "hint": "(noun) Error, mistake."
+      },
+      {
+        "word_id": 114,
+        "question": "freeze",
+        "answer": "停止",
+        "hint": "(verb) Especially of a liquid, to become solid due to low temperature."
+      },
+      {
+        "word_id": 115,
+        "question": "weatherman",
+        "answer": "天气预报员",
+        "hint": "(noun) A person, especially a male one, who reports the weather conditions or forecasts."
+      },
+      {
+        "word_id": 116,
+        "question": "frigid",
+        "answer": "阴寒",
+        "hint": "(adjective) Very cold; lacking warmth; icy."
+      },
+      {
+        "word_id": 117,
+        "question": "tremble",
+        "answer": "撼 撼 [han4]",
+        "hint": "(noun) A shake, quiver, or vibration."
+      },
+      {
+        "word_id": 118,
+        "question": "shiver",
+        "answer": "颤抖",
+        "hint": "(noun) The act of shivering."
+      },
+      {
+        "word_id": 119,
+        "question": "thunder",
+        "answer": "雷",
+        "hint": "(noun) The loud rumbling, cracking, or crashing sound caused by expansion of rapidly heated air around a lightning bolt."
+      },
+      {
+        "word_id": 120,
+        "question": "express",
+        "answer": "快递",
+        "hint": "(noun) A mode of transportation, often a train, that travels quickly or directly."
+      },
+      {
+        "word_id": 121,
+        "question": "lightning",
+        "answer": "闪电",
+        "hint": "(noun) A flash of light produced by short-duration, high-voltage discharge of electricity within a cloud, between clouds"
+      },
+      {
+        "word_id": 122,
+        "question": "stormflashes",
+        "answer": "n.风暴闪电（复数）",
+        "hint": "Sudden bright lightning discharges occurring during storm events (note: standard term is storm flashes)"
+      },
+      {
+        "word_id": 123,
+        "question": "stormy",
+        "answer": "暴风雨",
+        "hint": "(adjective) Of or pertaining to storms."
+      },
+      {
+        "word_id": 124,
+        "question": "downpour",
+        "answer": "倾盆",
+        "hint": "(noun) A heavy rain."
+      }
+    ],
+    "collocation": [
+      {
+        "word_id": 0,
+        "question": "_____ chamber (岩浆房)",
+        "answer": "magma",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 1,
+        "question": "_____ violently (猛烈喷发)",
+        "answer": "erupt",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 2,
+        "question": "active _____ (活火山)",
+        "answer": "volcano",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 3,
+        "question": "continental _____ (大陆地壳)",
+        "answer": "crust",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 4,
+        "question": "inner _____ (内核)",
+        "answer": "core",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 5,
+        "question": "upper _____ (上层大气)",
+        "answer": "atmosphere",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 6,
+        "question": "global _____ (全球水圈)",
+        "answer": "hydrosphere",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 7,
+        "question": "_____ plate (岩石圈板块)",
+        "answer": "lithosphere",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 8,
+        "question": "dissolved _____ (溶解氧)",
+        "answer": "oxygen",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 9,
+        "question": "sulfur _____ (硫氧化物)",
+        "answer": "oxide",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 10,
+        "question": "_____ in (……中的二氧化碳)",
+        "answer": "carbon dioxide",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 11,
+        "question": "_____ fuel (氢燃料)",
+        "answer": "hydrogen",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 12,
+        "question": "upper _____ (上地幔)",
+        "answer": "mantle",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 13,
+        "question": "biological _____ (亲生父母)",
+        "answer": "parents",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 14,
+        "question": "_____ line (经线)",
+        "answer": "longitude",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 15,
+        "question": "high _____ (高纬度)",
+        "answer": "latitude",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 16,
+        "question": "visible _____ (可见地平线)",
+        "answer": "horizon",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 17,
+        "question": "_____ sickness (高原反应)",
+        "answer": "altitude",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 18,
+        "question": "natural _____ (自然灾害)",
+        "answer": "disaster",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 19,
+        "question": "minor _____ (小意外)",
+        "answer": "mishap",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 20,
+        "question": "_____ gas (温室气体)",
+        "answer": "greenhouse",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 21,
+        "question": "_____ damage (灾难性破坏)",
+        "answer": "catastrophic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 22,
+        "question": "natural _____ (自然灾害)",
+        "answer": "calamity",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 23,
+        "question": "_____ species (危及物种)",
+        "answer": "endanger",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 24,
+        "question": "natural _____ (自然现象)",
+        "answer": "phenomenon",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 25,
+        "question": "_____ safety (危害安全)",
+        "answer": "jeopardise",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 26,
+        "question": "_____ earthquake (破坏性地震)",
+        "answer": "destructive",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 27,
+        "question": "_____ beach (鹅卵石海滩)",
+        "answer": "pebble",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 28,
+        "question": "bar _____ (条形磁铁)",
+        "answer": "magnet",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 30,
+        "question": "_____ rain (季风雨)",
+        "answer": "monsoon",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 31,
+        "question": "_____ warning (大风警报)",
+        "answer": "gale",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 32,
+        "question": "_____ range (山脉)",
+        "answer": "mountain",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 33,
+        "question": "_____ deposit (矿床)",
+        "answer": "mineral",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 34,
+        "question": "_____ quarry (大理石采石场)",
+        "answer": "marble",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 35,
+        "question": "_____ crystal (石英晶体)",
+        "answer": "quartz",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 36,
+        "question": "_____ outcrop (花岗岩露头)",
+        "answer": "granite",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 37,
+        "question": "strong _____ (强阵风)",
+        "answer": "gust",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 38,
+        "question": "sea _____ (海风)",
+        "answer": "breeze",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 39,
+        "question": "_____ season (飓风季)",
+        "answer": "hurricane",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 40,
+        "question": "violent _____ (猛烈的龙卷风)",
+        "answer": "tornado",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 41,
+        "question": "_____ landfall (台风登陆)",
+        "answer": "typhoon",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 42,
+        "question": "_____ process (热力学过程)",
+        "answer": "thermodynamic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 43,
+        "question": "_____ warning (海啸预警)",
+        "answer": "tsunami",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 44,
+        "question": "severe _____ (严重干旱)",
+        "answer": "drought",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 45,
+        "question": "photochemical _____ (光化学烟雾)",
+        "answer": "smog",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 46,
+        "question": "flash _____ (骤发洪水)",
+        "answer": "flooding",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 47,
+        "question": "mountain _____ (山洪)",
+        "answer": "torrent",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 48,
+        "question": "exhaust _____ (尾气)",
+        "answer": "fume",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 49,
+        "question": "dense _____ (浓雾)",
+        "answer": "mist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 50,
+        "question": "devastating _____ (毁灭性地震)",
+        "answer": "earthquake",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 51,
+        "question": "_____ activity (地震活动)",
+        "answer": "seismic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 52,
+        "question": "distant _____ (遥远的往昔)",
+        "answer": "yesterdays",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 53,
+        "question": "rugged _____ (崎岖地形)",
+        "answer": "terrain",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 54,
+        "question": "natural _____ (自然风景)",
+        "answer": "landscape",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 55,
+        "question": "_____ margin (大陆边缘)",
+        "answer": "continent",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 56,
+        "question": "_____ formation (洞穴形成)",
+        "answer": "cave",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 57,
+        "question": "_____ erosion (悬崖侵蚀)",
+        "answer": "cliff",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 58,
+        "question": "_____ retreat (冰川消退)",
+        "answer": "glacier",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 59,
+        "question": "_____ ecosystem (沼泽生态系统)",
+        "answer": "swamp",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 60,
+        "question": "_____ delta (尼罗河三角洲)",
+        "answer": "nile",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 61,
+        "question": "alluvial _____ (冲积平原)",
+        "answer": "plain",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 62,
+        "question": "_____ thought (曾经认为)",
+        "answer": "once",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 63,
+        "question": "_____ uplift (高原抬升)",
+        "answer": "plateau",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 64,
+        "question": "_____ agriculture (绿洲农业)",
+        "answer": "oasis",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 65,
+        "question": "_____ shift (极移)",
+        "answer": "pole",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 66,
+        "question": "_____ vortex (极地涡旋)",
+        "answer": "polar",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 67,
+        "question": "_____ tilt (轴倾斜)",
+        "answer": "axis",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 68,
+        "question": "_____ projection (地球投影)",
+        "answer": "globe",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 69,
+        "question": "_____ hemisphere (北半球)",
+        "answer": "northern",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 70,
+        "question": "thermal _____ (热赤道)",
+        "answer": "equator",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 71,
+        "question": "_____ expedition (北极探险)",
+        "answer": "arctic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 72,
+        "question": "_____ circle (南极圈)",
+        "answer": "antarctic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 73,
+        "question": "partly _____ (部分原因是)",
+        "answer": "because",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 74,
+        "question": "_____ infrastructure (升级基础设施)",
+        "answer": "upgrade",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 75,
+        "question": "_____ coastline (侵蚀海岸线)",
+        "answer": "erode",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 76,
+        "question": "_____ Ocean (大西洋)",
+        "answer": "atlantic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 77,
+        "question": "_____ cooperation (和平合作)",
+        "answer": "pacific",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 78,
+        "question": "_____ region (亚太地区)",
+        "answer": "asian-pacific",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 79,
+        "question": "_____ trend (当前趋势)",
+        "answer": "current",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 80,
+        "question": "_____ acidification (海洋酸化)",
+        "answer": "ocean",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 81,
+        "question": "_____ ecosystem (海洋生态系统)",
+        "answer": "marine",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 82,
+        "question": "_____ premise (正确前提)",
+        "answer": "true",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 83,
+        "question": "satellite _____ (卫星导航)",
+        "answer": "navigation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 84,
+        "question": "_____ Stream (墨西哥湾暖流)",
+        "answer": "gulf",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 85,
+        "question": "_____ erosion (海滩侵蚀)",
+        "answer": "beach",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 86,
+        "question": "_____ sailing (平行航行)",
+        "answer": "parallel",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 87,
+        "question": "_____ layer (表面层)",
+        "answer": "superficial",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 88,
+        "question": "_____ terrain (平坦地形)",
+        "answer": "flat",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 89,
+        "question": "_____ surface (平滑表面)",
+        "answer": "smooth",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 90,
+        "question": "_____ surface (粗糙表面)",
+        "answer": "rough",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 91,
+        "question": "_____ effect (半岛效应)",
+        "answer": "peninsula",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 92,
+        "question": "_____ beach (沙滩)",
+        "answer": "sandy",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 93,
+        "question": "_____ change (气候变化)",
+        "answer": "climate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 94,
+        "question": "_____ soil (石质土)",
+        "answer": "stony",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 95,
+        "question": "_____ migration (垂直迁移)",
+        "answer": "vertical",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 96,
+        "question": "local _____ (当地天气)",
+        "answer": "weather",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 97,
+        "question": "marine _____ (海洋气象)",
+        "answer": "meteorology",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 98,
+        "question": "_____ symptom (轻度症状)",
+        "answer": "mild",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 99,
+        "question": "central _____ (中央供暖)",
+        "answer": "heating",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 100,
+        "question": "_____ risk (中等风险)",
+        "answer": "moderate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 101,
+        "question": "_____ pressure (血压)",
+        "answer": "blood",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 102,
+        "question": "_____ energy (热能)",
+        "answer": "thermal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 103,
+        "question": "save _____ (拯救生命)",
+        "answer": "lives",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 104,
+        "question": "_____ region (干旱地区)",
+        "answer": "arid",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 105,
+        "question": "_____ soil (湿润土壤)",
+        "answer": "moist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 106,
+        "question": "_____ weather (潮湿天气)",
+        "answer": "damp",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 107,
+        "question": "breast _____ (母乳)",
+        "answer": "milk",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 108,
+        "question": "_____ winter (多雪的冬天)",
+        "answer": "snowy",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 109,
+        "question": "_____ damage (霜冻损害)",
+        "answer": "frost",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 110,
+        "question": "_____ storm (雹暴)",
+        "answer": "hail",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 111,
+        "question": "_____ protection (防晒)",
+        "answer": "sun",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 112,
+        "question": "_____ wind (寒风)",
+        "answer": "chill",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 113,
+        "question": "_____ weather (恶劣天气)",
+        "answer": "bad",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 114,
+        "question": "wage _____ (工资冻结)",
+        "answer": "freeze",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 115,
+        "question": "local _____ (当地天气预报员)",
+        "answer": "weatherman",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 116,
+        "question": "_____ zone (寒带)",
+        "answer": "frigid",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 117,
+        "question": "_____ violently (剧烈颤抖)",
+        "answer": "tremble",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 118,
+        "question": "_____ visibly (明显颤抖)",
+        "answer": "shiver",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 119,
+        "question": "_____ clap (一声惊雷)",
+        "answer": "thunder",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 120,
+        "question": "_____ concern (表达关切)",
+        "answer": "express",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 121,
+        "question": "_____ conductor (避雷针)",
+        "answer": "lightning",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 122,
+        "question": "frequent _____ (频繁的风暴闪电)",
+        "answer": "stormflashes",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 123,
+        "question": "_____ sea (波涛汹涌的大海)",
+        "answer": "stormy",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 124,
+        "question": "torrential _____ (倾盆大雨)",
+        "answer": "downpour",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      }
+    ],
+    "sentence": [
+      {
+        "word_id": 0,
+        "question": "When underground _____ cools and solidifies, it forms igneous rocks such as granite. (岩浆)",
+        "answer": "magma",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 1,
+        "question": "The long-dormant volcano is expected to _____ at any moment, prompting local evacuation orders. (喷薄迸)",
+        "answer": "erupt",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 2,
+        "question": "Hikers are warned not to approach the _____ without a certified guide, as toxic gases can seep from its vents. (火山)",
+        "answer": "volcano",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 3,
+        "question": "Earthquakes occur when tectonic plates that make up the planet's _____ shift and grind against each other. (地壳)",
+        "answer": "crust",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 4,
+        "question": "The _____ of the problem lies in a lack of communication between team members. (核心)",
+        "answer": "core",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 5,
+        "question": "Soft lighting and gentle music create a relaxing _____ perfect for a romantic dinner. (氛围)",
+        "answer": "atmosphere",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 6,
+        "question": "The _____ includes all water on Earth's surface, such as oceans, lakes, rivers, and even groundwater. (水圈)",
+        "answer": "hydrosphere",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 7,
+        "question": "The _____ is the rigid, outermost layer of the Earth, consisting of the crust and upper mantle. (岩石圈)",
+        "answer": "lithosphere",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 8,
+        "question": "Trees and other plants absorb carbon dioxide and release _____ through the process of photosynthesis. (氧气)",
+        "answer": "oxygen",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 9,
+        "question": "When iron reacts with oxygen over time, it forms iron _____, commonly known as rust. (氧化物)",
+        "answer": "oxide",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 10,
+        "question": "Burning fossil fuels releases large amounts of _____ into the atmosphere, contributing to global warming. (二氧化碳)",
+        "answer": "carbon dioxide",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 11,
+        "question": "Water molecules are made up of two atoms of _____ and one atom of oxygen. (氢)",
+        "answer": "hydrogen",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 12,
+        "question": "The slow convection of rock in the Earth's _____ drives the movement of tectonic plates over millions of years. (地幔)",
+        "answer": "mantle",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 13,
+        "question": "Many _____ choose to read bedtime stories to their children to foster a love of books. (父母)",
+        "answer": "parents",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 14,
+        "question": "To pinpoint an exact location on the globe, you need both the latitude and _____ of the point. (经度)",
+        "answer": "longitude",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 15,
+        "question": "Regions at high _____ often experience long, cold winters and short, cool summers. (纬度)",
+        "answer": "latitude",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 16,
+        "question": "As the sun dipped below the _____, the sky turned soft shades of pink and orange. (地平线)",
+        "answer": "horizon",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 17,
+        "question": "The plane continued to climb until it reached a cruising _____ of around 35,000 feet. (海拔高度)",
+        "answer": "altitude",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 18,
+        "question": "Emergency teams worked around the clock to deliver aid to communities affected by the _____. (灾难 zāinàn)",
+        "answer": "disaster",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 19,
+        "question": "Despite a small _____ during setup, the outdoor concert went off without any further issues. (n.事故, 意外)",
+        "answer": "mishap",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 20,
+        "question": "The gardener grows tropical flowers and vegetables in a heated _____ during the cold winter months. (溫室)",
+        "answer": "greenhouse",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 21,
+        "question": "The powerful hurricane caused _____ flooding along the coast, destroying thousands of homes. (灾难性的...)",
+        "answer": "catastrophic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 22,
+        "question": "The drought was a terrible _____ that destroyed crops and left thousands of families without food. (n.不幸 ,灾 ,灾害)",
+        "answer": "calamity",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 23,
+        "question": "Driving at high speeds in icy conditions can _____ the lives of everyone on the road. (使遭危险)",
+        "answer": "endanger",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 24,
+        "question": "Scientists spent years studying the strange _____ before they could identify its underlying cause. (现象)",
+        "answer": "phenomenon",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 25,
+        "question": "Any attempt to cut corners will _____ the quality of the project. (危害)",
+        "answer": "jeopardise",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 26,
+        "question": "The _____ earthquake caused widespread destruction in the region. (adj.破坏性)",
+        "answer": "destructive",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 27,
+        "question": "She picked up a smooth _____ on the riverbank and put it in her pocket. (鵝卵石)",
+        "answer": "pebble",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 28,
+        "question": "You can use a _____ to pick up the iron nails scattered on the floor. (磁铁)",
+        "answer": "magnet",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 30,
+        "question": "The _____ brings heavy rain that is crucial for local agricultural production. (雨季)",
+        "answer": "monsoon",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 31,
+        "question": "A _____ was blowing so hard that it was difficult to walk along the seafront. (n.大风，烈风)",
+        "answer": "gale",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 32,
+        "question": "They plan to climb the highest _____ in the range next summer. (山)",
+        "answer": "mountain",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 33,
+        "question": "Milk contains calcium and other essential _____ that are good for bone health. (矿物)",
+        "answer": "mineral",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 34,
+        "question": "The sculptor used a piece of white _____ to carve a statue of the goddess. (大理石)",
+        "answer": "marble",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 35,
+        "question": "This type of watch uses a _____ oscillator to keep precise time. (石英)",
+        "answer": "quartz",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 36,
+        "question": "The kitchen countertop is made of polished _____, which is durable and easy to clean. (花岗岩)",
+        "answer": "granite",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 37,
+        "question": "A sudden _____ of wind blew her hat off as she walked across the bridge. (n.阵风，一阵狂风)",
+        "answer": "gust",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 38,
+        "question": "A cool _____ blew through the window, making the hot afternoon more bearable. (小风)",
+        "answer": "breeze",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 39,
+        "question": "The _____ strengthened to a Category 5 storm as it moved across the warm ocean waters. (飓风)",
+        "answer": "hurricane",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 40,
+        "question": "Meteorologists warned residents to take shelter immediately as the _____ approached the town. (龙卷风)",
+        "answer": "tornado",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 41,
+        "question": "The _____ is expected to make landfall tomorrow morning, so schools and businesses have been closed. (台风)",
+        "answer": "typhoon",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 42,
+        "question": "The experiment demonstrates a basic _____ principle related to heat transfer. (adj.热力学的)",
+        "answer": "thermodynamic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 43,
+        "question": "Thousands of people were killed by the _____ that followed the 9.0-magnitude earthquake in 2004. (海啸)",
+        "answer": "tsunami",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 44,
+        "question": "The government has allocated funds to help farmers affected by the severe _____. (干旱)",
+        "answer": "drought",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 45,
+        "question": "The city has introduced strict measures to reduce vehicle exhaust and control _____. (雾霾)",
+        "answer": "smog",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 46,
+        "question": "Continuous heavy rain led to widespread _____ in the city, disrupting traffic and power supply. (淹没)",
+        "answer": "flooding",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 47,
+        "question": "After the dam broke, a _____ of muddy water surged towards the villages downstream. (洪流)",
+        "answer": "torrent",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 48,
+        "question": "Car exhaust _____ contains harmful chemicals that contribute to air pollution. (n.有害烟气)",
+        "answer": "fume",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 49,
+        "question": "The early morning _____ lifted as the sun rose higher in the sky. (烟雾)",
+        "answer": "mist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 50,
+        "question": "A devastating _____ struck the coastal region last week, destroying hundreds of homes. (地震)",
+        "answer": "earthquake",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 51,
+        "question": "Geologists monitor _____ waves closely to predict potential volcanic eruptions. (地震)",
+        "answer": "seismic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 52,
+        "question": "_____ are often romanticised in literature, as people tend to remember the good times more than the bad. (昨天)",
+        "answer": "yesterdays",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 53,
+        "question": "The army had to navigate through rough, mountainous _____ to reach the remote village. (地形)",
+        "answer": "terrain",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 54,
+        "question": "The artist spent years travelling across the country to paint the beautiful local _____. (风景)",
+        "answer": "landscape",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 55,
+        "question": "The ancient _____ of Gondwana began to break apart around 180 million years ago. (大陆)",
+        "answer": "continent",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 56,
+        "question": "We explored a dark, narrow _____ that was filled with stalactites and stalagmites. (洞穴)",
+        "answer": "cave",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 57,
+        "question": "The dangerous coastal _____ had warning signs to prevent visitors from getting too close to the edge. (悬崖)",
+        "answer": "cliff",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 58,
+        "question": "The melting _____ feeds into the river, providing fresh water for millions of people downstream. (冰川)",
+        "answer": "glacier",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 59,
+        "question": "The waterlogged _____ is home to alligators, herons and many other unique species. (沼泽)",
+        "answer": "swamp",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 60,
+        "question": "The _____ is the longest river in the world, flowing north through 11 countries. (n.尼罗河)",
+        "answer": "nile",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 61,
+        "question": "The fertile _____ between the two rivers is one of the most productive agricultural regions in the country. (平原)",
+        "answer": "plain",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 62,
+        "question": "_____ considered an ineffective treatment, the drug is now widely used to cure the disease. (曾经)",
+        "answer": "once",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 63,
+        "question": "The Tibetan _____ is often called the 'Roof of the World' because of its extremely high elevation. (高原)",
+        "answer": "plateau",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 64,
+        "question": "After trekking across the hot desert for a week, the caravan finally arrived at a lush, green _____. (绿洲)",
+        "answer": "oasis",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 65,
+        "question": "The geographic _____ marks the northernmost point on the Earth's surface. (极)",
+        "answer": "pole",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 66,
+        "question": "Melting _____ ice is contributing to global sea level rise. (极地的)",
+        "answer": "polar",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 67,
+        "question": "The Earth's _____ is tilted at an angle of about 23.5 degrees, which causes the change of seasons. (轴)",
+        "answer": "axis",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 68,
+        "question": "Climate change is a pressing issue that affects every country on the _____. (地球)",
+        "answer": "globe",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 69,
+        "question": "The _____ lights, also known as aurora borealis, can be seen in high-latitude regions near the Arctic. (adj.北)",
+        "answer": "northern",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 70,
+        "question": "Tropical rainforests are mostly located near the _____, where rainfall is abundant throughout the year. (赤道)",
+        "answer": "equator",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 71,
+        "question": "Sea ice in the _____ is melting rapidly as a result of rising global temperatures. (北极)",
+        "answer": "arctic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 72,
+        "question": "Thousands of scientists travel to the _____ every year to conduct research on climate change and glaciology. (南极)",
+        "answer": "antarctic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 73,
+        "question": "_____ the flight was cancelled due to bad weather, all passengers had to stay in a hotel overnight. (conj.因为)",
+        "answer": "because",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 74,
+        "question": "The company will _____ its computer systems next month to improve work efficiency and data security. (升级)",
+        "answer": "upgrade",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 75,
+        "question": "Constant wave action will _____ the base of the cliff over hundreds of years. (侵蚀)",
+        "answer": "erode",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 76,
+        "question": "The _____ is the second-largest ocean in the world, covering around 20% of the Earth's surface. (大西洋)",
+        "answer": "atlantic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 77,
+        "question": "All parties involved agreed to seek a _____ resolution to the territorial dispute through dialogue. (和平的)",
+        "answer": "pacific",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 78,
+        "question": "The _____ economy is expected to drive global economic recovery in the post-pandemic era. (亚太的)",
+        "answer": "asian-pacific",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 79,
+        "question": "The _____ policy on renewable energy aims to cut carbon emissions by 40% within the next decade. (当前)",
+        "answer": "current",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 80,
+        "question": "The _____ plays a critical role in regulating the global climate by absorbing excess heat and carbon dioxide from the atmosphere. (海洋)",
+        "answer": "ocean",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 81,
+        "question": "Many _____ species are at risk of extinction due to plastic pollution, overfishing and habitat destruction. (海洋)",
+        "answer": "marine",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 82,
+        "question": "The argument only holds if its initial assumption about consumer behaviour is _____. (正确)",
+        "answer": "true",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 83,
+        "question": "Early sailors used stars and constellations for _____ when sailing across vast, unmarked open oceans. (导航)",
+        "answer": "navigation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 84,
+        "question": "The 2010 oil spill in the _____ of Mexico caused catastrophic damage to coastal and marine ecosystems. (海湾)",
+        "answer": "gulf",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 85,
+        "question": "Tourists often walk along the sandy _____ at sunset to enjoy the panoramic ocean views. (海滩)",
+        "answer": "beach",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 86,
+        "question": "The coastal road runs _____ to the cliff edge for dozens of kilometres, providing breathtaking views of the ocean. (平行)",
+        "answer": "parallel",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 87,
+        "question": "The _____ layer of soil is often rich in organic matter from decomposed plant and animal material. (表面的)",
+        "answer": "superficial",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 88,
+        "question": "The path along the beach is relatively _____, making it easy for families with young children and elderly visitors to walk along. (平的)",
+        "answer": "flat",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 89,
+        "question": "The lecturer made a _____ transition between the two topics, allowing the audience to follow her line of argument easily. (流畅的)",
+        "answer": "smooth",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 90,
+        "question": "The small fishing boat struggled to stay afloat in _____ seas during the severe winter storm. (汹涌的)",
+        "answer": "rough",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 91,
+        "question": "The Iberian _____ is home to Spain and Portugal, and is separated from the rest of continental Europe by the Pyrenees Mountains. (半岛)",
+        "answer": "peninsula",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 92,
+        "question": "The _____ soil in the coastal region drains very quickly, making it unsuitable for growing water-intensive crops such as rice. (沙质的)",
+        "answer": "sandy",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 93,
+        "question": "The Mediterranean _____ is characterised by hot, dry summers and mild, wet winters, making it a popular tourist destination year-round. (气候)",
+        "answer": "climate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 94,
+        "question": "Unlike the popular sandy beaches on the southern coast, the _____ beach on the northern shore is covered in pebbles and rarely visited by tourists. (石质的)",
+        "answer": "stony",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 95,
+        "question": "The coastal cliff face was almost _____, making it a challenging but popular spot for experienced rock climbers. (垂直的)",
+        "answer": "vertical",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 96,
+        "question": "Rough seas and stormy _____ forced the cross-channel ferry service to suspend operations for the entire weekend. (天气)",
+        "answer": "weather",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 97,
+        "question": "Researchers specialising in tropical _____ study the formation and movement of monsoons, cyclones and other weather systems near the equator. (气象)",
+        "answer": "meteorology",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 98,
+        "question": "Most people infected with the virus experience only _____ symptoms, such as a slight cough and low-grade fever, and recover fully within a week. (轻度)",
+        "answer": "mild",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 99,
+        "question": "Excessive carbon dioxide emissions contribute to global _____ by trapping heat in the Earth's atmosphere, leading to rising average temperatures. (加热)",
+        "answer": "heating",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 100,
+        "question": "Doctors recommend _____ exercise for people recovering from a heart condition. (中等)",
+        "answer": "moderate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 101,
+        "question": "_____ carries oxygen and nutrients to all parts of the body. (血液)",
+        "answer": "blood",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 102,
+        "question": "_____ imaging cameras can detect heat loss from buildings to improve energy efficiency. (热)",
+        "answer": "thermal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 103,
+        "question": "He _____ a quiet life in the countryside after retiring from his city job. (n.生命（复数）；v.居住/生活（第三人称单数）)",
+        "answer": "lives",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 104,
+        "question": "Very few plants can survive in the _____ conditions of the desert. (干旱)",
+        "answer": "arid",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 105,
+        "question": "Keep the soil _____ but not waterlogged when growing young vegetable seedlings. (潮湿)",
+        "answer": "moist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 106,
+        "question": "The old cottage smelled of mould because of the _____ air trapped inside. (『潮』湿)",
+        "answer": "damp",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 107,
+        "question": "I usually drink a glass of warm _____ before bed to help me fall asleep faster. (奶)",
+        "answer": "milk",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 108,
+        "question": "The new body lotion promises to keep your skin _____ and soft throughout the dry winter. (雪润的)",
+        "answer": "snowy",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 109,
+        "question": "Gardeners often cover delicate young plants at night to protect them from _____. (霜冻)",
+        "answer": "frost",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 110,
+        "question": "_____ can shatter windows, dent cars and destroy crops during severe summer storms. (冰雹)",
+        "answer": "hail",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 111,
+        "question": "The _____ provides the light and heat necessary for life to exist on Earth. (太阳)",
+        "answer": "sun",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 112,
+        "question": "There was a distinct _____ in the air as we walked home after the sun set. (阴寒)",
+        "answer": "chill",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 113,
+        "question": "Eating too much sugary and processed food is _____ for your long-term health. (坏)",
+        "answer": "bad",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 114,
+        "question": "The company had to _____ all new recruitment due to the ongoing economic recession. (停止)",
+        "answer": "freeze",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 115,
+        "question": "The _____ warned that a powerful typhoon would hit the coastal city within 48 hours. (天气预报员)",
+        "answer": "weatherman",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 116,
+        "question": "Penguins and other polar animals are well adapted to the _____ temperatures of Antarctica. (阴寒)",
+        "answer": "frigid",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 117,
+        "question": "When the high-speed train rushed past, we felt the old platform _____ beneath our feet. (撼 撼 [han4])",
+        "answer": "tremble",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 118,
+        "question": "The lost child started to _____ in the cold wind after wandering outside for hours. (颤抖)",
+        "answer": "shiver",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 119,
+        "question": "A loud crash of _____ made the small dog hide under the sofa during the storm. (雷)",
+        "answer": "thunder",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 120,
+        "question": "I paid extra for _____ delivery to ensure the birthday gift arrived on my friend's big day. (快递)",
+        "answer": "express",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 121,
+        "question": "The old oak tree was struck by _____ during last night's violent thunderstorm. (闪电)",
+        "answer": "lightning",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 122,
+        "question": "_____ lit up the dark night sky repeatedly as the hurricane approached the coast. (n.风暴闪电（复数）)",
+        "answer": "stormflashes",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 123,
+        "question": "_____ sea conditions forced the ferry company to cancel all services for the day. (暴风雨)",
+        "answer": "stormy",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 124,
+        "question": "We got completely soaked by a sudden _____ on our walk to the city centre. (倾盆)",
+        "answer": "downpour",
+        "hint": "请根据上下文和中文提示填空"
+      }
+    ]
+  }
+}

@@ -30,6 +30,7 @@ st.set_page_config(
 TOTAL_DAYS = 28
 DATA_FILE = Path(__file__).parent / 'progress.json'
 TEST_BANK_FILE = Path(__file__).parent / 'test_bank.json'
+TEST_BANK_DIR  = Path(__file__).parent / 'test_bank_llm'
 XLSX_FILE = Path(__file__).parent / '雅思英文词汇表（完整版）.xlsx'
 AUDIO_DIR = Path(__file__).parent / 'audio'
 
@@ -244,48 +245,40 @@ def generate_learning_plan(total_words: int) -> Dict[int, List[int]]:
 # =============================================================================
 
 class TestBankManager:
-    """Manages pre-generated test questions, persisted to disk."""
-    
-    def __init__(self, plan: Dict[int, List[int]]):
-        self.plan = plan
-        self.data = self._load()
-    
-    def _load(self) -> dict:
-        if TEST_BANK_FILE.exists():
-            try:
-                with open(TEST_BANK_FILE, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except:
-                pass
-        return {}
-    
-    def save(self):
-        with open(TEST_BANK_FILE, 'w', encoding='utf-8') as f:
-            json.dump(self.data, f, ensure_ascii=False, indent=2)
-    
-    def ensure_day_bank(self, day: int):
-        """Ensure test bank exists for the given day, generate if not."""
+    """Loads pre-generated LLM test questions from test_bank_llm/ directory.
+    Each day has a day_DD.json file with 4 question arrays: cn2en, en2cn, collocation, sentence.
+    """
+    TEST_TYPES = ['cn2en', 'en2cn', 'collocation', 'sentence']
+
+    def __init__(self):
+        self._cache: dict[str, dict] = {}  # day_key -> bank dict
+
+    def _load_day(self, day: int) -> dict | None:
         day_key = str(day)
-        if day_key not in self.data:
-            day_words = self.plan.get(day, [])
-            self.data[day_key] = {}
-            for test_type in ['translation', 'collocation', 'sentence', 'related']:
-                shuffled = list(day_words)
-                random.shuffle(shuffled)
-                self.data[day_key][test_type] = shuffled
-            self.save()
-    
-    def get_test_batch(self, day: int, test_type: str, size: int = None) -> List[int]:
-        """Get pre-generated word IDs for the specified day and test type."""
-        self.ensure_day_bank(day)
-        day_key = str(day)
-        word_ids = self.data[day_key].get(test_type, self.plan.get(day, []))
-        if size and size < len(word_ids):
-            return word_ids[:size]
-        return word_ids
-    
-    def ensure_exists_for_day(self, day: int) -> bool:
-        return str(day) in self.data
+        if day_key in self._cache:
+            return self._cache[day_key]
+        f = TEST_BANK_DIR / f"day_{day:02d}.json"
+        if not f.exists():
+            return None
+        try:
+            data = json.loads(f.read_text(encoding='utf-8'))
+            self._cache[day_key] = data
+            return data
+        except Exception:
+            return None
+
+    def get_test_batch(self, day: int, test_type: str, size: int | None = None) -> list[dict]:
+        """Return a list of question dicts for the given day + test type."""
+        bank = self._load_day(day)
+        if not bank:
+            return []
+        questions = bank.get("questions", {}).get(test_type, [])
+        if size and size < len(questions):
+            return questions[:size]
+        return questions
+
+    def has_day(self, day: int) -> bool:
+        return (TEST_BANK_DIR / f"day_{day:02d}.json").exists()
 
 
 # =============================================================================
@@ -351,7 +344,7 @@ class ProgressManager:
         return self.data['word_records'].get(str(word_id), {
             'attempts': 0,
             'correct': 0,
-            'test_scores': {'translation': 0, 'collocation': 0, 'sentence': 0, 'related': 0},
+            'test_scores': {'cn2en': 0, 'en2cn': 0, 'collocation': 0, 'sentence': 0},
             'mastery': 0.0,
             'last_tested': None,
             'first_seen': None,
@@ -429,90 +422,21 @@ class ProgressManager:
 class TestEngine:
     
     @staticmethod
-    def generate_question(word_id: int, word_row: pd.Series, test_type: str, seed_offset: int = 0) -> dict:
-        """Generate a deterministic question for the given word and test type."""
-        rng = random.Random(word_id * 100 + seed_offset + {'translation':0,'collocation':1000,'sentence':2000,'related':3000}[test_type])
-        
-        word = str(word_row['word']).strip()
-        word_lower = word.lower()
-        
-        if test_type == 'translation':
-            hint = f"首字母: {word[0].upper()}..." if len(word) > 3 else f"长度: {len(word)} 个字母"
-            return {
-                'type': 'translation',
-                'label': '汉译英',
-                'question': str(word_row['chinese_def']),
-                'answer': word_lower,
-                'hint': hint,
-                'word_id': int(word_id),
-            }
-        
-        elif test_type == 'collocation':
-            colls = parse_collocations(str(word_row['collocations']))
-            if colls and len(colls) >= 1:
-                # Pick ONE random collocation phrase deterministically
-                picked = colls[rng.randint(0, len(colls) - 1)]
-                # Build question by blanking out the target word IN the phrase
-                pattern = re.compile(re.escape(word), re.IGNORECASE)
-                if pattern.search(picked):
-                    question = pattern.sub('_____', picked, count=1)
-                else:
-                    # Target word not literally in the phrase — prepend blank
-                    question = f"_____ {picked}"
-            else:
-                question = f"_____ {word_lower}"
-            return {
-                'type': 'collocation',
-                'label': '搭配测试',
-                'question': question,
-                'answer': word_lower,
-                'hint': '请填写该搭配短语中缺失的目标词',
-                'word_id': int(word_id),
-            }
-        
-        elif test_type == 'sentence':
-            sentence = str(word_row['sentence'])
-            if sentence and sentence != 'None':
-                pattern = re.compile(re.escape(word), re.IGNORECASE)
-                question = pattern.sub('_____', sentence, count=1)
-            else:
-                question = f'翻译: {word_row["chinese_def"]}'
-            return {
-                'type': 'sentence',
-                'label': '句子填空',
-                'question': question,
-                'answer': word_lower,
-                'hint': f'长度: {len(word)} 个字母',
-                'word_id': int(word_id),
-            }
-        
-        elif test_type == 'related':
-            related = parse_related_words(str(word_row['related_words']))
-            root = parse_root_words(str(word_row['root_words']))
-            clues = []
-            if related:
-                clues.append(f"相近词: {', '.join(rng.sample(related, min(4, len(related))))}")
-            if root:
-                clues.append(f"同根词: {', '.join(rng.sample(root, min(4, len(root))))}")
-            if not clues:
-                clues.append(f"释义: {str(word_row['chinese_def'])}")
-            return {
-                'type': 'related',
-                'label': '相关词联想',
-                'question': ' | '.join(clues),
-                'answer': word_lower,
-                'hint': '根据相关词/同根词回忆目标单词',
-                'word_id': int(word_id),
-            }
-        
-        # fallback
+    def get_question(question_item: dict, word_row: pd.Series, test_type: str) -> dict:
+        """Wrap a pre-generated question item with UI metadata."""
+        type_labels = {
+            'cn2en':       '汉译英',
+            'en2cn':       '英译汉',
+            'collocation': '短语搭配翻译',
+            'sentence':    '句子词汇填空',
+        }
         return {
-            'type': 'translation',
-            'label': '汉译英',
-            'question': str(word_row['chinese_def']),
-            'answer': word_lower,
-            'hint': '',
-            'word_id': int(word_id),
+            'type':      test_type,
+            'label':     type_labels.get(test_type, test_type),
+            'question':  question_item.get('question', ''),
+            'answer':    question_item.get('answer', '').strip().lower(),
+            'hint':      question_item.get('hint', ''),
+            'word_id':   question_item.get('word_id', 0),
         }
     
     @staticmethod
@@ -569,7 +493,7 @@ def main():
         st.session_state.progress.init_start_date()
     
     if 'test_bank' not in st.session_state:
-        st.session_state.test_bank = TestBankManager(plan)
+        st.session_state.test_bank = TestBankManager()
     
     if 'test_batch' not in st.session_state:
         st.session_state.test_batch = []
@@ -580,7 +504,7 @@ def main():
     if 'test_total' not in st.session_state:
         st.session_state.test_total = 0
     if 'test_type' not in st.session_state:
-        st.session_state.test_type = 'translation'
+        st.session_state.test_type = 'cn2en'
     if 'test_results' not in st.session_state:
         st.session_state.test_results = []
     if 'show_answer' not in st.session_state:
@@ -596,9 +520,6 @@ def main():
     
     pm = st.session_state.progress
     tbm = st.session_state.test_bank
-    
-    # Ensure test bank exists for current day
-    tbm.ensure_day_bank(st.session_state.learning_day)
     
     # =========================================================================
     # SIDEBAR
@@ -619,8 +540,6 @@ def main():
             st.session_state.learning_page = 0
             st.session_state.test_batch = []
             st.session_state.test_index = 0
-            # Ensure bank for the new day
-            tbm.ensure_day_bank(selected_day)
             st.rerun()
         
         day_words = plan[selected_day]
@@ -667,9 +586,6 @@ def main():
                     'review_queue': []
                 }
                 pm.save()
-                # Also reset test bank
-                tbm.data = {}
-                tbm.save()
                 st.session_state.clear()
                 st.rerun()
             else:
@@ -798,12 +714,12 @@ def main():
         with col_t1:
             test_type_go = st.selectbox(
                 "选择测试题型",
-                options=['translation', 'collocation', 'sentence', 'related'],
+                options=['cn2en', 'en2cn', 'collocation', 'sentence'],
                 format_func=lambda x: {
-                    'translation': '🈂️ 汉译英',
-                    'collocation': '🔗 搭配测试',
-                    'sentence': '📝 句子填空',
-                    'related': '🔍 相关词测试'
+                    'cn2en':       '汉译英',
+                    'en2cn':       '英译汉',
+                    'collocation': '短语搭配翻译',
+                    'sentence':    '句子词汇填空',
                 }[x],
                 key='test_type_go_selector'
             )
@@ -819,16 +735,19 @@ def main():
             # Load from persistent test bank
             size = len(day_words) if "全部" in str(test_size_go) else min(int(test_size_go), len(day_words))
             batch = tbm.get_test_batch(selected_day, test_type_go, size)
-            st.session_state.test_batch = batch
-            st.session_state.test_index = 0
-            st.session_state.test_score = 0
-            st.session_state.test_total = 0
-            st.session_state.test_results = []
-            st.session_state.test_type = test_type_go
-            st.session_state.show_answer = False
-            st.session_state.last_user_answer = ''
-            st.session_state.test_batch_size = size
-            st.success(f"已加载 {len(batch)} 道测试题，请切换到「✍️ 开始测试」标签页")
+            if not batch:
+                st.error(f"第{selected_day}天的测试题库尚未生成，请先运行 generate_test_bank.py")
+            else:
+                st.session_state.test_batch = batch
+                st.session_state.test_index = 0
+                st.session_state.test_score = 0
+                st.session_state.test_total = 0
+                st.session_state.test_results = []
+                st.session_state.test_type = test_type_go
+                st.session_state.show_answer = False
+                st.session_state.last_user_answer = ''
+                st.session_state.test_batch_size = size
+                st.success(f"已加载 {len(batch)} 道测试题，请切换到「✍️ 开始测试」标签页")
     
     # =========================================================================
     # TAB 2: TEST
@@ -846,27 +765,28 @@ def main():
             quick_size = st.selectbox("题数", [10, 20, 30], key='quick_size')
             quick_type = st.selectbox(
                 "题型",
-                options=['translation', 'collocation', 'sentence', 'related'],
+                options=['cn2en', 'en2cn', 'collocation', 'sentence'],
                 format_func=lambda x: {
-                    'translation': '汉译英', 'collocation': '搭配测试',
-                    'sentence': '句子填空', 'related': '相关词测试'
+                    'cn2en': '汉译英', 'en2cn': '英译汉',
+                    'collocation': '短语搭配翻译', 'sentence': '句子词汇填空',
                 }[x],
                 key='quick_type'
             )
             
             if st.button("⚡ 快速开始", type="primary", use_container_width=True):
-                qday_words = plan[quick_day]
-                actual_size = min(quick_size, len(qday_words))
-                tbm.ensure_day_bank(quick_day)
+                actual_size = min(quick_size, len(plan[quick_day]))
                 batch = tbm.get_test_batch(quick_day, quick_type, actual_size)
-                st.session_state.test_batch = batch
-                st.session_state.test_index = 0
-                st.session_state.test_score = 0
-                st.session_state.test_total = 0
-                st.session_state.test_results = []
-                st.session_state.test_type = quick_type
-                st.session_state.show_answer = False
-                st.rerun()
+                if not batch:
+                    st.error(f"第{quick_day}天的测试题库尚未生成，请先运行 generate_test_bank.py")
+                else:
+                    st.session_state.test_batch = batch
+                    st.session_state.test_index = 0
+                    st.session_state.test_score = 0
+                    st.session_state.test_total = 0
+                    st.session_state.test_results = []
+                    st.session_state.test_type = quick_type
+                    st.session_state.show_answer = False
+                    st.rerun()
         
         else:
             if st.session_state.test_index >= len(st.session_state.test_batch):
@@ -900,38 +820,35 @@ def main():
                     st.rerun()
             
             else:
-                current_word_idx = st.session_state.test_batch[st.session_state.test_index]
-                word_row = df.iloc[current_word_idx]
+                current_question = st.session_state.test_batch[st.session_state.test_index]
                 test_type = st.session_state.test_type
-                
-                # Generate question deterministically from test bank position
-                question = TestEngine.generate_question(
-                    current_word_idx, word_row, test_type,
-                    seed_offset=st.session_state.test_index
-                )
-                
+                word_id = current_question.get('word_id', 0)
+                word_row = df.iloc[word_id] if word_id < len(df) else df.iloc[0]
+
+                question = TestEngine.get_question(current_question, word_row, test_type)
+
                 progress_pct = st.session_state.test_index / len(st.session_state.test_batch)
                 st.progress(progress_pct, text=f"进度: {st.session_state.test_index+1}/{len(st.session_state.test_batch)}")
-                
+
                 col_sc1, col_sc2 = st.columns(2)
                 with col_sc1:
                     st.metric("正确", st.session_state.test_score)
                 with col_sc2:
                     current_acc = (st.session_state.test_score / st.session_state.test_total * 100) if st.session_state.test_total > 0 else 0
                     st.metric("正确率", f"{current_acc:.0f}%")
-                
+
                 type_labels = {
-                    'translation': '🈂️ 汉译英',
-                    'collocation': '🔗 搭配测试',
-                    'sentence': '📝 句子填空',
-                    'related': '🔍 相关词测试'
+                    'cn2en':       '汉译英',
+                    'en2cn':       '英译汉',
+                    'collocation': '短语搭配翻译',
+                    'sentence':    '句子词汇填空',
                 }
-                
+
                 st.markdown(f"""
                 <div class="test-card">
                     <div style="color:#888;font-size:0.85rem;">{type_labels.get(test_type, '')}</div>
                     <div class="question">{question['question']}</div>
-                    <div class="hint">💡 {question.get('hint', '')}</div>
+                    <div class="hint">{question.get('hint', '')}</div>
                 </div>
                 """, unsafe_allow_html=True)
                 
@@ -955,7 +872,7 @@ def main():
                             if correct:
                                 st.session_state.test_score += 1
                             
-                            pm.update_word_record(current_word_idx, test_type, correct)
+                            pm.update_word_record(word_id, test_type, correct)
                             st.session_state.test_results.append({
                                 'word': word_row['word'],
                                 'chinese_def': word_row['chinese_def'],
@@ -973,7 +890,7 @@ def main():
                         st.session_state.show_answer = True
                         st.session_state.last_user_answer = '(跳过)'
                         st.session_state.test_total += 1
-                        pm.update_word_record(current_word_idx, test_type, False)
+                        pm.update_word_record(word_id, test_type, False)
                         st.session_state.test_results.append({
                             'word': word_row['word'],
                             'chinese_def': word_row['chinese_def'],
@@ -1011,7 +928,7 @@ def main():
                     st.caption(str(word_row['english_def'])[:300])
                     
                     # Audio for the word in test answer
-                    audio_path = AUDIO_DIR / f'{current_word_idx}.mp3'
+                    audio_path = AUDIO_DIR / f'{word_id}.mp3'
                     if audio_path.exists() and audio_path.stat().st_size > 0:
                         try:
                             with open(audio_path, 'rb') as f:
@@ -1262,26 +1179,47 @@ def main():
                         st.markdown(f"**同根词**: {', '.join(root[:6])}")
                     
                     if st.button(f"⚡ 快速测试此词", key=f"qt_{widx}"):
-                        st.session_state.test_batch = [widx]
+                        row = df.iloc[widx]
+                        word = str(row['word']).strip()
+                        cn_def = str(row['chinese_def']).strip()
+                        hint = f"{word[0].upper()}..." if len(word) > 3 else f"{len(word)} letters"
+                        st.session_state.test_batch = [{
+                            'word_id': widx,
+                            'question': cn_def,
+                            'answer': word.lower(),
+                            'hint': hint,
+                        }]
                         st.session_state.test_index = 0
                         st.session_state.test_score = 0
                         st.session_state.test_total = 0
                         st.session_state.test_results = []
                         st.session_state.show_answer = False
-                        st.session_state.test_type = 'translation'
+                        st.session_state.test_type = 'cn2en'
                         st.info("请切换到「✍️ 开始测试」标签页")
             
             st.markdown("---")
             review_test_count = min(30, len(review_words))
             if st.button(f"🚀 对这{review_test_count}个词进行测试", type="primary", use_container_width=True):
                 test_words = review_words[:review_test_count]
-                st.session_state.test_batch = test_words
+                batch = []
+                for widx in test_words:
+                    row = df.iloc[widx]
+                    word = str(row['word']).strip()
+                    cn_def = str(row['chinese_def']).strip()
+                    hint = f"{word[0].upper()}..." if len(word) > 3 else f"{len(word)} letters"
+                    batch.append({
+                        'word_id': widx,
+                        'question': cn_def,
+                        'answer': word.lower(),
+                        'hint': hint,
+                    })
+                st.session_state.test_batch = batch
                 st.session_state.test_index = 0
                 st.session_state.test_score = 0
                 st.session_state.test_total = 0
                 st.session_state.test_results = []
                 st.session_state.show_answer = False
-                st.session_state.test_type = 'translation'
+                st.session_state.test_type = 'cn2en'
                 st.info("请切换到「✍️ 开始测试」标签页")
         else:
             st.info("暂无需要复习的词汇。完成更多测试后，系统会自动识别薄弱词汇。")
