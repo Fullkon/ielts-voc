@@ -1,0 +1,2702 @@
+{
+  "day": 3,
+  "word_count": 125,
+  "questions": {
+    "cn2en": [
+      {
+        "word_id": 250,
+        "question": "n.芽，花蕾；v.发芽",
+        "answer": "bud",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 251,
+        "question": "adj.短日照的",
+        "answer": "short-day",
+        "hint": "S..."
+      },
+      {
+        "word_id": 252,
+        "question": "adj.耐阴的",
+        "answer": "shade-tolerant",
+        "hint": "S..."
+      },
+      {
+        "word_id": 253,
+        "question": "n.花；v.开花",
+        "answer": "flower",
+        "hint": "F..."
+      },
+      {
+        "word_id": 254,
+        "question": "n.樱桃，樱桃树",
+        "answer": "cherry",
+        "hint": "C..."
+      },
+      {
+        "word_id": 255,
+        "question": "n.花簇；v.开花",
+        "answer": "blossom",
+        "hint": "B..."
+      },
+      {
+        "word_id": 256,
+        "question": "n.树，乔木",
+        "answer": "tree",
+        "hint": "T..."
+      },
+      {
+        "word_id": 257,
+        "question": "n.真菌",
+        "answer": "fungus",
+        "hint": "F..."
+      },
+      {
+        "word_id": 258,
+        "question": "n.霉菌；v.发霉",
+        "answer": "mould",
+        "hint": "M..."
+      },
+      {
+        "word_id": 259,
+        "question": "n.花粉",
+        "answer": "pollen",
+        "hint": "P..."
+      },
+      {
+        "word_id": 260,
+        "question": "v.发芽，萌芽",
+        "answer": "germinate",
+        "hint": "G..."
+      },
+      {
+        "word_id": 261,
+        "question": "n.种子；v.播种",
+        "answer": "seed",
+        "hint": "S..."
+      },
+      {
+        "word_id": 262,
+        "question": "v.迅速增长，萌芽",
+        "answer": "burgeon",
+        "hint": "B..."
+      },
+      {
+        "word_id": 263,
+        "question": "adj.结实的；n.公司",
+        "answer": "firm",
+        "hint": "F..."
+      },
+      {
+        "word_id": 264,
+        "question": "n.花；v.开花",
+        "answer": "bloom",
+        "hint": "B..."
+      },
+      {
+        "word_id": 265,
+        "question": "n.气味，香味；v.嗅",
+        "answer": "scent",
+        "hint": "S..."
+      },
+      {
+        "word_id": 266,
+        "question": "adj.芳香的，有香味的",
+        "answer": "aromatic",
+        "hint": "A..."
+      },
+      {
+        "word_id": 267,
+        "question": "adj.成熟的",
+        "answer": "ripe",
+        "hint": "R..."
+      },
+      {
+        "word_id": 268,
+        "question": "n.水果，果实",
+        "answer": "fruit",
+        "hint": "F..."
+      },
+      {
+        "word_id": 269,
+        "question": "v.枯萎，凋谢",
+        "answer": "wither",
+        "hint": "W..."
+      },
+      {
+        "word_id": 270,
+        "question": "n.田野，领域",
+        "answer": "field",
+        "hint": "F..."
+      },
+      {
+        "word_id": 271,
+        "question": "n.梯田，露台",
+        "answer": "terrace",
+        "hint": "T..."
+      },
+      {
+        "word_id": 272,
+        "question": "v.分解，腐烂",
+        "answer": "decompose",
+        "hint": "D..."
+      },
+      {
+        "word_id": 273,
+        "question": "v./n.腐烂，腐朽",
+        "answer": "rot",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 274,
+        "question": "v./n.腐烂，衰退",
+        "answer": "decay",
+        "hint": "D..."
+      },
+      {
+        "word_id": 275,
+        "question": "adj.不新鲜的，陈腐的",
+        "answer": "stale",
+        "hint": "S..."
+      },
+      {
+        "word_id": 276,
+        "question": "n.雨林",
+        "answer": "rainforest",
+        "hint": "R..."
+      },
+      {
+        "word_id": 277,
+        "question": "n.丛林，密林",
+        "answer": "jungle",
+        "hint": "J..."
+      },
+      {
+        "word_id": 278,
+        "question": "n.种植园，林场",
+        "answer": "plantation",
+        "hint": "P..."
+      },
+      {
+        "word_id": 279,
+        "question": "n.木材，木料",
+        "answer": "timber",
+        "hint": "T..."
+      },
+      {
+        "word_id": 280,
+        "question": "n.木炭",
+        "answer": "charcoal",
+        "hint": "C..."
+      },
+      {
+        "word_id": 281,
+        "question": "n.原木；v.记录",
+        "answer": "log",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 282,
+        "question": "n.标识，商标",
+        "answer": "logo",
+        "hint": "L..."
+      },
+      {
+        "word_id": 283,
+        "question": "n.林业，林学",
+        "answer": "forestry",
+        "hint": "F..."
+      },
+      {
+        "word_id": 284,
+        "question": "n.公司（复数，正确形式companies）",
+        "answer": "companys",
+        "hint": "C..."
+      },
+      {
+        "word_id": 285,
+        "question": "v.购买（buy的过去式）",
+        "answer": "bought",
+        "hint": "B..."
+      },
+      {
+        "word_id": 286,
+        "question": "n.根，根源；v.生根",
+        "answer": "root",
+        "hint": "R..."
+      },
+      {
+        "word_id": 287,
+        "question": "n.干草（饲料）",
+        "answer": "hay",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 288,
+        "question": "n.麦秆，稻草；吸管",
+        "answer": "straw",
+        "hint": "S..."
+      },
+      {
+        "word_id": 289,
+        "question": "n.芦苇",
+        "answer": "reed",
+        "hint": "R..."
+      },
+      {
+        "word_id": 290,
+        "question": "n.草，草地",
+        "answer": "grass",
+        "hint": "G..."
+      },
+      {
+        "word_id": 291,
+        "question": "n.草甸，草地",
+        "answer": "meadow",
+        "hint": "M..."
+      },
+      {
+        "word_id": 292,
+        "question": "n.草坪",
+        "answer": "lawn",
+        "hint": "L..."
+      },
+      {
+        "word_id": 293,
+        "question": "n.橄榄，橄榄树",
+        "answer": "olive",
+        "hint": "O..."
+      },
+      {
+        "word_id": 294,
+        "question": "n.刺，荆棘",
+        "answer": "thorn",
+        "hint": "T..."
+      },
+      {
+        "word_id": 295,
+        "question": "n.松树，松木",
+        "answer": "pine",
+        "hint": "P..."
+      },
+      {
+        "word_id": 296,
+        "question": "n.树干，后备箱",
+        "answer": "trunk",
+        "hint": "T..."
+      },
+      {
+        "word_id": 297,
+        "question": "n.酶",
+        "answer": "enzyme",
+        "hint": "E..."
+      },
+      {
+        "word_id": 298,
+        "question": "n.紫罗兰；adj.紫色的",
+        "answer": "violet",
+        "hint": "V..."
+      },
+      {
+        "word_id": 299,
+        "question": "n.郁金香",
+        "answer": "tulip",
+        "hint": "T..."
+      },
+      {
+        "word_id": 300,
+        "question": "v./n.释放，发布",
+        "answer": "release",
+        "hint": "R..."
+      },
+      {
+        "word_id": 301,
+        "question": "n.排放，排放物",
+        "answer": "emission",
+        "hint": "E..."
+      },
+      {
+        "word_id": 302,
+        "question": "v.吸收，理解",
+        "answer": "absorb",
+        "hint": "A..."
+      },
+      {
+        "word_id": 303,
+        "question": "v.铸造(硬币) n.铸币厂",
+        "answer": "mint",
+        "hint": "M..."
+      },
+      {
+        "word_id": 304,
+        "question": "n.流通，循环",
+        "answer": "circulation",
+        "hint": "C..."
+      },
+      {
+        "word_id": 305,
+        "question": "v.运输 n.船舶",
+        "answer": "ship",
+        "hint": "S..."
+      },
+      {
+        "word_id": 306,
+        "question": "n.藻类，海藻",
+        "answer": "algae",
+        "hint": "A..."
+      },
+      {
+        "word_id": 307,
+        "question": "n.吸收，摄取",
+        "answer": "uptake",
+        "hint": "U..."
+      },
+      {
+        "word_id": 308,
+        "question": "n.营养物，养分",
+        "answer": "nutrient",
+        "hint": "N..."
+      },
+      {
+        "word_id": 309,
+        "question": "n.大多数，大部分",
+        "answer": "majority",
+        "hint": "M..."
+      },
+      {
+        "word_id": 310,
+        "question": "n.环境，周围事物",
+        "answer": "surroundings",
+        "hint": "S..."
+      },
+      {
+        "word_id": 311,
+        "question": "n.机制，机理",
+        "answer": "mechanism",
+        "hint": "M..."
+      },
+      {
+        "word_id": 312,
+        "question": "v./n.平衡，抵消",
+        "answer": "counterbalance",
+        "hint": "C..."
+      },
+      {
+        "word_id": 313,
+        "question": "v.保护，防护",
+        "answer": "protect",
+        "hint": "P..."
+      },
+      {
+        "word_id": 314,
+        "question": "v.保护，保存 n.保护区",
+        "answer": "preserve",
+        "hint": "P..."
+      },
+      {
+        "word_id": 315,
+        "question": "n.住宿，适应",
+        "answer": "accommodation",
+        "hint": "A..."
+      },
+      {
+        "word_id": 316,
+        "question": "n.丛林大火",
+        "answer": "bush fire",
+        "hint": "B..."
+      },
+      {
+        "word_id": 317,
+        "question": "v.熄灭，扑灭",
+        "answer": "extinguish",
+        "hint": "E..."
+      },
+      {
+        "word_id": 318,
+        "question": "v.破坏，毁坏",
+        "answer": "destruct",
+        "hint": "D..."
+      },
+      {
+        "word_id": 319,
+        "question": "v.毁坏 n.废墟",
+        "answer": "ruin",
+        "hint": "R..."
+      },
+      {
+        "word_id": 320,
+        "question": "n.暴风雨，风暴",
+        "answer": "storm",
+        "hint": "S..."
+      },
+      {
+        "word_id": 321,
+        "question": "v.死亡，毁灭",
+        "answer": "perish",
+        "hint": "P..."
+      },
+      {
+        "word_id": 322,
+        "question": "v.拆除，推翻",
+        "answer": "demolish",
+        "hint": "D..."
+      },
+      {
+        "word_id": 323,
+        "question": "v.违反，侵犯",
+        "answer": "infringe",
+        "hint": "I..."
+      },
+      {
+        "word_id": 324,
+        "question": "v.削弱，损害",
+        "answer": "undermine",
+        "hint": "U..."
+      },
+      {
+        "word_id": 325,
+        "question": "n.灭绝，消亡",
+        "answer": "extinction",
+        "hint": "E..."
+      },
+      {
+        "word_id": 326,
+        "question": "n.模式，规律",
+        "answer": "pattern",
+        "hint": "P..."
+      },
+      {
+        "word_id": 327,
+        "question": "n.结果，成果",
+        "answer": "outcome",
+        "hint": "O..."
+      },
+      {
+        "word_id": 328,
+        "question": "n./v.影响，冲击",
+        "answer": "impact",
+        "hint": "I..."
+      },
+      {
+        "word_id": 329,
+        "question": "adj.最大的，最高的",
+        "answer": "maximal",
+        "hint": "M..."
+      },
+      {
+        "word_id": 330,
+        "question": "adj.季节的，季节性的",
+        "answer": "seasonal",
+        "hint": "S..."
+      },
+      {
+        "word_id": 331,
+        "question": "adj.最小的，最低的",
+        "answer": "minimal",
+        "hint": "M..."
+      },
+      {
+        "word_id": 332,
+        "question": "adj.实验的，试验性的",
+        "answer": "experimental",
+        "hint": "E..."
+      },
+      {
+        "word_id": 333,
+        "question": "adj.有利的，良好的",
+        "answer": "favourable",
+        "hint": "F..."
+      },
+      {
+        "word_id": 334,
+        "question": "n.鹰，雕",
+        "answer": "eagle",
+        "hint": "E..."
+      },
+      {
+        "word_id": 335,
+        "question": "n.哺乳动物",
+        "answer": "mammal",
+        "hint": "M..."
+      },
+      {
+        "word_id": 336,
+        "question": "n.企鹅",
+        "answer": "penguin",
+        "hint": "P..."
+      },
+      {
+        "word_id": 337,
+        "question": "n.海龟，龟",
+        "answer": "turtle",
+        "hint": "T..."
+      },
+      {
+        "word_id": 338,
+        "question": "n.鲸",
+        "answer": "whale",
+        "hint": "W..."
+      },
+      {
+        "word_id": 339,
+        "question": "n.生物学家",
+        "answer": "biologist",
+        "hint": "B..."
+      },
+      {
+        "word_id": 340,
+        "question": "n.动物学家",
+        "answer": "zoologist",
+        "hint": "Z..."
+      },
+      {
+        "word_id": 341,
+        "question": "n.两栖动物",
+        "answer": "amphibian",
+        "hint": "A..."
+      },
+      {
+        "word_id": 342,
+        "question": "n.灵长类动物",
+        "answer": "primate",
+        "hint": "P..."
+      },
+      {
+        "word_id": 343,
+        "question": "n.脊椎动物",
+        "answer": "vertebrate",
+        "hint": "V..."
+      },
+      {
+        "word_id": 344,
+        "question": "n.爬行动物",
+        "answer": "reptile",
+        "hint": "R..."
+      },
+      {
+        "word_id": 345,
+        "question": "n.食肉动物",
+        "answer": "carnivore",
+        "hint": "C..."
+      },
+      {
+        "word_id": 346,
+        "question": "n.食草动物",
+        "answer": "herbivore",
+        "hint": "H..."
+      },
+      {
+        "word_id": 347,
+        "question": "n.生物，动物",
+        "answer": "creature",
+        "hint": "C..."
+      },
+      {
+        "word_id": 348,
+        "question": "n.野生动物，野生生物",
+        "answer": "wildlife",
+        "hint": "W..."
+      },
+      {
+        "word_id": 349,
+        "question": "n.（某区域）动物群",
+        "answer": "fauna",
+        "hint": "F..."
+      },
+      {
+        "word_id": 350,
+        "question": "n. 植物群",
+        "answer": "flora",
+        "hint": "F..."
+      },
+      {
+        "word_id": 351,
+        "question": "n./v. 人群；挤满",
+        "answer": "throng",
+        "hint": "T..."
+      },
+      {
+        "word_id": 352,
+        "question": "v. 遇见（meet过去式）",
+        "answer": "met",
+        "hint": "3 letters"
+      },
+      {
+        "word_id": 353,
+        "question": "n./v. 人群；拥挤",
+        "answer": "crowd",
+        "hint": "C..."
+      },
+      {
+        "word_id": 354,
+        "question": "n. 野兽，猛兽",
+        "answer": "beast",
+        "hint": "B..."
+      },
+      {
+        "word_id": 355,
+        "question": "n./adj. 野兽；残忍的",
+        "answer": "brute",
+        "hint": "B..."
+      },
+      {
+        "word_id": 356,
+        "question": "adj. 残忍的，残酷的",
+        "answer": "cruel",
+        "hint": "C..."
+      },
+      {
+        "word_id": 357,
+        "question": "n. 物种，种",
+        "answer": "species",
+        "hint": "S..."
+      },
+      {
+        "word_id": 358,
+        "question": "n./v. 群；聚集",
+        "answer": "flock",
+        "hint": "F..."
+      },
+      {
+        "word_id": 359,
+        "question": "n. 绵羊",
+        "answer": "sheep",
+        "hint": "S..."
+      },
+      {
+        "word_id": 360,
+        "question": "n./v. 兽群；放牧",
+        "answer": "herd",
+        "hint": "H..."
+      },
+      {
+        "word_id": 361,
+        "question": "n./v. 蜂群；成群移动",
+        "answer": "swarm",
+        "hint": "S..."
+      },
+      {
+        "word_id": 362,
+        "question": "v. 起源，发源",
+        "answer": "originate",
+        "hint": "O..."
+      },
+      {
+        "word_id": 363,
+        "question": "v. 获得；源自",
+        "answer": "derive",
+        "hint": "D..."
+      },
+      {
+        "word_id": 364,
+        "question": "n.茎，干；v.起源于；阻止",
+        "answer": "stem stem/",
+        "hint": "S..."
+      },
+      {
+        "word_id": 365,
+        "question": "adj./v. 正确的；纠正",
+        "answer": "correct",
+        "hint": "C..."
+      },
+      {
+        "word_id": 366,
+        "question": "n. 祖先，原种",
+        "answer": "ancestor",
+        "hint": "A..."
+      },
+      {
+        "word_id": 367,
+        "question": "n. 后代，后裔",
+        "answer": "descendant",
+        "hint": "D..."
+      },
+      {
+        "word_id": 368,
+        "question": "n. 后代，幼崽",
+        "answer": "offspring",
+        "hint": "O..."
+      },
+      {
+        "word_id": 369,
+        "question": "n. 亚群，子群",
+        "answer": "subgroup",
+        "hint": "S..."
+      },
+      {
+        "word_id": 370,
+        "question": "v./n. 喂养；饲料",
+        "answer": "feed",
+        "hint": "F..."
+      },
+      {
+        "word_id": 371,
+        "question": "v./n. 繁殖；品种",
+        "answer": "breed",
+        "hint": "B..."
+      },
+      {
+        "word_id": 372,
+        "question": "n./v. 品种；繁殖（三单）",
+        "answer": "breeds",
+        "hint": "B..."
+      },
+      {
+        "word_id": 373,
+        "question": "v. 杂交繁殖",
+        "answer": "interbreed",
+        "hint": "I..."
+      },
+      {
+        "word_id": 374,
+        "question": "v./n. 孵化；舱口",
+        "answer": "hatch",
+        "hint": "H..."
+      }
+    ],
+    "en2cn": [
+      {
+        "word_id": 250,
+        "question": "bud",
+        "answer": "n.芽，花蕾；v.发芽",
+        "hint": "Small undeveloped shoot on a plant that grows into a flower or leaf."
+      },
+      {
+        "word_id": 251,
+        "question": "short-day",
+        "answer": "adj.短日照的",
+        "hint": "Describing plants that flower when daylight is shorter than a critical length."
+      },
+      {
+        "word_id": 252,
+        "question": "shade-tolerant",
+        "answer": "adj.耐阴的",
+        "hint": "Able to grow well in low light conditions under tree canopies."
+      },
+      {
+        "word_id": 253,
+        "question": "flower",
+        "answer": "n.花；v.开花",
+        "hint": "Colored reproductive part of a plant, often scented, that produces seeds."
+      },
+      {
+        "word_id": 254,
+        "question": "Cherry",
+        "answer": "n.樱桃，樱桃树",
+        "hint": "Small deciduous tree bearing sweet or sour red stone fruit, or its fruit."
+      },
+      {
+        "word_id": 255,
+        "question": "blossom",
+        "answer": "n.花簇；v.开花",
+        "hint": "Mass of flowers on a tree or bush, or the period when these open."
+      },
+      {
+        "word_id": 256,
+        "question": "tree",
+        "answer": "n.树，乔木",
+        "hint": "Tall woody perennial plant with a single trunk and branching upper structure."
+      },
+      {
+        "word_id": 257,
+        "question": "fungus",
+        "answer": "n.真菌",
+        "hint": "Spore-producing organism lacking chlorophyll, e.g. mushroom, mould, yeast."
+      },
+      {
+        "word_id": 258,
+        "question": "mould",
+        "answer": "n.霉菌；v.发霉",
+        "hint": "Furry fungal growth that forms on damp or decaying organic matter."
+      },
+      {
+        "word_id": 259,
+        "question": "pollen",
+        "answer": "n.花粉",
+        "hint": "Fine powdery substance produced by flowers, needed for plant fertilization."
+      },
+      {
+        "word_id": 260,
+        "question": "germinate",
+        "answer": "v.发芽，萌芽",
+        "hint": "(Of a seed) begin to grow and put out shoots after a dormant period."
+      },
+      {
+        "word_id": 261,
+        "question": "seed",
+        "answer": "n.种子；v.播种",
+        "hint": "Small hard reproductive unit of a flowering plant, able to grow into a new plant."
+      },
+      {
+        "word_id": 262,
+        "question": "burgeon",
+        "answer": "v.迅速增长，萌芽",
+        "hint": "Begin to grow or increase rapidly; flourish."
+      },
+      {
+        "word_id": 263,
+        "question": "firm",
+        "answer": "adj.结实的；n.公司",
+        "hint": "Solidly hard, not soft or yielding to pressure; also a business company."
+      },
+      {
+        "word_id": 264,
+        "question": "bloom",
+        "answer": "n.花；v.开花",
+        "hint": "Flower on a plant, or the state or period of flowering."
+      },
+      {
+        "word_id": 265,
+        "question": "scent",
+        "answer": "n.气味，香味；v.嗅",
+        "hint": "Distinctive, usually pleasant smell, especially from a plant or flower."
+      },
+      {
+        "word_id": 266,
+        "question": "aromatic",
+        "answer": "adj.芳香的，有香味的",
+        "hint": "Having a pleasant, distinctive, usually spicy or sweet smell."
+      },
+      {
+        "word_id": 267,
+        "question": "ripe",
+        "answer": "adj.成熟的",
+        "hint": "(Of fruit/grain) fully developed and ready to eat or harvest."
+      },
+      {
+        "word_id": 268,
+        "question": "fruit",
+        "answer": "n.水果，果实",
+        "hint": "Sweet fleshy product of a plant that contains seeds and can be eaten."
+      },
+      {
+        "word_id": 269,
+        "question": "wither",
+        "answer": "v.枯萎，凋谢",
+        "hint": "(Of plants) become dry and shrivelled, often from lack of water."
+      },
+      {
+        "word_id": 270,
+        "question": "field",
+        "answer": "n.田野，领域",
+        "hint": "Open area of land, usually used for growing crops or keeping animals."
+      },
+      {
+        "word_id": 271,
+        "question": "terrace",
+        "answer": "n.梯田，露台",
+        "hint": "Flat level area cut into a slope, often used for farming on hillsides."
+      },
+      {
+        "word_id": 272,
+        "question": "decompose",
+        "answer": "v.分解，腐烂",
+        "hint": "(Of organic matter) decay or rot, breaking down into simpler substances."
+      },
+      {
+        "word_id": 273,
+        "question": "rot",
+        "answer": "v./n.腐烂，腐朽",
+        "hint": "Decay by the action of bacteria and fungi, causing bad smell and softness."
+      },
+      {
+        "word_id": 274,
+        "question": "decay",
+        "answer": "v./n.腐烂，衰退",
+        "hint": "Gradual decomposition of organic matter caused by bacteria or fungi."
+      },
+      {
+        "word_id": 275,
+        "question": "stale",
+        "answer": "adj.不新鲜的，陈腐的",
+        "hint": "(Of food/air) no longer fresh and pleasant to eat, smell or use."
+      },
+      {
+        "word_id": 276,
+        "question": "rainforest",
+        "answer": "n.雨林",
+        "hint": "Dense evergreen forest with high annual rainfall, rich in biodiversity."
+      },
+      {
+        "word_id": 277,
+        "question": "jungle",
+        "answer": "n.丛林，密林",
+        "hint": "Dense tangled tropical forest with thick undergrowth, hard to travel through."
+      },
+      {
+        "word_id": 278,
+        "question": "plantation",
+        "answer": "n.种植园，林场",
+        "hint": "Large agricultural estate growing a single cash crop for commercial sale."
+      },
+      {
+        "word_id": 279,
+        "question": "timber",
+        "answer": "n.木材，木料",
+        "hint": "Wood prepared for use in building, carpentry or other commercial uses."
+      },
+      {
+        "word_id": 280,
+        "question": "charcoal",
+        "answer": "n.木炭",
+        "hint": "Black porous carbon made by burning wood slowly without air, used as fuel."
+      },
+      {
+        "word_id": 281,
+        "question": "log",
+        "answer": "n.原木；v.记录",
+        "hint": "Thick piece of wood cut from a tree trunk, used for fuel or building."
+      },
+      {
+        "word_id": 282,
+        "question": "logo",
+        "answer": "n.标识，商标",
+        "hint": "Distinctive symbol or design used by an organisation to identify its brand."
+      },
+      {
+        "word_id": 283,
+        "question": "forestry",
+        "answer": "n.林业，林学",
+        "hint": "Science and practice of managing, planting and conserving forests."
+      },
+      {
+        "word_id": 284,
+        "question": "companys",
+        "answer": "n.公司（复数，正确形式companies）",
+        "hint": "Common misspelling of 'companies'; plural of company, business organisations."
+      },
+      {
+        "word_id": 285,
+        "question": "bought",
+        "answer": "v.购买（buy的过去式）",
+        "hint": "Past tense of buy; obtained something by paying money for it."
+      },
+      {
+        "word_id": 286,
+        "question": "root",
+        "answer": "n.根，根源；v.生根",
+        "hint": "Part of a plant that grows underground, anchoring it and absorbing water."
+      },
+      {
+        "word_id": 287,
+        "question": "hay",
+        "answer": "n.干草（饲料）",
+        "hint": "Dried grass cut and stored for use as animal feed, especially for cattle."
+      },
+      {
+        "word_id": 288,
+        "question": "straw",
+        "answer": "n.麦秆，稻草；吸管",
+        "hint": "Dry stalks of grain crops left after harvest, used for bedding or crafts."
+      },
+      {
+        "word_id": 289,
+        "question": "reed",
+        "answer": "n.芦苇",
+        "hint": "Tall slender grass-like plant that grows in wet ground or shallow water."
+      },
+      {
+        "word_id": 290,
+        "question": "grass",
+        "answer": "n.草，草地",
+        "hint": "Short green plant with narrow leaves, covering lawns, pastures and fields."
+      },
+      {
+        "word_id": 291,
+        "question": "meadow",
+        "answer": "n.草甸，草地",
+        "hint": "Open field of grass and wild flowers, often used for hay or grazing."
+      },
+      {
+        "word_id": 292,
+        "question": "lawn",
+        "answer": "n.草坪",
+        "hint": "Area of short mown grass around a house or in a public park."
+      },
+      {
+        "word_id": 293,
+        "question": "olive",
+        "answer": "n.橄榄，橄榄树",
+        "hint": "Small oval bitter fruit of the olive tree, used for oil and eating."
+      },
+      {
+        "word_id": 294,
+        "question": "thorn",
+        "answer": "n.刺，荆棘",
+        "hint": "Sharp pointed woody projection on the stem or branch of a plant."
+      },
+      {
+        "word_id": 295,
+        "question": "pine",
+        "answer": "n.松树，松木",
+        "hint": "Evergreen coniferous tree with needle-shaped leaves and woody cones."
+      },
+      {
+        "word_id": 296,
+        "question": "trunk",
+        "answer": "n.树干，后备箱",
+        "hint": "Thick main woody stem of a tree, supporting branches and carrying nutrients."
+      },
+      {
+        "word_id": 297,
+        "question": "enzyme",
+        "answer": "n.酶",
+        "hint": "Biological protein that speeds up chemical reactions in living organisms."
+      },
+      {
+        "word_id": 298,
+        "question": "violet",
+        "answer": "n.紫罗兰；adj.紫色的",
+        "hint": "Small low-growing plant with purple or blue flowers, or a purple color."
+      },
+      {
+        "word_id": 299,
+        "question": "tulip",
+        "answer": "n.郁金香",
+        "hint": "Bulbous spring-flowering plant with large cup-shaped brightly colored flowers."
+      },
+      {
+        "word_id": 300,
+        "question": "release",
+        "answer": "v./n.释放，发布",
+        "hint": "To set free, discharge, or make something available publicly"
+      },
+      {
+        "word_id": 301,
+        "question": "emission",
+        "answer": "n.排放，排放物",
+        "hint": "Gas, heat, or substance discharged into the environment"
+      },
+      {
+        "word_id": 302,
+        "question": "absorb",
+        "answer": "v.吸收，理解",
+        "hint": "To take in or soak up substance, energy, or information"
+      },
+      {
+        "word_id": 303,
+        "question": "mint",
+        "answer": "v.铸造(硬币) n.铸币厂",
+        "hint": "To produce coins; a factory making official currency"
+      },
+      {
+        "word_id": 304,
+        "question": "circulation",
+        "answer": "n.流通，循环",
+        "hint": "Movement or flow of something around a system or area"
+      },
+      {
+        "word_id": 305,
+        "question": "ship",
+        "answer": "v.运输 n.船舶",
+        "hint": "To transport goods by sea, land, or air; large sea vessel"
+      },
+      {
+        "word_id": 306,
+        "question": "algae",
+        "answer": "n.藻类，海藻",
+        "hint": "Simple aquatic non-flowering plants including seaweed"
+      },
+      {
+        "word_id": 307,
+        "question": "uptake",
+        "answer": "n.吸收，摄取",
+        "hint": "The process of taking in or absorbing a substance"
+      },
+      {
+        "word_id": 308,
+        "question": "nutrient",
+        "answer": "n.营养物，养分",
+        "hint": "Substance providing nourishment for growth and metabolism"
+      },
+      {
+        "word_id": 309,
+        "question": "majority",
+        "answer": "n.大多数，大部分",
+        "hint": "The largest part or number of a group; more than half"
+      },
+      {
+        "word_id": 310,
+        "question": "surroundings",
+        "answer": "n.环境，周围事物",
+        "hint": "The conditions, objects, or environment around a person/thing"
+      },
+      {
+        "word_id": 311,
+        "question": "mechanism",
+        "answer": "n.机制，机理",
+        "hint": "Natural or established process by which something occurs"
+      },
+      {
+        "word_id": 312,
+        "question": "counterbalance",
+        "answer": "v./n.平衡，抵消",
+        "hint": "To offset or balance an opposing force or influence"
+      },
+      {
+        "word_id": 313,
+        "question": "protect",
+        "answer": "v.保护，防护",
+        "hint": "To keep someone or something safe from harm or damage"
+      },
+      {
+        "word_id": 314,
+        "question": "preserve",
+        "answer": "v.保护，保存 n.保护区",
+        "hint": "To maintain something in its original or existing state"
+      },
+      {
+        "word_id": 315,
+        "question": "accommodation",
+        "answer": "n.住宿，适应",
+        "hint": "Temporary lodging; adjustment to suit different needs"
+      },
+      {
+        "word_id": 316,
+        "question": "bush fire",
+        "answer": "n.丛林大火",
+        "hint": "Uncontrolled fire burning in scrub or woodland areas"
+      },
+      {
+        "word_id": 317,
+        "question": "extinguish",
+        "answer": "v.熄灭，扑灭",
+        "hint": "To put out a fire; to end or destroy something completely"
+      },
+      {
+        "word_id": 318,
+        "question": "destruct",
+        "answer": "v.破坏，毁坏",
+        "hint": "To cause deliberate or accidental damage to something"
+      },
+      {
+        "word_id": 319,
+        "question": "ruin",
+        "answer": "v.毁坏 n.废墟",
+        "hint": "To damage something so severely it loses value or function"
+      },
+      {
+        "word_id": 320,
+        "question": "storm",
+        "answer": "n.暴风雨，风暴",
+        "hint": "Violent weather disturbance with wind, rain, thunder, or snow"
+      },
+      {
+        "word_id": 321,
+        "question": "perish",
+        "answer": "v.死亡，毁灭",
+        "hint": "To die, especially in a violent or sudden way"
+      },
+      {
+        "word_id": 322,
+        "question": "demolish",
+        "answer": "v.拆除，推翻",
+        "hint": "To pull down a building; to completely destroy or refute"
+      },
+      {
+        "word_id": 323,
+        "question": "infringe",
+        "answer": "v.违反，侵犯",
+        "hint": "To actively break a rule, law, or limit; violate"
+      },
+      {
+        "word_id": 324,
+        "question": "undermine",
+        "answer": "v.削弱，损害",
+        "hint": "To weaken or damage something gradually or insidiously"
+      },
+      {
+        "word_id": 325,
+        "question": "extinction",
+        "answer": "n.灭绝，消亡",
+        "hint": "The state or process of a species ceasing to exist"
+      },
+      {
+        "word_id": 326,
+        "question": "pattern",
+        "answer": "n.模式，规律",
+        "hint": "Regular, repeated way something happens or is arranged"
+      },
+      {
+        "word_id": 327,
+        "question": "outcome",
+        "answer": "n.结果，成果",
+        "hint": "The final result or consequence of an action or process"
+      },
+      {
+        "word_id": 328,
+        "question": "impact",
+        "answer": "n./v.影响，冲击",
+        "hint": "Strong effect or influence on someone or something"
+      },
+      {
+        "word_id": 329,
+        "question": "maximal",
+        "answer": "adj.最大的，最高的",
+        "hint": "Of the greatest possible size, amount, or intensity"
+      },
+      {
+        "word_id": 330,
+        "question": "seasonal",
+        "answer": "adj.季节的，季节性的",
+        "hint": "Relating to, occurring at, or dependent on a season"
+      },
+      {
+        "word_id": 331,
+        "question": "minimal",
+        "answer": "adj.最小的，最低的",
+        "hint": "Of the smallest possible amount, quantity, or degree"
+      },
+      {
+        "word_id": 332,
+        "question": "experimental",
+        "answer": "adj.实验的，试验性的",
+        "hint": "Based on untested ideas or scientific trial methods"
+      },
+      {
+        "word_id": 333,
+        "question": "favourable",
+        "answer": "adj.有利的，良好的",
+        "hint": "Giving advantage or approval; beneficial to a purpose"
+      },
+      {
+        "word_id": 334,
+        "question": "eagle",
+        "answer": "n.鹰，雕",
+        "hint": "Large predatory bird with sharp vision, hooked beak, broad wings"
+      },
+      {
+        "word_id": 335,
+        "question": "mammal",
+        "answer": "n.哺乳动物",
+        "hint": "Warm-blooded vertebrate that gives birth to live young, produces milk"
+      },
+      {
+        "word_id": 336,
+        "question": "penguin",
+        "answer": "n.企鹅",
+        "hint": "Flightless seabird of southern regions, adapted for swimming"
+      },
+      {
+        "word_id": 337,
+        "question": "turtle",
+        "answer": "n.海龟，龟",
+        "hint": "Slow-moving reptile with a hard protective shell, aquatic or land"
+      },
+      {
+        "word_id": 338,
+        "question": "whale",
+        "answer": "n.鲸",
+        "hint": "Very large marine mammal that breathes air through a blowhole"
+      },
+      {
+        "word_id": 339,
+        "question": "biologist",
+        "answer": "n.生物学家",
+        "hint": "Scientist who studies living organisms and life processes"
+      },
+      {
+        "word_id": 340,
+        "question": "zoologist",
+        "answer": "n.动物学家",
+        "hint": "Scientist who specialises in the study of animals"
+      },
+      {
+        "word_id": 341,
+        "question": "amphibian",
+        "answer": "n.两栖动物",
+        "hint": "Cold-blooded vertebrate living on land and in water, e.g. frog"
+      },
+      {
+        "word_id": 342,
+        "question": "primate",
+        "answer": "n.灵长类动物",
+        "hint": "Mammal group including monkeys, apes, and humans"
+      },
+      {
+        "word_id": 343,
+        "question": "vertebrate",
+        "answer": "n.脊椎动物",
+        "hint": "Animal with a backbone, including mammals, birds, fish"
+      },
+      {
+        "word_id": 344,
+        "question": "reptile",
+        "answer": "n.爬行动物",
+        "hint": "Cold-blooded vertebrate with scales, e.g. snake, lizard, turtle"
+      },
+      {
+        "word_id": 345,
+        "question": "carnivore",
+        "answer": "n.食肉动物",
+        "hint": "Animal that feeds primarily on meat or other animals"
+      },
+      {
+        "word_id": 346,
+        "question": "herbivore",
+        "answer": "n.食草动物",
+        "hint": "Animal that feeds only on plants and vegetation"
+      },
+      {
+        "word_id": 347,
+        "question": "creature",
+        "answer": "n.生物，动物",
+        "hint": "Any living being, especially an animal or other organism"
+      },
+      {
+        "word_id": 348,
+        "question": "wildlife",
+        "answer": "n.野生动物，野生生物",
+        "hint": "Wild animals, plants, and organisms living in natural habitats"
+      },
+      {
+        "word_id": 349,
+        "question": "fauna",
+        "answer": "n.（某区域）动物群",
+        "hint": "All animal life occurring in a particular region or time period"
+      },
+      {
+        "word_id": 350,
+        "question": "flora",
+        "answer": "n. 植物群",
+        "hint": "Plants of a specific region, habitat, or geological period."
+      },
+      {
+        "word_id": 351,
+        "question": "throng",
+        "answer": "n./v. 人群；挤满",
+        "hint": "A large dense crowd of people; to fill or crowd a place."
+      },
+      {
+        "word_id": 352,
+        "question": "met",
+        "answer": "v. 遇见（meet过去式）",
+        "hint": "Past tense of meet; encountered or came together with someone."
+      },
+      {
+        "word_id": 353,
+        "question": "crowd",
+        "answer": "n./v. 人群；拥挤",
+        "hint": "A large group of people gathered closely together."
+      },
+      {
+        "word_id": 354,
+        "question": "beast",
+        "answer": "n. 野兽，猛兽",
+        "hint": "A large, dangerous, or wild animal, especially a mammal."
+      },
+      {
+        "word_id": 355,
+        "question": "brute",
+        "answer": "n./adj. 野兽；残忍的",
+        "hint": "A violent, cruel person or animal; lacking rational thought."
+      },
+      {
+        "word_id": 356,
+        "question": "cruel",
+        "answer": "adj. 残忍的，残酷的",
+        "hint": "Willfully causing pain or suffering to others; unkind."
+      },
+      {
+        "word_id": 357,
+        "question": "species",
+        "answer": "n. 物种，种",
+        "hint": "A group of living organisms able to breed and produce fertile offspring."
+      },
+      {
+        "word_id": 358,
+        "question": "flock",
+        "answer": "n./v. 群；聚集",
+        "hint": "A group of birds, sheep, or goats; to gather or move in a group."
+      },
+      {
+        "word_id": 359,
+        "question": "Sheep",
+        "answer": "n. 绵羊",
+        "hint": "A domesticated ruminant farm animal raised for wool and meat."
+      },
+      {
+        "word_id": 360,
+        "question": "herd",
+        "answer": "n./v. 兽群；放牧",
+        "hint": "A large group of grazing or herding animals; to tend livestock."
+      },
+      {
+        "word_id": 361,
+        "question": "swarm",
+        "answer": "n./v. 蜂群；成群移动",
+        "hint": "A large dense group of flying insects; to move in a large mass."
+      },
+      {
+        "word_id": 362,
+        "question": "originate",
+        "answer": "v. 起源，发源",
+        "hint": "To begin, arise, or be created from a particular source or place."
+      },
+      {
+        "word_id": 363,
+        "question": "derive",
+        "answer": "v. 获得；源自",
+        "hint": "To obtain something from a source; to originate from a root."
+      },
+      {
+        "word_id": 364,
+        "question": "stem stem/",
+        "answer": "n.茎，干；v.起源于；阻止",
+        "hint": "The main structural stalk of a plant; also to originate from or stop the flow of something (note: input has redundant du"
+      },
+      {
+        "word_id": 365,
+        "question": "Correct",
+        "answer": "adj./v. 正确的；纠正",
+        "hint": "Free from error; to make right or fix a mistake."
+      },
+      {
+        "word_id": 366,
+        "question": "ancestor",
+        "answer": "n. 祖先，原种",
+        "hint": "A person, plant, or animal from whom a species or group is descended."
+      },
+      {
+        "word_id": 367,
+        "question": "descendant",
+        "answer": "n. 后代，后裔",
+        "hint": "A person, plant, or animal descended from a specific ancestor."
+      },
+      {
+        "word_id": 368,
+        "question": "offspring",
+        "answer": "n. 后代，幼崽",
+        "hint": "The young of an animal, plant, or person; children or progeny."
+      },
+      {
+        "word_id": 369,
+        "question": "subgroup",
+        "answer": "n. 亚群，子群",
+        "hint": "A distinct smaller group within a larger group or category."
+      },
+      {
+        "word_id": 370,
+        "question": "feed",
+        "answer": "v./n. 喂养；饲料",
+        "hint": "To give food to; to eat food; a supply of material for a process."
+      },
+      {
+        "word_id": 371,
+        "question": "breed",
+        "answer": "v./n. 繁殖；品种",
+        "hint": "To produce offspring; a specific stock of domesticated animals/plants."
+      },
+      {
+        "word_id": 372,
+        "question": "breeds",
+        "answer": "n./v. 品种；繁殖（三单）",
+        "hint": "Third person singular of breed; multiple varieties of a domestic species."
+      },
+      {
+        "word_id": 373,
+        "question": "interbreed",
+        "answer": "v. 杂交繁殖",
+        "hint": "To breed with individuals of a different species, race, or variety."
+      },
+      {
+        "word_id": 374,
+        "question": "hatch",
+        "answer": "v./n. 孵化；舱口",
+        "hint": "To emerge from an egg; to cause a young animal to break out of an egg."
+      }
+    ],
+    "collocation": [
+      {
+        "word_id": 250,
+        "question": "axillary _____ (腋芽)",
+        "answer": "bud",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 251,
+        "question": "_____ plant (短日照植物)",
+        "answer": "short-day",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 252,
+        "question": "_____ tree (耐阴树木)",
+        "answer": "shade-tolerant",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 253,
+        "question": "wild _____ (野花)",
+        "answer": "flower",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 254,
+        "question": "_____ orchard (樱桃园)",
+        "answer": "cherry",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 255,
+        "question": "cherry _____ (樱花)",
+        "answer": "blossom",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 256,
+        "question": "_____ canopy (林冠)",
+        "answer": "tree",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 257,
+        "question": "_____ infection (真菌感染)",
+        "answer": "fungus",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 258,
+        "question": "_____ growth (霉菌生长)",
+        "answer": "mould",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 259,
+        "question": "_____ count (花粉计数)",
+        "answer": "pollen",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 260,
+        "question": "rapidly _____ (快速发芽)",
+        "answer": "germinate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 261,
+        "question": "_____ bank (种子库)",
+        "answer": "seed",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 262,
+        "question": "_____ rapidly (迅速萌芽)",
+        "answer": "burgeon",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 263,
+        "question": "_____ ground (坚实的地面)",
+        "answer": "firm",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 264,
+        "question": "algal _____ (藻华)",
+        "answer": "bloom",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 265,
+        "question": "floral _____ (花香)",
+        "answer": "scent",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 266,
+        "question": "_____ herb (芳香草本)",
+        "answer": "aromatic",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 267,
+        "question": "_____ fruit (成熟的水果)",
+        "answer": "ripe",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 268,
+        "question": "tropical _____ (热带水果)",
+        "answer": "fruit",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 269,
+        "question": "_____ prematurely (过早枯萎)",
+        "answer": "wither",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 270,
+        "question": "agricultural _____ (农田)",
+        "answer": "field",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 271,
+        "question": "_____ cultivation (梯田耕作)",
+        "answer": "terrace",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 272,
+        "question": "_____ rapidly (快速分解)",
+        "answer": "decompose",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 273,
+        "question": "root _____ (根腐病)",
+        "answer": "rot",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 274,
+        "question": "tooth _____ (蛀牙)",
+        "answer": "decay",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 275,
+        "question": "_____ food (不新鲜的食物)",
+        "answer": "stale",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 276,
+        "question": "tropical _____ (热带雨林)",
+        "answer": "rainforest",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 277,
+        "question": "dense _____ (茂密丛林)",
+        "answer": "jungle",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 278,
+        "question": "commercial _____ (商业种植园)",
+        "answer": "plantation",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 279,
+        "question": "hardwood _____ (硬木木材)",
+        "answer": "timber",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 280,
+        "question": "activated _____ (活性炭)",
+        "answer": "charcoal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 281,
+        "question": "fallen _____ (倒地原木)",
+        "answer": "log",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 282,
+        "question": "company _____ (公司标识)",
+        "answer": "logo",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 283,
+        "question": "sustainable _____ (可持续林业)",
+        "answer": "forestry",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 285,
+        "question": "_____ land (购置的土地)",
+        "answer": "bought",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 286,
+        "question": "_____ cause (根本原因)",
+        "answer": "root",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 287,
+        "question": "_____ fever (花粉症)",
+        "answer": "hay",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 288,
+        "question": "wheat _____ (小麦秸秆)",
+        "answer": "straw",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 289,
+        "question": "_____ bed (芦苇床)",
+        "answer": "reed",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 290,
+        "question": "native _____ (原生草种)",
+        "answer": "grass",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 291,
+        "question": "alpine _____ (高山草甸)",
+        "answer": "meadow",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 292,
+        "question": "_____ care (草坪养护)",
+        "answer": "lawn",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 293,
+        "question": "_____ oil (橄榄油)",
+        "answer": "olive",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 294,
+        "question": "_____ forest (多刺丛林)",
+        "answer": "thorn",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 295,
+        "question": "_____ needle (松针)",
+        "answer": "pine",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 296,
+        "question": "tree _____ (树干)",
+        "answer": "trunk",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 297,
+        "question": "digestive _____ (消化酶)",
+        "answer": "enzyme",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 298,
+        "question": "wild _____ (野生紫罗兰)",
+        "answer": "violet",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 299,
+        "question": "_____ bulb (郁金香球茎)",
+        "answer": "tulip",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 325,
+        "question": "mass _____ (大灭绝)",
+        "answer": "extinction",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 326,
+        "question": "weather _____ (天气模式)",
+        "answer": "pattern",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 327,
+        "question": "desired _____ (预期结果)",
+        "answer": "outcome",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 328,
+        "question": "environmental _____ (环境影响)",
+        "answer": "impact",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 329,
+        "question": "_____ strength (最大力量)",
+        "answer": "maximal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 330,
+        "question": "_____ variation (季节性变化)",
+        "answer": "seasonal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 331,
+        "question": "_____ impact (最小影响)",
+        "answer": "minimal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 332,
+        "question": "_____ study (实验研究)",
+        "answer": "experimental",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 333,
+        "question": "_____ condition (有利条件)",
+        "answer": "favourable",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 334,
+        "question": "bald _____ (白头海雕)",
+        "answer": "eagle",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 335,
+        "question": "marine _____ (海洋哺乳动物)",
+        "answer": "mammal",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 336,
+        "question": "emperor _____ (帝企鹅)",
+        "answer": "penguin",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 337,
+        "question": "sea _____ (海龟)",
+        "answer": "turtle",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 338,
+        "question": "blue _____ (蓝鲸)",
+        "answer": "whale",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 339,
+        "question": "marine _____ (海洋生物学家)",
+        "answer": "biologist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 340,
+        "question": "wildlife _____ (野生动物学家)",
+        "answer": "zoologist",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 341,
+        "question": "_____ decline (两栖动物减少)",
+        "answer": "amphibian",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 342,
+        "question": "nonhuman _____ (非人类灵长类动物)",
+        "answer": "primate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 343,
+        "question": "terrestrial _____ (陆生脊椎动物)",
+        "answer": "vertebrate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 344,
+        "question": "desert _____ (沙漠爬行动物)",
+        "answer": "reptile",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 345,
+        "question": "large _____ (大型食肉动物)",
+        "answer": "carnivore",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 346,
+        "question": "_____ diet (食草动物饮食)",
+        "answer": "herbivore",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 347,
+        "question": "nocturnal _____ (夜行动物)",
+        "answer": "creature",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 348,
+        "question": "_____ conservation (野生动物保护)",
+        "answer": "wildlife",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 349,
+        "question": "native _____ (本土动物群)",
+        "answer": "fauna",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 350,
+        "question": "native _____ (本土植物群)",
+        "answer": "flora",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 351,
+        "question": "dense _____ (密集的人群)",
+        "answer": "throng",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 352,
+        "question": "_____ colleague (遇见同事)",
+        "answer": "met",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 353,
+        "question": "_____ control (人群控制)",
+        "answer": "crowd",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 354,
+        "question": "fierce _____ (猛兽)",
+        "answer": "beast",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 355,
+        "question": "_____ force (蛮力)",
+        "answer": "brute",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 356,
+        "question": "_____ punishment (残酷的惩罚)",
+        "answer": "cruel",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 357,
+        "question": "endangered _____ (濒危物种)",
+        "answer": "species",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 358,
+        "question": "migratory _____ (迁徙鸟群)",
+        "answer": "flock",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 359,
+        "question": "_____ farming (绵羊养殖)",
+        "answer": "sheep",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 360,
+        "question": "_____ immunity (群体免疫)",
+        "answer": "herd",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 361,
+        "question": "_____ intelligence (群体智能)",
+        "answer": "swarm",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 362,
+        "question": "_____ theory (创立理论)",
+        "answer": "originate",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 363,
+        "question": "_____ formula (推导公式)",
+        "answer": "derive",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 364,
+        "question": "_____ cell (干细胞)",
+        "answer": "stem",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 365,
+        "question": "_____ error (纠正错误)",
+        "answer": "correct",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 366,
+        "question": "common _____ (共同祖先)",
+        "answer": "ancestor",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 367,
+        "question": "direct _____ (直系后代)",
+        "answer": "descendant",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 368,
+        "question": "produce _____ (繁殖后代)",
+        "answer": "offspring",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 369,
+        "question": "distinct _____ (独特亚群)",
+        "answer": "subgroup",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 370,
+        "question": "animal _____ (动物饲料)",
+        "answer": "feed",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 371,
+        "question": "_____ species (繁育物种)",
+        "answer": "breed",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 372,
+        "question": "dog _____ (犬种)",
+        "answer": "breeds",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 373,
+        "question": "_____ with (与…杂交)",
+        "answer": "interbreed",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      },
+      {
+        "word_id": 374,
+        "question": "_____ eggs (孵蛋)",
+        "answer": "hatch",
+        "hint": "请根据中文提示填写搭配中缺失的词"
+      }
+    ],
+    "sentence": [
+      {
+        "word_id": 250,
+        "question": "As the weather warms, each _____ on the peach tree swells before blooming. (芽，花蕾)",
+        "answer": "bud",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 251,
+        "question": "Most _____ plants require long periods of darkness to trigger flowering. (短日照的)",
+        "answer": "short-day",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 252,
+        "question": "Many _____ plants can grow well in the dim light beneath dense forest canopies. (耐阴的)",
+        "answer": "shade-tolerant",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 253,
+        "question": "Most almond trees _____ in early spring, requiring bees for pollination. (开花)",
+        "answer": "flower",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 254,
+        "question": "The _____ tree in our backyard produces sweet, juicy fruit every June. (樱桃)",
+        "answer": "cherry",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 255,
+        "question": "The apple trees will _____ in late April, filling the orchard with a soft, sweet fragrance. (开花)",
+        "answer": "blossom",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 256,
+        "question": "The tall deciduous _____ at the edge of the forest turns bright yellow in autumn before losing its leaves. (树，乔木)",
+        "answer": "tree",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 257,
+        "question": "This type of _____ forms a symbiotic relationship with tree roots, helping them absorb water and nutrients. (真菌)",
+        "answer": "fungus",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 258,
+        "question": "Damp, poorly ventilated rooms are ideal for _____ to spread on walls and furniture. (霉菌)",
+        "answer": "mould",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 259,
+        "question": "People with hay fever often suffer from itchy eyes and sneezing when _____ levels are high in spring. (花粉)",
+        "answer": "pollen",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 260,
+        "question": "Most seeds will only _____ if they have access to enough water, oxygen, and warm temperatures. (发芽，萌芽)",
+        "answer": "germinate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 261,
+        "question": "Each _____ contains a store of nutrients to feed the young plant until it can grow leaves and make its own food. (种子)",
+        "answer": "seed",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 262,
+        "question": "After the warm spring rains, new green shoots began to _____ from the bare soil across the valley. (萌芽)",
+        "answer": "burgeon",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 263,
+        "question": "Make sure the ladder is placed on _____ ground before you climb up to pick the ripe apples. (结实的)",
+        "answer": "firm",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 264,
+        "question": "The roses in the cottage garden _____ all summer, filling the air with a sweet, heady scent. (开花)",
+        "answer": "bloom",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 265,
+        "question": "The delicate, sweet _____ of orange blossoms drifted through the open window on the warm breeze. (香味)",
+        "answer": "scent",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 266,
+        "question": "Many _____ herbs, such as basil and rosemary, are commonly used to add flavour to cooking. (芳香的)",
+        "answer": "aromatic",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 267,
+        "question": "The strawberries are perfectly _____ and ready to be picked from the plants this weekend. (成熟的)",
+        "answer": "ripe",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 268,
+        "question": "Mangoes and pineapples are my favourite types of _____ because they are sweet and juicy. (水果)",
+        "answer": "fruit",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 269,
+        "question": "The flowers will quickly _____ if you do not water them regularly during the hot summer months. (枯萎)",
+        "answer": "wither",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 270,
+        "question": "The farmers worked from dawn to dusk harvesting wheat in the golden _____. (田野)",
+        "answer": "field",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 271,
+        "question": "Local farmers build each _____ by hand, using stones to hold the soil in place on steep slopes. (梯田)",
+        "answer": "terrace",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 272,
+        "question": "Fungi and bacteria help to _____ dead plant and animal matter, returning nutrients to the soil. (分解)",
+        "answer": "decompose",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 273,
+        "question": "The fallen apples will start to _____ on the ground if they are not collected within a few days. (腐烂)",
+        "answer": "rot",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 274,
+        "question": "Dead leaves and branches slowly _____ on the forest floor, recycling nutrients back into the ecosystem. (腐烂)",
+        "answer": "decay",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 275,
+        "question": "The office felt stuffy, filled with _____ air that had been trapped inside over the long weekend. (不新鲜的，陈腐的)",
+        "answer": "stale",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 276,
+        "question": "The _____ is home to over half of the world's terrestrial plant and animal species despite covering a small share of the planet's surface. (雨林)",
+        "answer": "rainforest",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 277,
+        "question": "The explorers had to cut through tangled vines and thick undergrowth as they trekked deep into the uncharted _____. (丛林，密林)",
+        "answer": "jungle",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 278,
+        "question": "Workers on the rubber _____ harvest latex from the trees every morning during the peak growing season. (种植园，林场)",
+        "answer": "plantation",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 279,
+        "question": "The construction company used sustainably sourced _____ to build the frames of the new eco-friendly houses. (木材，木料)",
+        "answer": "timber",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 280,
+        "question": "Many people prefer to grill food over _____ in the summer, as it gives the dishes a distinctive smoky flavour. (木炭)",
+        "answer": "charcoal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 281,
+        "question": "The family built a small _____ cabin in the woods as a quiet weekend retreat away from the noise of the city. (原木；v.记录)",
+        "answer": "log",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 282,
+        "question": "The new _____ for the eco-friendly clothing brand features a stylised leaf and a small bird to reflect its commitment to sustainability. (标识，商标)",
+        "answer": "logo",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 283,
+        "question": "Studying _____ at university can lead to careers in conservation, timber management, and ecosystem restoration. (林业，林学)",
+        "answer": "forestry",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 285,
+        "question": "She _____ a small cottage in the countryside last year, after years of saving up for a quiet place to retire. (购买（buy的过去式）)",
+        "answer": "bought",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 286,
+        "question": "The _____ of the old oak tree spread deep into the soil, helping to stabilise the riverbank and prevent erosion. (根，根源；v.生根)",
+        "answer": "root",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 287,
+        "question": "The farmer stacked the dried _____ into tall bales to store as feed for his cattle during the cold winter months. (干草（饲料）)",
+        "answer": "hay",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 288,
+        "question": "The old cottage had a roof made of _____, which kept the interior cool in summer and warm in winter. (麦秆，稻草；吸管)",
+        "answer": "straw",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 289,
+        "question": "The tall, slender _____ grew along the edge of the shallow lake, providing shelter for small fish and nesting birds. (芦苇)",
+        "answer": "reed",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 290,
+        "question": "The children ran barefoot across the soft, green _____ in the park, laughing as they chased a colourful butterfly. (草，草地)",
+        "answer": "grass",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 291,
+        "question": "The colourful wildflower _____ bloomed in the valley below the mountain, attracting hundreds of bees and butterflies during the summer months. (草甸，草地)",
+        "answer": "meadow",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 292,
+        "question": "He spent Saturday morning mowing the front _____ and pulling weeds from the flower beds along the path. (草坪)",
+        "answer": "lawn",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 293,
+        "question": "The gnarled old _____ trees grew on the sunlit hillside, their small fruit ripening to a deep purple in the warm Mediterranean sun. (橄榄，橄榄树)",
+        "answer": "olive",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 294,
+        "question": "She pricked her finger on a sharp _____ from the rose bush as she reached to pick a bloom. (刺，荆棘)",
+        "answer": "thorn",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 295,
+        "question": "The tall, evergreen _____ trees gave off a fresh, resinous scent that filled the cool mountain air. (松树，松木)",
+        "answer": "pine",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 296,
+        "question": "We packed our suitcases and camping gear into the _____ of the car before setting off on our road trip to the national park. (树干，后备箱)",
+        "answer": "trunk",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 297,
+        "question": "Each type of _____ in the human body catalyses a specific chemical reaction, supporting essential functions from digestion to DNA repair. (酶)",
+        "answer": "enzyme",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 298,
+        "question": "The artist used soft _____ hues to paint the twilight sky, blending the colour gently with pale pink and gold. (紫罗兰；adj.紫色的)",
+        "answer": "violet",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 299,
+        "question": "Every spring, thousands of colourful _____ bloom in the botanical garden, drawing crowds of visitors who come to admire the vibrant displays. (郁金香)",
+        "answer": "tulip",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 325,
+        "question": "Many conservationists are working to prevent the _____ of rare plant and animal species. (灭绝，消亡)",
+        "answer": "extinction",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 326,
+        "question": "Researchers noticed a consistent _____ in the way customers respond to discount offers. (模式，规律)",
+        "answer": "pattern",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 327,
+        "question": "The final _____ of the trade negotiation will be announced next Wednesday. (结果，成果)",
+        "answer": "outcome",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 328,
+        "question": "The _____ of plastic pollution on marine ecosystems is well documented in hundreds of scientific studies. (影响，冲击)",
+        "answer": "impact",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 329,
+        "question": "To get the _____ benefit from your study sessions, try to eliminate distractions like mobile phone notifications. (最大的，最高的)",
+        "answer": "maximal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 330,
+        "question": "Many local farms hire temporary staff to cope with the _____ demand for fresh produce during harvest months. (季节的，季节性的)",
+        "answer": "seasonal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 331,
+        "question": "The new construction method was designed to cause _____ damage to the surrounding ancient woodland. (最小的，最低的)",
+        "answer": "minimal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 332,
+        "question": "The research team is currently testing an _____ drug that could slow the progression of the rare disease. (实验的，试验性的)",
+        "answer": "experimental",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 333,
+        "question": "Thanks to _____ weather conditions, the rescue team was able to reach the stranded hikers before sunset. (有利的，良好的)",
+        "answer": "favourable",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 334,
+        "question": "High in the mountain cliffs, a large _____ circled slowly in the sky, searching for prey on the ground below. (鹰，雕)",
+        "answer": "eagle",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 335,
+        "question": "The blue whale is the largest _____ that has ever lived on Earth, growing to lengths of over 30 metres. (哺乳动物)",
+        "answer": "mammal",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 336,
+        "question": "The _____ is a flightless seabird that is uniquely adapted to survive in the harsh, icy conditions of the Southern Hemisphere. (企鹅)",
+        "answer": "penguin",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 337,
+        "question": "The female _____ will return to the same beach where she was born to lay her eggs every few years. (海龟，龟)",
+        "answer": "turtle",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 338,
+        "question": "The _____ communicates with other members of its pod using complex, low-frequency songs that can travel hundreds of kilometres underwater. (鲸)",
+        "answer": "whale",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 339,
+        "question": "The _____ spent three years tracking the movement patterns of wild wolf packs in the national park. (生物学家)",
+        "answer": "biologist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 340,
+        "question": "The _____ observed that the primate group had developed unique social behaviours to adapt to changes in their forest habitat. (动物学家)",
+        "answer": "zoologist",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 341,
+        "question": "A frog is a well-known _____ that can live both in water and on land throughout its life cycle. (两栖动物)",
+        "answer": "amphibian",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 342,
+        "question": "The chimpanzee is a highly intelligent _____ that shares over 98 percent of its DNA with human beings. (灵长类动物)",
+        "answer": "primate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 343,
+        "question": "A _____ is an animal that has a backbone or spinal column running along the length of its body. (脊椎动物)",
+        "answer": "vertebrate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 344,
+        "question": "A snake is a legless _____ that crawls along the ground and is covered in dry, scaly skin. (爬行动物)",
+        "answer": "reptile",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 345,
+        "question": "A lion is a powerful _____ that hunts herbivores like zebras and antelopes for food on the African savanna. (食肉动物)",
+        "answer": "carnivore",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 346,
+        "question": "An elephant is a massive _____ that feeds mainly on leaves, grass, and tree bark. (食草动物)",
+        "answer": "herbivore",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 347,
+        "question": "The small, furry _____ emerged from its burrow at dusk to search for seeds and insects to eat. (生物，动物)",
+        "answer": "creature",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 348,
+        "question": "The new national park was established to protect local _____ and preserve the natural ecosystem for future generations. (野生动物，野生生物)",
+        "answer": "wildlife",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 349,
+        "question": "The unique _____ of the remote island includes many species found nowhere else on Earth. (（某区域）动物群)",
+        "answer": "fauna",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 350,
+        "question": "The diverse _____ of the national park includes over 2,000 species of flowering plants. (植物群)",
+        "answer": "flora",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 351,
+        "question": "A _____ of shoppers pushed through the market entrance on the first day of the holiday sale. (人群；挤满)",
+        "answer": "throng",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 352,
+        "question": "I _____ my old high school classmate on the subway yesterday morning. (遇见（meet过去式）)",
+        "answer": "met",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 353,
+        "question": "A large _____ of onlookers gathered around the street performer to watch his magic show. (人群；拥挤)",
+        "answer": "crowd",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 354,
+        "question": "The legend says that a terrible _____ haunts the dark forest at the edge of the village. (野兽，猛兽)",
+        "answer": "beast",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 355,
+        "question": "The heartless _____ showed no mercy to the people he robbed on the remote mountain road. (野兽；残忍的)",
+        "answer": "brute",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 356,
+        "question": "It is _____ to leave a small pet locked in a hot car with no water in summer. (残忍的，残酷的)",
+        "answer": "cruel",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 357,
+        "question": "This rare _____ of orchid only grows in the high-altitude cloud forests of the Andes. (物种，种)",
+        "answer": "species",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 358,
+        "question": "A _____ of geese flew overhead in a V-formation, heading south for the winter. (群；聚集)",
+        "answer": "flock",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 359,
+        "question": "The farmer keeps a dozen _____ on his hillside farm, producing wool and lamb meat for the local market. (绵羊)",
+        "answer": "sheep",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 360,
+        "question": "A _____ of wildebeest thundered across the savanna during the annual great migration. (兽群；放牧)",
+        "answer": "herd",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 361,
+        "question": "A _____ of honeybees settled on the low branch of an oak tree after leaving their old hive. (蜂群；成群移动)",
+        "answer": "swarm",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 362,
+        "question": "Many popular folk tales _____ in small rural communities, passed down orally from generation to generation. (起源，发源)",
+        "answer": "originate",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 363,
+        "question": "Many common English words _____ from Latin and Greek roots. (获得；源自)",
+        "answer": "derive",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 364,
+        "question": "The delicate _____ of the sunflower supports its heavy, bright yellow flower head as it grows toward the sunlight. (茎，干；起源于；阻止)",
+        "answer": "stem",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 365,
+        "question": "Please check that you have selected the _____ answer before submitting your test paper. (正确的；纠正)",
+        "answer": "correct",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 366,
+        "question": "My distant _____ first settled in this coastal region during the Ming Dynasty, building the village that still stands today. (祖先，原种)",
+        "answer": "ancestor",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 367,
+        "question": "She is a _____ of the famous ancient poet, and she still loves writing poetry in her free time. (后代，后裔)",
+        "answer": "descendant",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 368,
+        "question": "The mother bird spends all day catching insects to feed her hungry _____ in the nest. (后代，幼崽)",
+        "answer": "offspring",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 369,
+        "question": "The research team found that a small _____ of participants experienced unusual side effects from the new medication. (亚群，子群)",
+        "answer": "subgroup",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 370,
+        "question": "The local charity works to _____ homeless people in the community by providing free hot meals every day. (喂养；饲料)",
+        "answer": "feed",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 371,
+        "question": "This _____ of dog is known for being gentle, intelligent, and great with young children. (繁殖；品种)",
+        "answer": "breed",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 372,
+        "question": "This type of insect _____ extremely quickly in warm, humid environments, leading to large infestations in summer. (品种；繁殖（三单）)",
+        "answer": "breeds",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 373,
+        "question": "When two closely related animal species live in the same area, they may sometimes _____ and produce hybrid offspring. (杂交繁殖)",
+        "answer": "interbreed",
+        "hint": "请根据上下文和中文提示填空"
+      },
+      {
+        "word_id": 374,
+        "question": "The baby sea turtles will _____ from their eggs in the warm sand after about two months of incubation. (孵化；舱口)",
+        "answer": "hatch",
+        "hint": "请根据上下文和中文提示填空"
+      }
+    ]
+  }
+}
